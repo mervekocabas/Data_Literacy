@@ -1,6 +1,8 @@
 # Import necessary libraries
 import json
 import csv
+import requests
+from bs4 import BeautifulSoup
 
 # Function to determine if an affiliation is a university or a company
 def is_university(affiliation):
@@ -42,6 +44,40 @@ def calculate_affiliations_percentages(affiliation_string):
     company_percentage = 100 - university_percentage
     return university_percentage, company_percentage
 
+# Function to check for a specific substring in a webpage (just for ECCV 2024)
+def check_for_substring(url, substring):
+    return substring in url.lower()
+
+# Function to scrape the abstract from a given site URL
+def scrape_abstract(site_url):
+    """
+    Scrape the abstract from a given site URL.
+
+    Args:
+        site_url (str): The URL of the site to scrape the abstract from.
+
+    Returns:
+        str: The abstract text if successfully scraped, otherwise an empty string.
+    """
+    substring = "eccv2024"
+    try:
+        response = requests.get(site_url)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.text, 'html.parser')
+        try:
+            if check_for_substring(site_url, substring):
+                abstract = soup.find('div', class_='collapse show', id='abstract_details').find('div', id='abstractExample').find('p')
+            else:
+                abstract = soup.find('div', id='content').find_next('div', id='abstract')  
+        except:
+            abstract = soup.find('div', class_='container papercontainer').find_next('div', id='content').find_next('div', id='abstract')  
+
+        return abstract.text.strip() if abstract else ""
+
+    except requests.RequestException as e:
+        print(f"Error fetching abstract from {site_url}: {e}")
+        return ""
+
 # Function to process the dataset and write to a CSV
 def process_dataset(json_file_path, csv_file_path):
     """
@@ -62,7 +98,9 @@ def process_dataset(json_file_path, csv_file_path):
         "aff",
         "university_affiliation",
         "company_affiliation",
+        "abstract",
         "site",
+        "oa",
         "pdf",
         "project",
         "github",
@@ -82,7 +120,13 @@ def process_dataset(json_file_path, csv_file_path):
         entry["university_affiliation"] = university_percentage
         entry["company_affiliation"] = company_percentage
 
-        # Filter the entry to include only the headers
+        if "site" in entry and entry["site"]:
+            entry["abstract"] = scrape_abstract(entry["site"])
+        elif "oa" in entry and entry["oa"]:
+            entry["abstract"] = scrape_abstract(entry["oa"])
+        else:
+            entry["abstract"] = ""
+
         filtered_entry = {key: entry.get(key, "") for key in headers}
         processed_data.append(filtered_entry)
 
@@ -100,8 +144,8 @@ def main():
     Main function to process the dataset and output the CSV.
     """
     # Input and output file paths
-    json_file_path = "/home/stud125/project/Data_Literacy/cvpr/cvpr2020.json"
-    csv_file_path = "/home/stud125/project/Data_Literacy/cvpr/cvpr2020_with_affiliations.csv"
+    json_file_path = "/home/stud125/project/Data_Literacy/eccv/eccv2024.json"
+    csv_file_path = "/home/stud125/project/Data_Literacy/eccv/eccv2024_with_affiliations.csv"
 
     # Process the dataset
     process_dataset(json_file_path, csv_file_path)
