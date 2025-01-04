@@ -33,12 +33,22 @@ def extract_affiliations(json_file_path):
         "zhejiang lab", "nyu", "bupt", "xjtlu", "ustb", "unsw", "iiai", "nasa", "fraunhofer itwm",
         "cea list", "lix", "rpi", "peng cheng laboratory", "computer vision center",
         "uenf", "memorial sloan kettering cancer center", "maple", "zhejiang provincial key",
-        "multimedia group"
+        "multimedia group",
+        "university", "college", "institute", "polytechnic", "department",
+        "institut", "school", "iit", "academy", "eth", "epfl", "uc", "kaust", "inria", 
+        "universität", "université", "universidade", "universidad", "università", "universiteit",
+        "carnegie mellon", "universty", "univeristy", "universitat", "cornell tech", "ecole", "enpc",
+        "ensta", "univrsity", "ctu", "cuhk", "cmu", "Caltech", "CentraleSupelec", "Georgia Tech",
+        "hkbu", "hkust", "hnu", "hust", "Hochschule", "Universiry", "Universit", "Unviersity",
+        "IBENS", "ICT", "Academia", "INSA", "Illinois Tech", "LMU", "MIT", "NTU", "Oxford", "Univerisity",
+        "Politecnico", "Polytech", "SKKU", "SFU", "Stanford", "TU", "UBC", "Télécom Paris", "UESTC", "UMD",
+        "UPenn", "USC", "UTokyo", "UW", "UW-Madison", "UZH", "UCL", "UvA", "Uviversité", "UW-Madison",
+        "UMass", "UT Austin", "Virginia Tech", "Yale", "Universtiy", "École"
     ]
 
     def is_university(affiliation):
         """Check if an affiliation contains university-related keywords."""
-        return any(keyword in affiliation.lower() for keyword in university_keywords)
+        return any(keyword.lower() in affiliation.lower() for keyword in university_keywords)
 
     # Load the JSON data
     with open(json_file_path, "r") as json_file:
@@ -84,10 +94,20 @@ def is_university(affiliation):
         "zhejiang lab", "nyu", "bupt", "xjtlu", "ustb", "unsw", "iiai", "nasa", "fraunhofer itwm",
         "cea list", "lix", "rpi", "peng cheng laboratory", "computer vision center",
         "uenf", "memorial sloan kettering cancer center", "maple", "zhejiang provincial key",
-        "multimedia group"
+        "multimedia group",
+        "university", "college", "institute", "polytechnic", "department",
+        "institut", "school", "iit", "academy", "eth", "epfl", "uc", "kaust", "inria", 
+        "universität", "université", "universidade", "universidad", "università", "universiteit",
+        "carnegie mellon", "universty", "univeristy", "universitat", "cornell tech", "ecole", "enpc",
+        "ensta", "univrsity", "ctu", "cuhk", "cmu", "Caltech", "CentraleSupelec", "Georgia Tech",
+        "hkbu", "hkust", "hnu", "hust", "Hochschule", "Universiry", "Universit", "Unviersity",
+        "IBENS", "ICT", "Academia", "INSA", "Illinois Tech", "LMU", "MIT", "NTU", "Oxford", "Univerisity",
+        "Politecnico", "Polytech", "SKKU", "SFU", "Stanford", "TU", "UBC", "Télécom Paris", "UESTC", "UMD",
+        "UPenn", "USC", "UTokyo", "UW", "UW-Madison", "UZH", "UCL", "UvA", "Uviversité", "UW-Madison",
+        "UMass", "UT Austin", "Virginia Tech", "Yale", "Universtiy", "École"
     ]
     for keyword in university_keywords:
-        if keyword in affiliation.lower():
+        if keyword.lower() in affiliation.lower():
             return True
     return False
 
