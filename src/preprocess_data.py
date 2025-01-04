@@ -76,7 +76,24 @@ def extract_affiliations(json_file_path):
         "IBENS", "ICT", "Academia", "INSA", "Illinois Tech", "LMU", "MIT", "NTU", "Oxford", "Univerisity",
         "Politecnico", "Polytech", "SKKU", "SFU", "Stanford", "TU", "UBC", "Télécom Paris", "UESTC", "UMD",
         "UPenn", "USC", "UTokyo", "UW", "UW-Madison", "UZH", "UCL", "UvA", "Uviversité", "UW-Madison",
-        "UMass", "UT Austin", "Virginia Tech", "Yale", "Universtiy", "École"
+        "UMass", "UT Austin", "Virginia Tech", "Yale", "Universtiy", "École",
+        "ANU", "Data61-CSIRO", "CIFAR AI Chair", "CSE, HBKU, Doha, Qatar", "Cornell", 
+        "CryoEM Center, SUSTech", "Barcelona Supercomputing Center, Spain", 
+        "Centre Borelli, ENS Paris-Saclay", "Data61-CSIRO", "Data61/CSIRO", 
+        "Evelina London Children’s Hospital", "Fondazione Pascale", "Johns Hopkins Medicine", 
+        "LIRIS, INSA - École Centrale, Lyon, UMR CNRS 5205, France", 
+        "LIRIS, INSA-Lyon, UMR CNRS 5205, France", "Robarts Research, Canada", 
+        "SIMTech, Agency for Science, Technology and Research", "SUNY Buffalo", 
+        "UBC, Vancouver, Canada", "USTC", "UNC Chapel Hill", "VISTEC, Thailand", 
+        "U.C. Santa Barbara", 
+        "Australian Centre for Robotic Vision","Australian Centre of Excellence for Robotic Vision, Australia",
+        "CMLA, ENS Cachan","CVC, UAB","Data61 CSIRO","Data61, CSIRO",
+        "DFKI - German Research Center for Artificial Intelligence","ETS Montreal, Canada",
+        "FORTH","KIST","LAAS-CNRS","LIGM, UPEM","Laboratory for Physical Sciences",
+        "Laboratory for Physical Sciences, Booz Allen Hamilton, u.m.b.c.",
+        "Laboratory for Physical Sciences, u.m.b.c.","MSRA","MUST, Macau, China",
+        "NTT Media Intelligence Laboratories","NTT Service Evolution Laboratories",
+        "PARC","Peng Cheng Laboratory, China", "Salesforce Research Asia, Singapore","Skoltech"
     ]
 
     def is_university(affiliation):
@@ -137,8 +154,26 @@ def is_university(affiliation):
         "IBENS", "ICT", "Academia", "INSA", "Illinois Tech", "LMU", "MIT", "NTU", "Oxford", "Univerisity",
         "Politecnico", "Polytech", "SKKU", "SFU", "Stanford", "TU", "UBC", "Télécom Paris", "UESTC", "UMD",
         "UPenn", "USC", "UTokyo", "UW", "UW-Madison", "UZH", "UCL", "UvA", "Uviversité", "UW-Madison",
-        "UMass", "UT Austin", "Virginia Tech", "Yale", "Universtiy", "École"
+        "UMass", "UT Austin", "Virginia Tech", "Yale", "Universtiy", "École",
+        "ANU", "Data61-CSIRO", "CIFAR AI Chair", "CSE, HBKU, Doha, Qatar", "Cornell", 
+        "CryoEM Center, SUSTech", "Barcelona Supercomputing Center, Spain", 
+        "Centre Borelli, ENS Paris-Saclay", "Data61-CSIRO", "Data61/CSIRO", 
+        "Evelina London Children’s Hospital", "Fondazione Pascale", "Johns Hopkins Medicine", 
+        "LIRIS, INSA - École Centrale, Lyon, UMR CNRS 5205, France", 
+        "LIRIS, INSA-Lyon, UMR CNRS 5205, France", "Robarts Research, Canada", 
+        "SIMTech, Agency for Science, Technology and Research", "SUNY Buffalo", 
+        "UBC, Vancouver, Canada", "USTC", "UNC Chapel Hill", "VISTEC, Thailand", 
+        "U.C. Santa Barbara", 
+        "Australian Centre for Robotic Vision","Australian Centre of Excellence for Robotic Vision, Australia",
+        "CMLA, ENS Cachan","CVC, UAB","Data61 CSIRO","Data61, CSIRO",
+        "DFKI - German Research Center for Artificial Intelligence","ETS Montreal, Canada",
+        "FORTH","KIST","LAAS-CNRS","LIGM, UPEM","Laboratory for Physical Sciences",
+        "Laboratory for Physical Sciences, Booz Allen Hamilton, u.m.b.c.",
+        "Laboratory for Physical Sciences, u.m.b.c.","MSRA","MUST, Macau, China",
+        "NTT Media Intelligence Laboratories","NTT Service Evolution Laboratories",
+        "PARC","Peng Cheng Laboratory, China", "Salesforce Research Asia, Singapore","Skoltech"
     ]
+
     for keyword in university_keywords:
         if keyword.lower() in affiliation.lower():
             return True
