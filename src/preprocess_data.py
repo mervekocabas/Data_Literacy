@@ -4,6 +4,39 @@ import csv
 import requests
 from bs4 import BeautifulSoup
 
+# Map of company names to their countries
+company_country_map = {
+    "Adobe": "USA",
+    "Amazon": "USA",
+    "AWS": "USA",
+    "Facebook": "USA",
+    "Google": "USA",
+    "Intel": "USA",
+    "Microsoft": "USA",
+    "OpenAI": "USA",
+    "JD Digits": "USA",
+    "JD AI": "USA",
+    
+}
+
+# Function to determine company country based on keywords in the affiliation
+def get_company_country_from_keywords(affiliation):
+    """
+    Get the country for a given affiliation string based on company-related keywords.
+
+    Args:
+        affiliation (str): The affiliation string to check.
+
+    Returns:
+        str: The country of the company, or 'Unknown' if no match is found.
+    """
+    # Check if any known company keywords appear in the affiliation
+    affiliation = affiliation.lower()  # Make it case-insensitive
+    for company_name in company_country_map.keys():
+        if company_name.lower() in affiliation:
+            return company_country_map[company_name]  # Return the country if a match is found
+    return "Unknown"  # Return "Unknown" if no match is found
+
 # check the affiliations
 def extract_affiliations(json_file_path):
     """
@@ -185,6 +218,7 @@ def process_dataset(json_file_path, csv_file_path):
         "aff",
         "university_affiliation",
         "company_affiliation",
+        "company_country",
         "abstract",
         "site",
         "oa",
@@ -206,6 +240,22 @@ def process_dataset(json_file_path, csv_file_path):
 
         entry["university_affiliation"] = university_percentage
         entry["company_affiliation"] = company_percentage
+
+        # Only assign company country if company percentage is greater than 0
+        if company_percentage != "" and company_percentage > 0: 
+            # Extract company country based on keywords in the affiliation
+            company_country = "Unknown"
+            if "aff" in entry and entry["aff"]:
+                affiliations = [aff.strip() for aff in entry["aff"].split(";") if aff.strip()]
+                for aff in affiliations:
+                    company_country = get_company_country_from_keywords(aff)
+                    if company_country != "Unknown":  # Stop checking once a company is found
+                        break
+            entry["company_country"] = company_country  # Add the company country column
+
+        # If company_percentage is 0, do not assign company_country
+        else:
+            entry["company_country"] = ""
 
         if "oa" in entry and entry["oa"]:
             entry["abstract"] = scrape_abstract(entry["oa"])
