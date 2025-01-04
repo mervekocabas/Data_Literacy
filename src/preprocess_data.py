@@ -18,7 +18,22 @@ def extract_affiliations(json_file_path):
     """
     university_keywords = [
         "university", "college", "institute", "polytechnic", "department",
-        "institut", "school", "iit", "academy", "eth", "epfl", "uc", "kaust", "inria"
+        "institut", "school", "iit", "academy", "eth", "epfl", "uc", "kaust", 
+        "inria", "mit", "mpii saarland", "tu kaiserslautern",
+        "dfki kaiserslautern", "upm", "mta sztaki", "cas", "caltech", 
+        "cu boulder", "ctu", "école polytechnique fédérale de lausanne", 
+        "école de technologie supérieure", "lausanne", "usc", "ut austin",
+        "tu", "mpi", "kaist", "ku leuven", "hkust", "georgia tech", "gist",
+        "universaity", "a&m", "cuhk", "postech", "cornell tech", "uestc",
+        "technion", "univ", "umass", "unist", "unsv", "uestc", "vgg",
+        "dlr", "riken", "a*star", "ihpc", "national", "fondazione bruno kessler",
+        "cispa", "children’s hospital of philadelphia", "minds and machines",
+        "ist austria", "paristech", "psl", "virginia tech", "nus", "iisc bangalore",
+        "uts", "saarland informatics campus", "state key lab of intelligent technologies and systems",
+        "zhejiang lab", "nyu", "bupt", "xjtlu", "ustb", "unsw", "iiai", "nasa", "fraunhofer itwm",
+        "cea list", "lix", "rpi", "peng cheng laboratory", "computer vision center",
+        "uenf", "memorial sloan kettering cancer center", "maple", "zhejiang provincial key",
+        "multimedia group"
     ]
 
     def is_university(affiliation):
@@ -53,8 +68,23 @@ def is_university(affiliation):
         bool: True if the affiliation is likely a university, False otherwise.
     """
     university_keywords = [
-        "university", "college", "institute", "polytechnic", "department", 
-        "institut", "school", "iit", "academy", "eth", "epfl", "uc", "kaust", "inria"
+        "university", "college", "institute", "polytechnic", "department",
+        "institut", "school", "iit", "academy", "eth", "epfl", "uc", "kaust", 
+        "inria", "mit", "mpii saarland", "tu kaiserslautern",
+        "dfki kaiserslautern", "upm", "mta sztaki", "cas", "caltech", 
+        "cu boulder", "ctu", "école polytechnique fédérale de lausanne", 
+        "école de technologie supérieure", "lausanne", "usc", "ut austin",
+        "tu", "mpi", "kaist", "ku leuven", "hkust", "georgia tech", "gist",
+        "universaity", "a&m", "cuhk", "postech", "cornell tech", "uestc",
+        "technion", "univ", "umass", "unist", "unsv", "uestc", "vgg",
+        "dlr", "riken", "a*star", "ihpc", "national", "fondazione bruno kessler",
+        "cispa", "children’s hospital of philadelphia", "minds and machines",
+        "ist austria", "paristech", "psl", "virginia tech", "nus", "iisc bangalore",
+        "uts", "saarland informatics campus", "state key lab of intelligent technologies and systems",
+        "zhejiang lab", "nyu", "bupt", "xjtlu", "ustb", "unsw", "iiai", "nasa", "fraunhofer itwm",
+        "cea list", "lix", "rpi", "peng cheng laboratory", "computer vision center",
+        "uenf", "memorial sloan kettering cancer center", "maple", "zhejiang provincial key",
+        "multimedia group"
     ]
     for keyword in university_keywords:
         if keyword in affiliation.lower():
