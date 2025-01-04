@@ -28,8 +28,6 @@ Bigo Technology PTE. LTD, Singapore
 Biometrics Research Laboratories, NEC Corporation, Kawasaki, Kanagawa, Japan
 Blue Prism AI Labs, UK
 Bosch Center for Artiﬁcial Intelligence
-CSIRO Data61, Brisbane, Australia
-CSIRO Health & Biosecurity, The Australian eHealth Research Centre, Brisbane, QLD, Australia
 CVC, UB, Spain
 CVision AI
 Canadian Wildlife Service, Environment and Climate Change Canada
@@ -45,7 +43,6 @@ DeepVoxel Inc.
 Delta Research Center, Singapore
 Digital Lab, Swisscom, Switzerland
 ETRI, Daejeon, Korea
-ETS Montreal
 Element AI
 Element AI, Montreal, Canada
 European Systems Integration, France
@@ -93,14 +90,12 @@ Microsoft
 Microsoft Corporation, Reading, UK
 Microsoft Dynamics 365 AI Research, Bellevue, WA, USA
 Microsoft Research, Beijing, China
-Misubishi Electric Research Laboratories, Cambridge, MA
 NA VER LABS Europe
 NA VERLABS, Korea
 NAVER LABS Europe
 NAVER LABS, South Korea
 NEC Laboratories America
 NEC Labs America
-NSUT
 NTT Corporation
 NVIDIA
 NVIDIA Research, Tel Aviv, Israel

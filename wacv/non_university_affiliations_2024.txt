@@ -33,8 +33,6 @@ AstraZeneca, Gothenburg, Sweden
 Atos.
 Auris Health. Inc, JNJ
 BBC Research and Development, United Kingdom.
-BITS Pilani
-BITS Pilani Hyderabad
 BMW Group
 BMW Group, Munich, Germany
 Baker Hughes, Florence, Italy
@@ -53,7 +51,6 @@ ByteDance Inc.
 Bytedance Inc
 Bytedance Inc.
 CARIAD SE
-CEDRIC (EA4329), Cnam Paris, France
 CFAR, Agency for Science, Technology and Research, Singapore
 CISCO Research, San Jose, CA, USA
 CSEM, CH
@@ -78,14 +75,12 @@ Deep Render
 Deeping Source Inc.
 Deeping Source Inc., Seoul, Republic of Korea
 Deeplab, Athens
-Dept. of EEE, BUET, Bangladesh
 Digital Sense
 ETRI
 ExploAI
 FA Research, Fast Accounting Co., Ltd. Japan
 FAIR, Meta
 FPT Software AI Center, Vietnam
-FZI and KIT, Karlsruhe, Germany
 Faurecia IRYStec Inc., Montreal, Canada
 Flower Labs
 Ford Motor Company
@@ -129,7 +124,6 @@ IBM Thomas J. Watson Research Ctr.
 IDEAS NCBR, Tooploox
 IDEAS NCBR, Warsaw, Poland
 ISEE AI
-ISTI-CNR Pisa, Italy
 Image Analytics, Australia
 Independent Researcher
 InfoTech Labs, Toyota Motor North America R&D
@@ -151,7 +145,6 @@ LY Corporation*, Tokyo, Japan
 Laboratory for Artificial Intelligence in Design, Hong Kong SAR
 Latent Labs (latentlabs.com), London, UK
 Luftbilddatenbank Dr. Carls GmbH, Austria
-MBZUAI, UAE
 MS Swaminathan Research Foundation, Chennai, India
 MVTec Software GmbH
 Magic Leap, Inc., 7500 W Sunrise Blvd, Plantation, Florida U.S.A
@@ -181,7 +174,6 @@ NAVER Cloud, ImageVision
 NCSOFT
 NEC Corporation
 NEC Laboratories America, Inc.
-NIT Srinagar, Srinagar, India
 NOAA NMFS, USA
 NTT Human Informatics Laboratories, NTT Corporation
 NVIDIA
@@ -266,12 +258,6 @@ Toyota Motor Corporation, Japan
 Toyota Motor Europe
 Transmute AI Lab, India
 TrojAI Inc., NB, Canada
-U. of Bern
-U. of Haifa
-UFMG, Brazil
-UNC Charlotte
-UQ, Australia
-UST, Republic of Korea
 United States Space Force
 United States Space Force, 550 Lipoa Parkway, Kihei, HI
 Unknown

@@ -5,10 +5,8 @@
 4Adobe Inc.
 5Salesforce Research
 AI Technology Division, LG Energy Solution
-AIIMS, New Delhi, India
 AIOZ, Singapore
 AISC GmbH
-APPCAIR, BITS Pilani, Goa Campus
 AWS AI Labs
 Adobe Inc
 Adobe Inc.
@@ -56,13 +54,7 @@ ByteDance
 ByteDance Ltd, Beijing, China
 Bytedance
 Bytedance Inc.
-CERTH ITI, Greece
-CHUV, Switzerland
 CIBM, Switzerland
-CSIRO
-CSIRO and QUT
-CSIRO, QUT
-CSIRO’s Data61
 Christian Doppler Laboratory for Embedded Machine Learning
 Clova AI Research, NAVER Corp
 Clova AI, NAVER Corp.
@@ -86,11 +78,7 @@ Dermatopathology Northwest
 Device CoRo, Amazon
 Difine, Seongnam, South Korea
 E.SUN Financial Holding Co., Ltd.
-ENS Paris-Saclay, Centre Borelli
-ETS Montreal
-ETS Montr´eal, Canada
 Eyecan.ai
-FAU Erlangen-Nürnberg, Erlangen, Germany
 FGBS, Amazon.com, 2121 7th Ave, Seattle, WA, USA
 FJIRSM1
 FJIRSM1, FJOEL2
@@ -134,9 +122,6 @@ Hyperfine Research
 IBM Japan
 IBM Research AI
 IDEAS NCBR, Warsaw, Poland
-IISER Bhopal, India
-IISER Mohali
-IMSE-CNM, Sevilla, Spain
 IMT Atlantique, Avenue du Technopôle, Plouzané, France
 IRCAD, Strasbourg, France
 Independent Researcher
@@ -144,8 +129,6 @@ Innopeak Technology Inc.
 Intel Corporation
 Intel Labs
 Intel Labs, USA
-KTH, Sweden
-KTH, Sweden and Silo AI, Sweden
 KYOCERA Corporation
 Kakao Brain
 Kakao Enterprise, Pangyo, Gyeonggi-do, South Korea
@@ -155,7 +138,6 @@ Kitware, NY & NC, USA
 Kuaishou Technology
 LG AI Research
 LINE Corporation, Japan
-LIVIA, ETS Montr´eal, Canada
 Letsur Inc., Seoul, Republic of Korea
 Lunit Inc.
 MVTec Software GmbH

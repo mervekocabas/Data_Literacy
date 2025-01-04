@@ -1,6 +1,5 @@
 *Work done while at Amazon
 1IoV team, Paris Research Center, Huawei Technologies France
-A&F, CSIRO, Australia
 ASUS Intelligent Cloud Services, Taiwan, R.O.C.
 ATERMES company, France
 Adobe
@@ -28,13 +27,9 @@ ByteDance AI Lab
 ByteDance Inc.
 C4-Cloud Computing Competence Center
 CDAC Noida
-CHUV, Switzerland
 CIBM, Switzerland
 CIEM-CONICET, Av. Medina Allende s/n, X5000HUA Córdoba, Argentina
 CNRS@CREATE LTD, Singapore
-CSIRO A&F
-CSIRO A&F, Australian Plant Phenomics Facility
-CSIRO Data61
 Carl Zeiss AG, DE
 Carl Zeiss Meditec AG, DE
 Cognitive Computing Lab, Baidu Research
@@ -66,11 +61,8 @@ Huawei
 Huawei Noah’s Ark Lab, London, UK
 Huawei Noah’s Ark Lab, London, United Kingdom
 Humatics Srl, Verona, Italy
-IISER Pune, India
 IMA VIS srl, via Trento 5/2, 16145-IT Genova,Italy
-IMT Atlantique, Lab-STICC, team RAMBO, UMR CNRS 6285, F-29328, Brest, France
 IRT Saint-Exupery
-ISI Kolkata
 Infineon Technologies AG, Munich, Germany
 Inselspital Bern, CH
 Kitware, Inc.
@@ -119,7 +111,6 @@ Qualcomm Technologies, Inc.
 Retail Business Services, Amazon
 Robert Bosch GmbH, Computer Vision Research Lab
 Robert Bosch GmbH, Germany
-SLU, Sweden
 SLiQ Labs, Sportlogiq, Montreal, QC., Canada
 SM@RTS : Laboratory of Signals, systeMs, aRtificial Intelligence and neTworkS
 SRC Inc.
@@ -136,7 +127,6 @@ Silo AI, Sweden
 Spectacular AI, Helsinki, Finland
 Stellantis, Opel Automobile GmbH, Germany
 TIB – Leibniz Information Centre for Science and Technology, Hannover, Germany
-TTI-Chicago
 Tencent Hippocrates Research Lab
 TensorTour Inc.
 Toyota Motor Europe

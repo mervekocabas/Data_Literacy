@@ -265,7 +265,8 @@ def extract_affiliations(json_file_path):
         "TTI-Chicago", "AIIMS, New Delhi, India", "BITS Pilani", "CSIRO", "CHUV, Switzerland", "CERTH ITI, Greece", 
         "FAU Erlangen-Nürnberg, Erlangen, Germany", "ENS Paris-Saclay, Centre Borelli", "ETS Montreal", "ETS Montr´eal, Canada",
         "IISER", "IMSE-CNM", "KTH, Sweden", "CEDRIC (EA4329)", "BUET, Bangladesh", "KIT, Karlsruhe", "ISTI-CNR Pisa, Italy",
-        "MBZUAI, UAE", "NIT Srinagar", "U. of Bern", "U. of Haifa", "UFMG, Brazil", "UNC Charlotte", "UQ, Australia", "UST, Republic of Korea"
+        "MBZUAI, UAE", "NIT Srinagar", "U. of Bern", "U. of Haifa", "UFMG, Brazil", "UNC Charlotte", "UQ, Australia", "UST, Republic of Korea",
+        "UNC-Chapel Hill"
     ]
 
     def is_university(affiliation):
@@ -348,7 +349,8 @@ def is_university(affiliation):
         "TTI-Chicago", "AIIMS, New Delhi, India", "BITS Pilani", "CSIRO", "CHUV, Switzerland", "CERTH ITI, Greece", 
         "FAU Erlangen-Nürnberg, Erlangen, Germany", "ENS Paris-Saclay, Centre Borelli", "ETS Montreal", "ETS Montr´eal, Canada",
         "IISER", "IMSE-CNM", "KTH, Sweden", "CEDRIC (EA4329)", "BUET, Bangladesh", "KIT, Karlsruhe", "ISTI-CNR Pisa, Italy",
-        "MBZUAI, UAE", "NIT Srinagar", "U. of Bern", "U. of Haifa", "UFMG, Brazil", "UNC Charlotte", "UQ, Australia", "UST, Republic of Korea"
+        "MBZUAI, UAE", "NIT Srinagar", "U. of Bern", "U. of Haifa", "UFMG, Brazil", "UNC Charlotte", "UQ, Australia", "UST, Republic of Korea",
+        "UNC-Chapel Hill"
     ]
 
     for keyword in university_keywords:
