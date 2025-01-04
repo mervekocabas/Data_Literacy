@@ -7,14 +7,20 @@ from bs4 import BeautifulSoup
 # Map of company names to their countries
 company_country_map = {
     "USA": [
-        "Amazon",
-        "AWS",
+        "Amazon Go",
+        "Amazon Rekognition",
+        "Amazon Web Services (AWS)",
         "Air Force Research Laboratory",
         "ASAPP Inc.",
         "Butterfly Network",
-        "Facebook",
-        "Google",
-        "Intel",
+        "Facebook AI Research",
+        "Facebook Reality Labs",
+        "Google AI",
+        "Google Brain",
+        "Google Cloud",
+        "Intel Labs",
+        "Microsoft Research",
+        "Microsoft Cloud & AI",
         "Microsoft",
         "OpenAI",
         "JD Digits",
@@ -23,7 +29,39 @@ company_country_map = {
         "Magic Leap",
         "Megvii Research USA",
         "ByteDance AI Lab",
-        "JD AI Research, Mountain View, USA"
+        "JD AI Research, Mountain View, USA",
+        "AI Platform, Ytech Seattle AI Lab, FeDA Lab, Kwai Inc., Seattle, USA",
+        "AI Labs, DiDi Chuxing",
+        "Currently at Amazon AWS",
+        "Dataminr Inc., New York, NY",
+        "Facebook Reality Labs, Redmond, USA",
+        "Facebook Reality Labs, Sausalito, USA",
+        "Facebook Inc.",
+        "Hewlett Packard Labs",
+        "HRL Laboratories, LLC., Malibu, CA, USA",
+        "IBM Research AI, Cambridge",
+        "Intel Labs",
+        "Interactive and Analytics Lab, Palo Alto Research Center, Palo Alto, CA",
+        "Kitware Inc., Clifton Park, NY",
+        "Mstar Technologies, Hangzhou, China",
+        "Pinterest, USA",
+        "Qualcomm AI Research",
+        "Rimac Automobili, Sveta Nedelja, Croatia",
+        "Scale AI",
+        "Silicon Valley Research Center, JD.com, United States",
+        "UNC-Charlotte, NC28223, USA",
+        "X, The Moonshot Factory, Mountain View, USA",
+        "AIoli Labs, USA",
+        "Applied Research Center (ARC), Tencent PCG, USA",
+        "Argo AI, USA",
+        "Arm Inc., San Jose, CA, USA",
+        "Bell Labs, NJ USA",
+        "Cognitive Computing Lab, Baidu Research, Bellevue, USA",
+        "Cloud+AI, Microsoft, United States",
+        "JD Digits, Mountain View, CA, USA",
+        "Kitware Inc., New York, USA",
+        "Retrocausal, Inc., Seattle, WA",
+        "Snap Inc., Santa Monica, CA"
     ],
     "China": [
         "Huawei Noah's Ark Lab",
@@ -37,35 +75,131 @@ company_country_map = {
         "Megvii (Face++)",
         "Shenzhen Zhuke Innovation Technology",
         "Shenzhen Malong AI Research Center",
-        "JD AI Research, Beijing, China"
+        "JD AI Research, Beijing, China",
+        "Alibaba Group, Hangzhou, China",
+        "Alibaba Inc.",
+        "Baidu Research(USA), 1195 Baudeaux Dr, Sunnyvale, CA, USA",
+        "Clova AI Research, NAVER Corp.",
+        "Huawei Technologies Co., Ltd.",
+        "Huawei Technologies Co., Ltd., China",
+        "Huawei Technologies, Beijing, China",
+        "Huawei Technologies, Zurich Research Center",
+        "Huawei Technologies, Shenzhen, China",
+        "Xiaomi AI Lab, Beijing, China",
+        "Xilinx Inc., Beijing, China",
+        "Megvii Research",
+        "JD AI Research, Beijing, China",
+        "Farsee2 Technology Ltd",
+        "ByteDance Intelligent Creation Lab",
+        "Huawei Cloud & AI",
+        "Huawei Inc.",
+        "Tencent Blade Team",
+        "Tencent Medical AI Lab, Beijing, China",
+        "Tencent Jarvis Lab, Shenzhen, China",
+        "Tencent PCG",
+        "Ping An Technology, Shenzhen, China",
+        "SenseTime Research, Shanghai AI Laboratory",
+        "Shanghai AI Laboratory",
+        "Shanghai Center for Brain Science and Brain-inspired Technology",
+        "Shanghai Em-Data Technology Co., Ltd.",
+        "Shenzhen People’s Hospital, China",
+        "Tetras.AI, Shanghai AI Laboratory",
+        "XForwardAI",
+        "Xilinx Inc., Beijing, China",
+        "ZhiJiang Laboratory"
     ],
     "UK": [
         "Anyvision Research Team, UK",
         "Tencent AI Lab, Seattle",
-        "Samsung AI Center, Cambridge, UK"
+        "Samsung AI Center, Cambridge, UK",
+        "FaceSoft.io, London, UK",
+        "Yandex, Russia",
+        "Zenith Ai, UK",
+        "SLAMCore Ltd., UK"
     ],
     "Germany": [
         "Bosch Center for Artificial Intelligence (BCAI)",
-        "Siemens AG"
+        "Siemens AG",
+        "Amazon, Tübingen",
+        "ADC Automotive Distance Control Systems GmbH, Continental, Germany",
+        "Google Research, Perception Team",
+        "Google Research, Brain Team",
+        "Google Research, Mountain View, USA",
+        "Google LLC",
+        "Spleenlab GmbH, Saalburg-Ebersdorf, Germany",
+        "Valeo Schalter und Sensoren GmbH, Kronach, Germany",
+        "Valeo.ai"
     ],
     "France": [
         "Prophesee, Paris",
-        "Technicolor, Cesson Sévigné"
+        "Technicolor, Cesson Sévigné",
+        "Cerema, Équipe-projet STI, 10 rue Bernard Palissy, F-63017 Clermont-Ferrand, France",
+        "EDF R&D, Chatou, France",
+        "IDE MIA, France",
+        "Orange, Cesson-Sévigné, France"
     ],
     "South Korea": [
         "Lunit Inc.",
-        "Samsung AI Center, Seoul"
+        "Samsung AI Center, Seoul",
+        "A&B Center, LG Electronics, Seoul, South Korea",
+        "Kakao Brain",
+        "Kakao Corp.",
+        "Kakao Enterprise",
+        "Agency for Defense Development (ADD), Daejeon, Korea",
+        "ETRI, South Korea",
+        "SKT Vision AI Labs/T-Brain X, Seoul, Korea",
+        "INEEJI, South Korea",
+        "Naver Corporation, Korea"
     ],
     "Japan": [
         "NVIDIA, Tokyo, Japan",
-        "Sony Corporation, Tokyo"
+        "Sony Corporation, Tokyo",
+        "Panasonic Technology Division, Japan",
+        "NTT Communication Science Laboratories, NTT Corporation"
     ],
     "Canada": [
         "Horizon Robotics, Inc.",
         "Huawei Technologies, Markham, ON",
         "Laboratoire d’imagerie, ÉTS Montreal",
-        "Huron Digital Pathology, St. Jacobs, ON",
-        "Miovision Technologies Inc., Kitchener, Canada"
+        "Miovision Technologies Inc., Kitchener, Canada",
+        "Huawei Noah’s Ark Lab, Mila Montréal",
+        "Huawei Noah’s Ark Lab, INSA Lyon",
+        "Microsoft Research, Toronto, Canada",
+        "Vancouver General Hospital, Canada",
+        "Samsung AI Centre Toronto",
+        "Toronto AI Lab, LG Electronics Canada"
+    ],
+    "Taiwan": [
+        "MediaTek Inc., Hsinchu, Taiwan",
+        "ASUS Intelligent Cloud Services, Taiwan"
+    ],
+    "Russia": [
+        "PicsArt Inc.*, Moscow, Russian Federation",
+        "Yandex, Russia"
+    ],
+    "Israel": [
+        "Habana-Labs, Caesarea, Israel",
+        "Amazon Rekognition, Israel",
+        "Rafael - Advanced Defense Systems Ltd., Israel"
+    ],
+    "Australia": [
+        "Data61-CSIRO, Australia",
+        "FaceSoft.io, London, UK"
+    ],
+    "Switzerland": [
+        "NNAISENSE, Switzerland",
+        "Microsoft Research Artificial Intelligence and Mixed Reality Lab, Zürich, Switzerland"
+    ],
+    "Spain": [
+        "Wide-Eyes Technologies, Barcelona, Spain",
+        "Kognia Sports Intelligence, Spain"
+    ],
+    "Croatia": [
+        "Rimac Automobili, Sveta Nedelja, Croatia"
+    ],
+    "Singapore": [
+        "Delta Research Center, Singapore",
+        "Salesforce Research Asia, Singapore"
     ]
 }
 
