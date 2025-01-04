@@ -158,9 +158,9 @@ def process_dataset(json_file_path, csv_file_path):
         entry["company_affiliation"] = company_percentage
 
         if "oa" in entry and entry["oa"]:
-            entry["abstract"] = scrape_abstract(entry["site"])
-        elif "site" in entry and entry["site"]:
             entry["abstract"] = scrape_abstract(entry["oa"])
+        elif "site" in entry and entry["site"]:
+            entry["abstract"] = scrape_abstract(entry["site"])
         else:
             entry["abstract"] = ""
 
@@ -182,9 +182,9 @@ def main():
     """
     # Change the file paths only
     # If you want the affiliation txt close the process the dataset part
-    json_file_path = "/Users/merve/Desktop/Data_Literacy/cvpr/cvpr2020.json"
-    csv_file_path = "/Users/merve/Desktop/Data_Literacy/cvpr/cvpr2020_with_affiliations.csv"
-    check_affiliation_path = "/Users/merve/Desktop/Data_Literacy/cvpr/non_university_affiliations_2020.txt"
+    json_file_path = "/home/stud125/project/Data_Literacy/cvpr/cvpr2023.json"
+    csv_file_path = "/home/stud125/project/Data_Literacy/cvpr/cvpr2023_with_affiliations.csv"
+    check_affiliation_path = "/home/stud125/project/Data_Literacy/cvpr/non_university_affiliations_2023.txt"
     
     # Extract non-university affiliations
     non_university_affiliations = extract_affiliations(json_file_path)
@@ -195,7 +195,7 @@ def main():
             output_file.write(f"{aff}\n")
         
     # Process the dataset
-    # process_dataset(json_file_path, csv_file_path)
+    process_dataset(json_file_path, csv_file_path)
 
 # Entry point of the script
 if __name__ == "__main__":
