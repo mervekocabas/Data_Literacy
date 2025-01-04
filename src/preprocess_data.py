@@ -148,6 +148,7 @@ company_country_map = {
     "Sony Corporation, Tokyo": "Japan",
     "Panasonic Technology Division, Japan": "Japan",
     "NTT Communication Science Laboratories, NTT Corporation": "Japan",
+    "AMD Japan Ltd": "Japan",
     
     "Horizon Robotics, Inc.": "Canada",
     "Huawei Technologies, Markham, ON": "Canada",
@@ -259,7 +260,12 @@ def extract_affiliations(json_file_path):
         "Laboratory for Physical Sciences, Booz Allen Hamilton, u.m.b.c.",
         "Laboratory for Physical Sciences, u.m.b.c.","MSRA","MUST, Macau, China",
         "NTT Media Intelligence Laboratories","NTT Service Evolution Laboratories",
-        "PARC","Peng Cheng Laboratory, China", "Salesforce Research Asia, Singapore","Skoltech"
+        "PARC","Peng Cheng Laboratory, China", "Salesforce Research Asia, Singapore","Skoltech", "Cambridge",  "NTNU", "NSUT", "IISR Pune",
+        "IMT Atlantique, Lab-STICC, team RAMBO, UMR CNRS 6285, F-29328, Brest, France", "ISI Kolkata", "SLU, Sweden",
+        "TTI-Chicago", "AIIMS, New Delhi, India", "BITS Pilani", "CSIRO", "CHUV, Switzerland", "CERTH ITI, Greece", 
+        "FAU Erlangen-Nürnberg, Erlangen, Germany", "ENS Paris-Saclay, Centre Borelli", "ETS Montreal", "ETS Montr´eal, Canada",
+        "IISER", "IMSE-CNM", "KTH, Sweden", "CEDRIC (EA4329)", "BUET, Bangladesh", "KIT, Karlsruhe", "ISTI-CNR Pisa, Italy",
+        "MBZUAI, UAE", "NIT Srinagar", "U. of Bern", "U. of Haifa", "UFMG, Brazil", "UNC Charlotte", "UQ, Australia", "UST, Republic of Korea"
     ]
 
     def is_university(affiliation):
@@ -337,7 +343,12 @@ def is_university(affiliation):
         "Laboratory for Physical Sciences, Booz Allen Hamilton, u.m.b.c.",
         "Laboratory for Physical Sciences, u.m.b.c.","MSRA","MUST, Macau, China",
         "NTT Media Intelligence Laboratories","NTT Service Evolution Laboratories",
-        "PARC","Peng Cheng Laboratory, China", "Salesforce Research Asia, Singapore","Skoltech"
+        "PARC","Peng Cheng Laboratory, China", "Salesforce Research Asia, Singapore","Skoltech", "Cambridge",  "NTNU", "NSUT", "IISR Pune",
+        "IMT Atlantique, Lab-STICC, team RAMBO, UMR CNRS 6285, F-29328, Brest, France", "ISI Kolkata", "SLU, Sweden",
+        "TTI-Chicago", "AIIMS, New Delhi, India", "BITS Pilani", "CSIRO", "CHUV, Switzerland", "CERTH ITI, Greece", 
+        "FAU Erlangen-Nürnberg, Erlangen, Germany", "ENS Paris-Saclay, Centre Borelli", "ETS Montreal", "ETS Montr´eal, Canada",
+        "IISER", "IMSE-CNM", "KTH, Sweden", "CEDRIC (EA4329)", "BUET, Bangladesh", "KIT, Karlsruhe", "ISTI-CNR Pisa, Italy",
+        "MBZUAI, UAE", "NIT Srinagar", "U. of Bern", "U. of Haifa", "UFMG, Brazil", "UNC Charlotte", "UQ, Australia", "UST, Republic of Korea"
     ]
 
     for keyword in university_keywords:
@@ -469,7 +480,7 @@ def process_dataset(json_file_path, csv_file_path):
         processed_data.append(filtered_entry)
 
     # Write the processed data to a CSV
-    with open(csv_file_path, "w", newline="") as csv_file:
+    with open(csv_file_path, "w", newline="", encoding="utf-8") as csv_file:
         writer = csv.DictWriter(csv_file, fieldnames=headers)
         writer.writeheader()  # Write the header row
         writer.writerows(processed_data)  # Write the data rows
@@ -483,9 +494,9 @@ def main():
     """
     # Change the file paths only
     # If you want the affiliation txt close the process the dataset part
-    json_file_path = "/home/stud125/project/Data_Literacy/cvpr/cvpr2023.json"
-    csv_file_path = "/home/stud125/project/Data_Literacy/cvpr/cvpr2023_with_affiliations.csv"
-    check_affiliation_path = "/home/stud125/project/Data_Literacy/cvpr/non_university_affiliations_2023.txt"
+    json_file_path = "wacv/wacv2020.json"
+    csv_file_path = "wacv/wacv2020_with_affiliations.csv"
+    check_affiliation_path = "wacv/non_university_affiliations_2020.txt"
     
     # Extract non-university affiliations
     non_university_affiliations = extract_affiliations(json_file_path)
