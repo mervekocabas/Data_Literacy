@@ -6,17 +6,67 @@ from bs4 import BeautifulSoup
 
 # Map of company names to their countries
 company_country_map = {
-    "Adobe": "USA",
-    "Amazon": "USA",
-    "AWS": "USA",
-    "Facebook": "USA",
-    "Google": "USA",
-    "Intel": "USA",
-    "Microsoft": "USA",
-    "OpenAI": "USA",
-    "JD Digits": "USA",
-    "JD AI": "USA",
-    
+    "USA": [
+        "Amazon",
+        "AWS",
+        "Air Force Research Laboratory",
+        "ASAPP Inc.",
+        "Butterfly Network",
+        "Facebook",
+        "Google",
+        "Intel",
+        "Microsoft",
+        "OpenAI",
+        "JD Digits",
+        "Kwai Seattle AI Lab",
+        "MarkableAI",
+        "Magic Leap",
+        "Megvii Research USA",
+        "ByteDance AI Lab",
+        "JD AI Research, Mountain View, USA"
+    ],
+    "China": [
+        "Huawei Noah's Ark Lab",
+        "Alibaba Group",
+        "Baidu Inc.",
+        "ByteDance AI Lab",
+        "Tencent AI Lab",
+        "DJI",
+        "SenseTime",
+        "Horizon Robotics",
+        "Megvii (Face++)",
+        "Shenzhen Zhuke Innovation Technology",
+        "Shenzhen Malong AI Research Center",
+        "JD AI Research, Beijing, China"
+    ],
+    "UK": [
+        "Anyvision Research Team, UK",
+        "Tencent AI Lab, Seattle",
+        "Samsung AI Center, Cambridge, UK"
+    ],
+    "Germany": [
+        "Bosch Center for Artificial Intelligence (BCAI)",
+        "Siemens AG"
+    ],
+    "France": [
+        "Prophesee, Paris",
+        "Technicolor, Cesson Sévigné"
+    ],
+    "South Korea": [
+        "Lunit Inc.",
+        "Samsung AI Center, Seoul"
+    ],
+    "Japan": [
+        "NVIDIA, Tokyo, Japan",
+        "Sony Corporation, Tokyo"
+    ],
+    "Canada": [
+        "Horizon Robotics, Inc.",
+        "Huawei Technologies, Markham, ON",
+        "Laboratoire d’imagerie, ÉTS Montreal",
+        "Huron Digital Pathology, St. Jacobs, ON",
+        "Miovision Technologies Inc., Kitchener, Canada"
+    ]
 }
 
 # Function to determine company country based on keywords in the affiliation
