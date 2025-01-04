@@ -157,9 +157,9 @@ def process_dataset(json_file_path, csv_file_path):
         entry["university_affiliation"] = university_percentage
         entry["company_affiliation"] = company_percentage
 
-        if "site" in entry and entry["site"]:
+        if "oa" in entry and entry["oa"]:
             entry["abstract"] = scrape_abstract(entry["site"])
-        elif "oa" in entry and entry["oa"]:
+        elif "site" in entry and entry["site"]:
             entry["abstract"] = scrape_abstract(entry["oa"])
         else:
             entry["abstract"] = ""
