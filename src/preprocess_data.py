@@ -4,6 +4,63 @@ import csv
 import requests
 from bs4 import BeautifulSoup
 
+# Get university keywords
+def get_university_keywords():
+    university_keywords = [
+        "university", "college", "institute", "polytechnic", "department",
+        "institut", "school", "iit", "academy", "eth", "epfl", "uc", "kaust", 
+        "inria", "mit", "mpii saarland", "tu kaiserslautern",
+        "dfki kaiserslautern", "upm", "mta sztaki", "cas", "caltech", 
+        "cu boulder", "ctu", "école polytechnique fédérale de lausanne", 
+        "école de technologie supérieure", "lausanne", "usc", "ut austin",
+        "tu", "mpi", "kaist", "ku leuven", "hkust", "georgia tech", "gist",
+        "universaity", "a&m", "cuhk", "postech", "cornell tech", "uestc",
+        "technion", "univ", "umass", "unist", "unsv", "uestc", "vgg",
+        "dlr", "riken", "a*star", "ihpc", "national", "fondazione bruno kessler",
+        "cispa", "children’s hospital of philadelphia", "minds and machines",
+        "ist austria", "paristech", "psl", "virginia tech", "nus", "iisc bangalore",
+        "uts", "saarland informatics campus", "state key lab of intelligent technologies and systems",
+        "zhejiang lab", "nyu", "bupt", "xjtlu", "ustb", "unsw", "iiai", "nasa", "fraunhofer itwm",
+        "cea list", "lix", "rpi", "peng cheng laboratory", "computer vision center",
+        "uenf", "memorial sloan kettering cancer center", "maple", "zhejiang provincial key",
+        "multimedia group",
+        "university", "college", "institute", "polytechnic", "department",
+        "institut", "school", "iit", "academy", "eth", "epfl", "uc", "kaust", "inria", 
+        "universität", "université", "universidade", "universidad", "università", "universiteit",
+        "carnegie mellon", "universty", "univeristy", "universitat", "cornell tech", "ecole", "enpc",
+        "ensta", "univrsity", "ctu", "cuhk", "cmu", "Caltech", "CentraleSupelec", "Georgia Tech",
+        "hkbu", "hkust", "hnu", "hust", "Hochschule", "Universiry", "Universit", "Unviersity",
+        "IBENS", "ICT", "Academia", "INSA", "Illinois Tech", "LMU", "MIT", "NTU", "Oxford", "Univerisity",
+        "Politecnico", "Polytech", "SKKU", "SFU", "Stanford", "TU", "UBC", "Télécom Paris", "UESTC", "UMD",
+        "UPenn", "USC", "UTokyo", "UW", "UW-Madison", "UZH", "UCL", "UvA", "Uviversité", "UW-Madison",
+        "UMass", "UT Austin", "Virginia Tech", "Yale", "Universtiy", "École",
+        "ANU", "Data61-CSIRO", "CIFAR AI Chair", "CSE, HBKU, Doha, Qatar", "Cornell", 
+        "CryoEM Center, SUSTech", "Barcelona Supercomputing Center, Spain", 
+        "Centre Borelli, ENS Paris-Saclay", "Data61-CSIRO", "Data61/CSIRO", 
+        "Evelina London Children’s Hospital", "Fondazione Pascale", "Johns Hopkins Medicine", 
+        "LIRIS, INSA - École Centrale, Lyon, UMR CNRS 5205, France", 
+        "LIRIS, INSA-Lyon, UMR CNRS 5205, France", "Robarts Research, Canada", 
+        "SIMTech, Agency for Science, Technology and Research", "SUNY Buffalo", 
+        "UBC, Vancouver, Canada", "USTC", "UNC Chapel Hill", "VISTEC, Thailand", 
+        "U.C. Santa Barbara", 
+        "Australian Centre for Robotic Vision","Australian Centre of Excellence for Robotic Vision, Australia",
+        "CMLA, ENS Cachan","CVC, UAB","Data61 CSIRO","Data61, CSIRO",
+        "DFKI - German Research Center for Artificial Intelligence","ETS Montreal, Canada",
+        "FORTH","KIST","LAAS-CNRS","LIGM, UPEM","Laboratory for Physical Sciences",
+        "Laboratory for Physical Sciences, Booz Allen Hamilton, u.m.b.c.",
+        "Laboratory for Physical Sciences, u.m.b.c.","MSRA","MUST, Macau, China",
+        "NTT Media Intelligence Laboratories","NTT Service Evolution Laboratories",
+        "PARC","Peng Cheng Laboratory, China", "Salesforce Research Asia, Singapore","Skoltech", "Cambridge",  "NTNU", "NSUT", "IISR Pune",
+        "IMT Atlantique, Lab-STICC, team RAMBO, UMR CNRS 6285, F-29328, Brest, France", "ISI Kolkata", "SLU, Sweden",
+        "TTI-Chicago", "AIIMS, New Delhi, India", "BITS Pilani", "CSIRO", "CHUV, Switzerland", "CERTH ITI, Greece", 
+        "FAU Erlangen-Nürnberg, Erlangen, Germany", "ENS Paris-Saclay, Centre Borelli", "ETS Montreal", "ETS Montr´eal, Canada",
+        "IISER", "IMSE-CNM", "KTH, Sweden", "CEDRIC (EA4329)", "BUET, Bangladesh", "KIT, Karlsruhe", "ISTI-CNR Pisa, Italy",
+        "MBZUAI, UAE", "NIT Srinagar", "U. of Bern", "U. of Haifa", "UFMG, Brazil", "UNC Charlotte", "UQ, Australia", "UST, Republic of Korea",
+        "UNC-Chapel Hill", "BUAA", "ECNU", "HKU", "Harvard", "KIT", "KULeuven", "Unversity", "Scuola Superiore", "Unibersity", "sysu", "AIIMS",
+        "asu", "buaa", "hku", "iisc", "mila", "isti", "Northwestern", "shi", "USYD", "UT Dallas"
+    ]
+    return university_keywords
+
 # Map of company names to their countries
 company_country_map = {
     "Amazon Go": "USA",
@@ -216,58 +273,7 @@ def extract_affiliations(json_file_path):
     Returns:
         list: Unique non-university affiliations.
     """
-    university_keywords = [
-        "university", "college", "institute", "polytechnic", "department",
-        "institut", "school", "iit", "academy", "eth", "epfl", "uc", "kaust", 
-        "inria", "mit", "mpii saarland", "tu kaiserslautern",
-        "dfki kaiserslautern", "upm", "mta sztaki", "cas", "caltech", 
-        "cu boulder", "ctu", "école polytechnique fédérale de lausanne", 
-        "école de technologie supérieure", "lausanne", "usc", "ut austin",
-        "tu", "mpi", "kaist", "ku leuven", "hkust", "georgia tech", "gist",
-        "universaity", "a&m", "cuhk", "postech", "cornell tech", "uestc",
-        "technion", "univ", "umass", "unist", "unsv", "uestc", "vgg",
-        "dlr", "riken", "a*star", "ihpc", "national", "fondazione bruno kessler",
-        "cispa", "children’s hospital of philadelphia", "minds and machines",
-        "ist austria", "paristech", "psl", "virginia tech", "nus", "iisc bangalore",
-        "uts", "saarland informatics campus", "state key lab of intelligent technologies and systems",
-        "zhejiang lab", "nyu", "bupt", "xjtlu", "ustb", "unsw", "iiai", "nasa", "fraunhofer itwm",
-        "cea list", "lix", "rpi", "peng cheng laboratory", "computer vision center",
-        "uenf", "memorial sloan kettering cancer center", "maple", "zhejiang provincial key",
-        "multimedia group",
-        "university", "college", "institute", "polytechnic", "department",
-        "institut", "school", "iit", "academy", "eth", "epfl", "uc", "kaust", "inria", 
-        "universität", "université", "universidade", "universidad", "università", "universiteit",
-        "carnegie mellon", "universty", "univeristy", "universitat", "cornell tech", "ecole", "enpc",
-        "ensta", "univrsity", "ctu", "cuhk", "cmu", "Caltech", "CentraleSupelec", "Georgia Tech",
-        "hkbu", "hkust", "hnu", "hust", "Hochschule", "Universiry", "Universit", "Unviersity",
-        "IBENS", "ICT", "Academia", "INSA", "Illinois Tech", "LMU", "MIT", "NTU", "Oxford", "Univerisity",
-        "Politecnico", "Polytech", "SKKU", "SFU", "Stanford", "TU", "UBC", "Télécom Paris", "UESTC", "UMD",
-        "UPenn", "USC", "UTokyo", "UW", "UW-Madison", "UZH", "UCL", "UvA", "Uviversité", "UW-Madison",
-        "UMass", "UT Austin", "Virginia Tech", "Yale", "Universtiy", "École",
-        "ANU", "Data61-CSIRO", "CIFAR AI Chair", "CSE, HBKU, Doha, Qatar", "Cornell", 
-        "CryoEM Center, SUSTech", "Barcelona Supercomputing Center, Spain", 
-        "Centre Borelli, ENS Paris-Saclay", "Data61-CSIRO", "Data61/CSIRO", 
-        "Evelina London Children’s Hospital", "Fondazione Pascale", "Johns Hopkins Medicine", 
-        "LIRIS, INSA - École Centrale, Lyon, UMR CNRS 5205, France", 
-        "LIRIS, INSA-Lyon, UMR CNRS 5205, France", "Robarts Research, Canada", 
-        "SIMTech, Agency for Science, Technology and Research", "SUNY Buffalo", 
-        "UBC, Vancouver, Canada", "USTC", "UNC Chapel Hill", "VISTEC, Thailand", 
-        "U.C. Santa Barbara", 
-        "Australian Centre for Robotic Vision","Australian Centre of Excellence for Robotic Vision, Australia",
-        "CMLA, ENS Cachan","CVC, UAB","Data61 CSIRO","Data61, CSIRO",
-        "DFKI - German Research Center for Artificial Intelligence","ETS Montreal, Canada",
-        "FORTH","KIST","LAAS-CNRS","LIGM, UPEM","Laboratory for Physical Sciences",
-        "Laboratory for Physical Sciences, Booz Allen Hamilton, u.m.b.c.",
-        "Laboratory for Physical Sciences, u.m.b.c.","MSRA","MUST, Macau, China",
-        "NTT Media Intelligence Laboratories","NTT Service Evolution Laboratories",
-        "PARC","Peng Cheng Laboratory, China", "Salesforce Research Asia, Singapore","Skoltech", "Cambridge",  "NTNU", "NSUT", "IISR Pune",
-        "IMT Atlantique, Lab-STICC, team RAMBO, UMR CNRS 6285, F-29328, Brest, France", "ISI Kolkata", "SLU, Sweden",
-        "TTI-Chicago", "AIIMS, New Delhi, India", "BITS Pilani", "CSIRO", "CHUV, Switzerland", "CERTH ITI, Greece", 
-        "FAU Erlangen-Nürnberg, Erlangen, Germany", "ENS Paris-Saclay, Centre Borelli", "ETS Montreal", "ETS Montr´eal, Canada",
-        "IISER", "IMSE-CNM", "KTH, Sweden", "CEDRIC (EA4329)", "BUET, Bangladesh", "KIT, Karlsruhe", "ISTI-CNR Pisa, Italy",
-        "MBZUAI, UAE", "NIT Srinagar", "U. of Bern", "U. of Haifa", "UFMG, Brazil", "UNC Charlotte", "UQ, Australia", "UST, Republic of Korea",
-        "UNC-Chapel Hill"
-    ]
+    university_keywords = get_university_keywords()
 
     def is_university(affiliation):
         """Check if an affiliation contains university-related keywords."""
@@ -300,58 +306,7 @@ def is_university(affiliation):
     Returns:
         bool: True if the affiliation is likely a university, False otherwise.
     """
-    university_keywords = [
-        "university", "college", "institute", "polytechnic", "department",
-        "institut", "school", "iit", "academy", "eth", "epfl", "uc", "kaust", 
-        "inria", "mit", "mpii saarland", "tu kaiserslautern",
-        "dfki kaiserslautern", "upm", "mta sztaki", "cas", "caltech", 
-        "cu boulder", "ctu", "école polytechnique fédérale de lausanne", 
-        "école de technologie supérieure", "lausanne", "usc", "ut austin",
-        "tu", "mpi", "kaist", "ku leuven", "hkust", "georgia tech", "gist",
-        "universaity", "a&m", "cuhk", "postech", "cornell tech", "uestc",
-        "technion", "univ", "umass", "unist", "unsv", "uestc", "vgg",
-        "dlr", "riken", "a*star", "ihpc", "national", "fondazione bruno kessler",
-        "cispa", "children’s hospital of philadelphia", "minds and machines",
-        "ist austria", "paristech", "psl", "virginia tech", "nus", "iisc bangalore",
-        "uts", "saarland informatics campus", "state key lab of intelligent technologies and systems",
-        "zhejiang lab", "nyu", "bupt", "xjtlu", "ustb", "unsw", "iiai", "nasa", "fraunhofer itwm",
-        "cea list", "lix", "rpi", "peng cheng laboratory", "computer vision center",
-        "uenf", "memorial sloan kettering cancer center", "maple", "zhejiang provincial key",
-        "multimedia group",
-        "university", "college", "institute", "polytechnic", "department",
-        "institut", "school", "iit", "academy", "eth", "epfl", "uc", "kaust", "inria", 
-        "universität", "université", "universidade", "universidad", "università", "universiteit",
-        "carnegie mellon", "universty", "univeristy", "universitat", "cornell tech", "ecole", "enpc",
-        "ensta", "univrsity", "ctu", "cuhk", "cmu", "Caltech", "CentraleSupelec", "Georgia Tech",
-        "hkbu", "hkust", "hnu", "hust", "Hochschule", "Universiry", "Universit", "Unviersity",
-        "IBENS", "ICT", "Academia", "INSA", "Illinois Tech", "LMU", "MIT", "NTU", "Oxford", "Univerisity",
-        "Politecnico", "Polytech", "SKKU", "SFU", "Stanford", "TU", "UBC", "Télécom Paris", "UESTC", "UMD",
-        "UPenn", "USC", "UTokyo", "UW", "UW-Madison", "UZH", "UCL", "UvA", "Uviversité", "UW-Madison",
-        "UMass", "UT Austin", "Virginia Tech", "Yale", "Universtiy", "École",
-        "ANU", "Data61-CSIRO", "CIFAR AI Chair", "CSE, HBKU, Doha, Qatar", "Cornell", 
-        "CryoEM Center, SUSTech", "Barcelona Supercomputing Center, Spain", 
-        "Centre Borelli, ENS Paris-Saclay", "Data61-CSIRO", "Data61/CSIRO", 
-        "Evelina London Children’s Hospital", "Fondazione Pascale", "Johns Hopkins Medicine", 
-        "LIRIS, INSA - École Centrale, Lyon, UMR CNRS 5205, France", 
-        "LIRIS, INSA-Lyon, UMR CNRS 5205, France", "Robarts Research, Canada", 
-        "SIMTech, Agency for Science, Technology and Research", "SUNY Buffalo", 
-        "UBC, Vancouver, Canada", "USTC", "UNC Chapel Hill", "VISTEC, Thailand", 
-        "U.C. Santa Barbara", 
-        "Australian Centre for Robotic Vision","Australian Centre of Excellence for Robotic Vision, Australia",
-        "CMLA, ENS Cachan","CVC, UAB","Data61 CSIRO","Data61, CSIRO",
-        "DFKI - German Research Center for Artificial Intelligence","ETS Montreal, Canada",
-        "FORTH","KIST","LAAS-CNRS","LIGM, UPEM","Laboratory for Physical Sciences",
-        "Laboratory for Physical Sciences, Booz Allen Hamilton, u.m.b.c.",
-        "Laboratory for Physical Sciences, u.m.b.c.","MSRA","MUST, Macau, China",
-        "NTT Media Intelligence Laboratories","NTT Service Evolution Laboratories",
-        "PARC","Peng Cheng Laboratory, China", "Salesforce Research Asia, Singapore","Skoltech", "Cambridge",  "NTNU", "NSUT", "IISR Pune",
-        "IMT Atlantique, Lab-STICC, team RAMBO, UMR CNRS 6285, F-29328, Brest, France", "ISI Kolkata", "SLU, Sweden",
-        "TTI-Chicago", "AIIMS, New Delhi, India", "BITS Pilani", "CSIRO", "CHUV, Switzerland", "CERTH ITI, Greece", 
-        "FAU Erlangen-Nürnberg, Erlangen, Germany", "ENS Paris-Saclay, Centre Borelli", "ETS Montreal", "ETS Montr´eal, Canada",
-        "IISER", "IMSE-CNM", "KTH, Sweden", "CEDRIC (EA4329)", "BUET, Bangladesh", "KIT, Karlsruhe", "ISTI-CNR Pisa, Italy",
-        "MBZUAI, UAE", "NIT Srinagar", "U. of Bern", "U. of Haifa", "UFMG, Brazil", "UNC Charlotte", "UQ, Australia", "UST, Republic of Korea",
-        "UNC-Chapel Hill"
-    ]
+    university_keywords = get_university_keywords()
 
     for keyword in university_keywords:
         if keyword.lower() in affiliation.lower():
@@ -496,9 +451,9 @@ def main():
     """
     # Change the file paths only
     # If you want the affiliation txt close the process the dataset part
-    json_file_path = "wacv/wacv2020.json"
+    json_file_path = "./Data_Literacy/cvpr/cvpr2022.json"
     csv_file_path = "wacv/wacv2020_with_affiliations.csv"
-    check_affiliation_path = "wacv/non_university_affiliations_2020.txt"
+    check_affiliation_path = "./Data_Literacy/cvpr/non_university_affiliations_2022.txt"
     
     # Extract non-university affiliations
     non_university_affiliations = extract_affiliations(json_file_path)
@@ -509,7 +464,7 @@ def main():
             output_file.write(f"{aff}\n")
         
     # Process the dataset
-    process_dataset(json_file_path, csv_file_path)
+    #process_dataset(json_file_path, csv_file_path)
 
 # Entry point of the script
 if __name__ == "__main__":
