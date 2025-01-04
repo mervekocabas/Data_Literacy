@@ -4,6 +4,43 @@ import csv
 import requests
 from bs4 import BeautifulSoup
 
+# check the affiliations
+def extract_affiliations(json_file_path):
+    """
+    Extract affiliations from a JSON dataset, filter by university keywords,
+    and return unique non-university affiliations.
+
+    Args:
+        json_file_path (str): Path to the input JSON file.
+
+    Returns:
+        list: Unique non-university affiliations.
+    """
+    university_keywords = [
+        "university", "college", "institute", "polytechnic", "department",
+        "institut", "school", "iit", "academy", "eth", "epfl", "uc", "kaust", "inria"
+    ]
+
+    def is_university(affiliation):
+        """Check if an affiliation contains university-related keywords."""
+        return any(keyword in affiliation.lower() for keyword in university_keywords)
+
+    # Load the JSON data
+    with open(json_file_path, "r") as json_file:
+        data = json.load(json_file)
+
+    # Extract all affiliations
+    all_affiliations = set()  # Use a set to store unique affiliations
+    for entry in data:
+        if "aff" in entry and entry["aff"]:
+            affiliations = [aff.strip() for aff in entry["aff"].split(";") if aff.strip()]
+            all_affiliations.update(affiliations)
+
+    # Filter affiliations
+    non_university_affiliations = [aff for aff in all_affiliations if not is_university(aff)]
+
+    return sorted(non_university_affiliations)  # Return sorted unique non-university affiliations
+
 # Function to determine if an affiliation is a university or a company
 def is_university(affiliation):
     """
@@ -59,7 +96,7 @@ def scrape_abstract(site_url):
     Returns:
         str: The abstract text if successfully scraped, otherwise an empty string.
     """
-    substring = "eccv2024"
+    substring = "cvpr2020"
     try:
         response = requests.get(site_url)
         response.raise_for_status()
@@ -143,12 +180,22 @@ def main():
     """
     Main function to process the dataset and output the CSV.
     """
-    # Input and output file paths
-    json_file_path = "/home/stud125/project/Data_Literacy/eccv/eccv2024.json"
-    csv_file_path = "/home/stud125/project/Data_Literacy/eccv/eccv2024_with_affiliations.csv"
+    # Change the file paths only
+    # If you want the affiliation txt close the process the dataset part
+    json_file_path = "/Users/merve/Desktop/Data_Literacy/cvpr/cvpr2020.json"
+    csv_file_path = "/Users/merve/Desktop/Data_Literacy/cvpr/cvpr2020_with_affiliations.csv"
+    check_affiliation_path = "/Users/merve/Desktop/Data_Literacy/cvpr/non_university_affiliations_2020.txt"
+    
+    # Extract non-university affiliations
+    non_university_affiliations = extract_affiliations(json_file_path)
 
+    # Save results to a file
+    with open(check_affiliation_path, "w", encoding="utf-8") as output_file:
+        for aff in non_university_affiliations:
+            output_file.write(f"{aff}\n")
+        
     # Process the dataset
-    process_dataset(json_file_path, csv_file_path)
+    # process_dataset(json_file_path, csv_file_path)
 
 # Entry point of the script
 if __name__ == "__main__":
