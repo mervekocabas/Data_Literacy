@@ -1,11 +1,34 @@
 from urllib.request import Request, urlopen
+import urllib.parse
 from bs4 import BeautifulSoup
 import json
 import csv
 import re
+from selenium import webdriver
+from selenium.webdriver.firefox.service import Service
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
-def extract_metadata_json(site_url, json_name):
+def scrape_ieee_data(site_url):
+
+    """
+    Scrapes IEEE metadata from a given IEEE Xplore document URL.
+
+    This function sends a request to the provided IEEE Xplore URL with a custom user-agent,
+    parses the HTML response, and extracts metadata embedded in the page's JavaScript.
+    The metadata includes IEEE Keywords, Index Terms, Author Keywords, abstract, and citation count.
+
+    Args:
+        site_url (str): The URL of the IEEE Xplore document to scrape.
+
+    Returns:
+        list: A list containing IEEE Keywords, Index Terms, Author Keywords, Citation Count, 
+              and Abstract in that order. Each element is extracted from the metadata or 
+              returned as None if not available.
+    """
+
     headers = {"User-Agent":'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}
     req = Request(site_url, headers=headers)
     response = urlopen(req, timeout=10)
@@ -19,15 +42,109 @@ def extract_metadata_json(site_url, json_name):
             # Extract the metadata using regex
             metadata_match = re.search(r'xplGlobal\.document\.metadata\s*=\s*({.*?});', script.string, re.DOTALL)
             if metadata_match:
-                metadata_json = json.loads(metadata_match.group(1))  # Parse as JSON
-                with open(json_name, 'w', encoding='utf-8') as file:
-                    json.dump(metadata_json, file, indent=4, ensure_ascii=False)
+                metadata_json = json.loads(metadata_match.group(1))
+                keywords = metadata_json.get('keywords', [])
+                organized_keywords = {entry['type']: entry['kwd'] for entry in keywords}
+                ieee_keywords = organized_keywords['IEEE Keywords'] if 'IEEE Keywords' in organized_keywords else None
+                ieee_index_terms = organized_keywords['Index Terms'] if 'Index Terms' in organized_keywords else None
+                ieee_author_keywords = organized_keywords['Author Keywords'] if 'Author Keywords' in organized_keywords else None
+                ieee_abstract = metadata_json.get('abstract') if metadata_json.get('abstract') else None
+                ieee_citations = int(metadata_json.get('citationCount')) if metadata_json.get('citationCount') else None
+    return [ieee_keywords, ieee_index_terms, ieee_author_keywords, ieee_citations, ieee_abstract]
+
+
+def get_ieee_link(paper_title):
+    """
+    Scrape IEEE Xplore for the link to a specific paper.
+
+    This function sends a GET request to the IEEE Xplore search page with the provided paper title
+    and searches for the link to the paper in the search results. The link is returned as a string.
+
+    Args:
+        paper_title (str): The title of the paper to search for.
+
+    Returns:
+        str: The URL of the paper on IEEE Xplore, or None if the link is not found.
+    """
+    encoded_title = urllib.parse.quote(paper_title)
+    search_url = f"https://ieeexplore.ieee.org/search/searchresult.jsp?newsearch=true&queryText={encoded_title}"
+    
+    # Initialize Selenium WebDriver
+    driver = webdriver.Chrome()  # Ensure you have the correct driver for your browser
+    driver.get(search_url)
+    
+    try:
+        # Wait for search results to load
+        WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.CLASS_NAME, "List-results-items"))
+        )
+        page_source = driver.page_source
+        soup = BeautifulSoup(page_source, 'html.parser')
+
+        # Find all <a> tags with class="fw-bold" in the search results
+        search_results = soup.find_all("a", class_="fw-bold")
+        for result in search_results:
+            extracted_title = result.get_text()
+            if extracted_title.lower() == paper_title.lower():  # Match the titles (case-insensitive)
+                document_link = result['href']
+                full_link = f"https://ieeexplore.ieee.org{document_link}"
+                driver.quit()
+                return full_link
+    except Exception as e:
+        print(f"Error while fetching link for {paper_title}: {e}")
+    finally:
+        driver.quit()
     return None
 
+def process_csv_and_update(input_csv):
+    """
+    Process a CSV file and update it with IEEE Xplore data.
 
-def main():
-    site_url = 'https://ieeexplore.ieee.org/document/10204476'
-    extract_metadata_json(site_url, '/home/stud125/project/Data_Literacy/src/example.json')
+    Given a CSV file, this function reads it into memory, checks if the columns 'ieee_link', 'ieee_keywords', 'ieee_citations', and 'ieee_abstract' exist, and adds them if not. 
+    Then, it scrapes the IEEE Xplore page for each paper title in the CSV and updates the rows with the scraped data. Finally, it writes the updated rows back to the same CSV file.
+
+    Args:
+        input_csv (str): The path to the CSV file to process.
+
+    Returns:
+        None
+    """
+    # Read the CSV into memory
+    with open(input_csv, 'r', encoding='utf-8') as infile:
+        reader = csv.DictReader(infile)
+        rows = list(reader)  # Load rows into memory
+        fieldnames = reader.fieldnames
+
+        # Check if the 'ieee_link', 'ieee_keywords', 'ieee_citations', and 'ieee_abstract' column exists, add it if not
+        fields_to_add = ['ieee_link', 'ieee_keywords', 'ieee_index_terms', 'ieee_author_keywords', 'ieee_citations', 'ieee_abstract']        
+        for field in fields_to_add:
+            if field not in fieldnames:
+                fieldnames.append(field)
+                for row in rows:
+                    row[field] = None
+                 
+    # Scrape IEEE links, keywords, citations, and abstract and update the rows
+    for row in rows:
+        title = row['title']
+        if not row.get('ieee_link'):  # Skip if the link already exists
+            print(f"Processing title: {title}")
+            ieee_link = get_ieee_link(title)
+            row['ieee_link'] = ieee_link
+            print(f"Link for '{title}': {ieee_link}")
+            ieee_keywords, ieee_index_terms, ieee_author_keywords, ieee_citations, ieee_abstract = scrape_ieee_data(ieee_link)
+            row['ieee_keywords'] = ieee_keywords
+            row['ieee_index_terms'] = ieee_index_terms
+            row['ieee_author_keywords'] = ieee_author_keywords
+            row['ieee_citations'] = ieee_citations
+            row['ieee_abstract'] = ieee_abstract
+
+    # Write back to the same CSV file
+    with open(input_csv, 'w', newline='', encoding='utf-8') as outfile:
+        writer = csv.DictWriter(outfile, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(rows)
+
 
 if __name__ == "__main__":
-    main()
+    input_csv = 'C:\\Users\\JAI GURU JI\\Desktop\\Data Lit\\Project\\Data_Literacy\\data\\cvpr_preprocessed\\cvpr2019.csv'  # Replace with your CSV file name
+    process_csv_and_update(input_csv)
