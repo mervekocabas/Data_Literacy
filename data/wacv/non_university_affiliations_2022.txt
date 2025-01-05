@@ -1,0 +1,143 @@
+*Work done while at Amazon
+1IoV team, Paris Research Center, Huawei Technologies France
+ASUS Intelligent Cloud Services, Taiwan, R.O.C.
+ATERMES company, France
+Adobe
+Adobe Applied ML
+Adobe Inc., San Jose, CA 95110
+Adobe Research
+Advanced Digital Sciences Center, Singapore
+Air Force Research Laboratory
+Amazon
+Amazon Web Services
+Amazon, Charles River Analytics
+Amazon, Haifa, Israel
+Apple
+Apple Inc.
+Athena RC
+Aurora Innovation
+BAE Systems Applied Intelligence
+BOE Technology Group Co., Ltd.
+Bing Multimedia Team, Microsoft, China
+Biometrics Research Laboratories, NEC Corporation, Japan
+Blackswan Technologies
+BrainCreators B. V.
+BuboAI, Middlesbrough, UK
+ByteDance AI Lab
+ByteDance Inc.
+C4-Cloud Computing Competence Center
+CDAC Noida
+CIBM, Switzerland
+CIEM-CONICET, Av. Medina Allende s/n, X5000HUA Córdoba, Argentina
+CNRS@CREATE LTD, Singapore
+Carl Zeiss AG, DE
+Carl Zeiss Meditec AG, DE
+Cognitive Computing Lab, Baidu Research
+Cognitive Computing Lab, Baidu Research, 10900 NE 8th St. Bellevue, Washington 98004, USA
+Cognitive Computing Lab, Baidu Research, No.10 Xibeiwang East Road, Beijing 100193, China
+Computer Vision & AI Technology Lab, Open8 Singapore
+Criteo AI Lab, Paris, France.
+CyberCore AI, Ho Chi Minh, Viet Nam
+DZYNE Technologies
+DeepNeuronic
+Ericsson, Global AI Accelerator, Montreal, Canada
+Facebook
+Facebook AI
+Five AI Ltd.
+Fraunhofer Center for Machine Learning and SCAI, Sankt Augustin, Germany
+Fujitsu LTD
+Fujitsu R & D Center, Co., Ltd.
+GBIF
+German Research Center for Artificial Intelligence, Germany
+German Research Center for Artiﬁcial Intelligence (DFKI)
+Google
+Google Research
+Google Research, Haifa, Israel
+GrabTaxi Holdings, Singapore
+HP Labs, HP Inc.
+Helsing AI, Germany
+Honeywell Technology Solutions, India
+Huawei
+Huawei Noah’s Ark Lab, London, UK
+Huawei Noah’s Ark Lab, London, United Kingdom
+Humatics Srl, Verona, Italy
+IMA VIS srl, via Trento 5/2, 16145-IT Genova,Italy
+IRT Saint-Exupery
+Infineon Technologies AG, Munich, Germany
+Inselspital Bern, CH
+Kitware, Inc.
+Kuaishou Technology
+Kunumi, Brazil
+Lightricks
+LinkSprite Technologies, Longmont, CO 80501, USA
+Manycore Tech Inc. (Kujiale)
+Media and Data Science Research Lab, Adobe
+Media and Data Science Research lab, Adobe
+Megvii
+Mercedes-Benz Research and Development India
+Microsoft
+Microsoft AI R&D Center, Taipei, Taiwan
+Microsoft AI R&D Center, Taiwan
+Microsoft Azure Computer Vision
+Microsoft Research Asia, Beijing, China
+Microsoft Research India, Bangalore, Karnataka, India
+Microsoft, India
+Monitor Corporation
+MonolithAI
+Myntra Designs Pvt. Ltd., Bangalore, India
+NA VER WEBTOON Corp.
+NAVER CLOVA LG AI Research
+NAVER LABS Europe
+NEC Labs America
+NVIDIA
+NVIDIA Research, Israel
+Naver Webtoon Corporation, Seoul, Korea
+OPPO US Research Center
+OPPO US Research Center, InnoPeak Technology, Inc.
+ObjectVideo Labs, Inc.
+Odd Concepts Inc.
+Orbital Insight
+Pacific Defense Solutions
+Panasonic AI Lab, USA
+Panasonic Technology Division, Japan
+Phiar Technologies
+Pinterest
+Preferred Networks, Inc.
+Qualcomm AI Research
+Qualcomm AI Research, Qualcomm Korea YH, Seoul, Korea
+Qualcomm AI Research, Qualcomm Technologies, Inc., San Diego, CA, US
+Qualcomm AI Research, an initiative of Qualcomm Technologies, Inc.
+Qualcomm Technologies, Inc.
+Retail Business Services, Amazon
+Robert Bosch GmbH, Computer Vision Research Lab
+Robert Bosch GmbH, Germany
+SLiQ Labs, Sportlogiq, Montreal, QC., Canada
+SM@RTS : Laboratory of Signals, systeMs, aRtificial Intelligence and neTworkS
+SRC Inc.
+Samsung AI Center Moscow
+Samsung AI Center – Toronto
+Samsung AI Centre Toronto
+Samsung Electronics
+Samsung Electronics, NCSOFT
+Samsung Research
+Samsung Research AI Center
+Samsung SDS, Seoul, Korea
+Shenzhen Deepcam Information Technologies, Shenzhen, China
+Silo AI, Sweden
+Spectacular AI, Helsinki, Finland
+Stellantis, Opel Automobile GmbH, Germany
+TIB – Leibniz Information Centre for Science and Technology, Hannover, Germany
+Tencent Hippocrates Research Lab
+TensorTour Inc.
+Toyota Motor Europe
+U.S. Army CCDC Army Research Laboratory, USA
+Uber ATG
+UnifyID Labs
+United States Space Force
+United States Space Force Space Systems Command
+VisionAI, hutom, Seoul, Republic of Korea
+Visual Search & AR, Amazon
+Waymo
+Work done at Qualcomm AI Research
+Xmotors
+exida LLC, Sellersville PA 18960

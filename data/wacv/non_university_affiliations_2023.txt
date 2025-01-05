@@ -1,0 +1,233 @@
+10900 NE 8th St. Bellevue, Washington, USA
+14Paradigm Inc., Beijing, China
+2Picsart AI Research (PAIR)
+42dot Inc.
+4Adobe Inc.
+5Salesforce Research
+AI Technology Division, LG Energy Solution
+AIOZ, Singapore
+AISC GmbH
+AWS AI Labs
+Adobe Inc
+Adobe Inc.
+Adobe Media and Data Science Research Labs, Noida, India
+Adobe Research
+Adobe Research, Bangalore India
+Adobe Research, India
+Affiliation of the First Author
+Affiliation of the Second Author
+Agility Robotics
+Agora
+Air Force Research Laboratory
+Amanda, 34 Avenue Des Champs Elys ´ees, F-75008, Paris, France
+Amanda, 34 Avenue Des Champs Elysées, F-75008, Paris, France
+Amazon
+Amazon Alexa Science
+Amazon Inc.
+Amazon Lab126, USA
+Amazon, USA
+Amazon.com Services, Inc
+Amazon.com, Inc.
+Apple
+Argo AI
+Arkansas Economic Development Commission, Little Rock, AR USA 72202
+Arm Research
+Artera AI
+AstraZeneca, Gothenburg, Sweden
+Athena RC
+Automated Driving, Qualcomm Technologies, Inc.
+Avanti Fellows
+BC Cancer Agency
+Baidu Inc.
+Baidu Inc., Beijing, China
+Baidu Inc., Shanghai, China
+Baidu Inc., Shenzhen, China
+Baidu Research (USA)
+Baidu VIS
+Berge Consulting, Gothenburg, Sweden
+Board-Certified Clinical Specialist in Pediatric Physical Therapy
+Bosch Center for Artiﬁcial Intelligence
+Bosch Mobility Solutions, Robert Bosch GmbH, 71229 Leonberg, Germany
+Bosch Research North America
+Bristol Myers Squibb
+ByteDance
+ByteDance Ltd, Beijing, China
+Bytedance
+Bytedance Inc.
+CIBM, Switzerland
+Christian Doppler Laboratory for Embedded Machine Learning
+Clova AI Research, NAVER Corp
+Clova AI, NAVER Corp.
+Cognitive Computing Lab, Baidu Research, 10900 NE 8th St. Bellevue, WA 98004, USA
+Cognitive Computing Lab, Baidu Research, Beijing, China
+Coupang
+Currently at Google Research
+CyberAgent
+CyberAgent, Inc.
+CyberAgent, Shibuya, Tokyo, Japan
+DEVCOM Army Research Laboratory
+DFKI, Saarbrücken, Germany
+DFKI-A V Kaiserslautern
+DVIEW
+DZYNE Technologies
+DataElem Inc., Beijing, China
+Datakalab2, 114 boulevard Malesherbes, 75017 Paris, France
+Dealicious Inc.
+Delicious AI
+Dermatopathology Northwest
+Device CoRo, Amazon
+Difine, Seongnam, South Korea
+E.SUN Financial Holding Co., Ltd.
+Eyecan.ai
+FGBS, Amazon.com, 2121 7th Ave, Seattle, WA, USA
+FJIRSM1
+FJIRSM1, FJOEL2
+FPT Software AI Center, Ho Chi Minh City, Vietnam
+FPT Software AI Center, Vietnam
+FPT Software, AI center, Vietnam
+Facebook Reality Labs
+Facebook/Meta
+First Author's Affiliation
+Fraunhofer FHR, Wachtberg, Germany
+Fraunhofer HHI
+Fraunhofer IKS, Munich, Germany
+Fraunhofer IOSB, Karlsruhe
+Fujian (Quanzhou) HIT
+Fujitsu Research of America
+Fujitsu Research, Japan
+Gatech
+German Research Center for Artificial Intelligence (DFKI)
+Glass Imaging*
+Glass Imaging, Inc.
+GoPro & MAP5, charles.laroche@u-paris.fr
+Goldman Sachs
+Google
+Google Cloud AI Research
+Google Research
+Graviton Research Capital LLP
+HU Berlin
+Hitachi Ltd., Tokyo, Japan
+Hitachi, Ltd.
+Honda Motor Co., Ltd., Tokyo, Japan
+Honeywell Technology Solutions, India
+Huawei
+Huawei Munich Research Center
+Huawei Noah’s Ark Lab
+Huawei Technologies
+Huawei Technologies Canada
+Huawei Technologies France SASU
+Huawei Technologies, London, UK
+Hubei Chutian Expressway Digital Technology, China
+Hyperfine Research
+IBM Japan
+IBM Research AI
+IDEAS NCBR, Warsaw, Poland
+IMT Atlantique, Avenue du Technopôle, Plouzané, France
+IRCAD, Strasbourg, France
+Independent Researcher
+Innopeak Technology Inc.
+Intel Corporation
+Intel Labs
+Intel Labs, USA
+KYOCERA Corporation
+Kakao Brain
+Kakao Enterprise, Pangyo, Gyeonggi-do, South Korea
+Kitware
+Kitware Inc.
+Kitware, NY & NC, USA
+Kuaishou Technology
+LG AI Research
+LINE Corporation, Japan
+Letsur Inc., Seoul, Republic of Korea
+Lunit Inc.
+MVTec Software GmbH
+Mercedes-Benz Research and Development India
+Meta
+Meta AI
+Meta AI, FAIR
+Meta Inc.*, mtassano@meta.com
+Meta Reality Labs
+Microsoft
+Microsoft AI R&D Center, Taiwan
+Microsoft Mixed Reality
+Microsoft Research
+Microsoft Research, Redmond, WA, USA
+Morgan Stanley
+NAVER
+NAVER AI Lab
+NAVER WEBTOON AI
+NCSOFT, Korea
+NEC Laboratories America, Inc.
+NEC Labs America
+NEC corporation
+NTT Corporation, Japan
+NVIDIA
+Niantic
+Nullmax
+Nvidia
+OPPO US Research Center, USA
+Oppo Mobile Telecommunications Corp.
+Oracle Health and AI
+Pathology Associates
+Picsart AI Research (PAIR)
+Pinscreen, Inc.
+Pinterest
+QUT
+Qualcomm AI Research
+Qualcomm AI Research, an initiative of Qualcomm Technologies, Inc.
+R&D Division, NEC Corporation, Japan
+Reality Labs, Meta Inc.
+Research Center, Aselsan Inc
+SI Analytics
+SNCF Paris
+Salesforce Research
+Samsung AI Center Toronto
+Samsung AI Center – Moscow
+Samsung Electronics
+Samsung Electronics (China) R&D Center
+Samsung Electronics, South Korea
+Samsung Research UK
+Samsung Research, Samsung Electronics
+Sanoh Industrial Co., Ltd.
+Scale AI
+Schlumberger AI Lab
+Science for Life Laboratory, Stockholm, Sweden
+Second Author's Affiliation
+SenseTime
+SenseTime Research
+ServiceNow Research
+Siemens Healthineers AG, Forchheim, Germany
+Snap Inc.
+Sony Computer Science Laboratory, Tokyo, Japan
+Sony Group Corporation
+SqueezeBits Inc.
+Systematic Alpha*
+Systems & Technology Research, Woburn MA, USA
+T Lab, Tencent Map, Tencent, China
+TCS Research, India
+TCS Research, Mumbai, India
+TCS Research, New Delhi
+TIB – Leibniz Information Centre for Science and Technology, Hannover, Germany
+Tencent AI Lab
+Tencent XR Vision Labs
+Tenstorrent Inc.
+Toyota Motor Corporation, Japan
+Toyota Motor Corporation, Tokyo, Japan
+UA VIO Labs
+UNC at Chapel Hill
+Valeo.ai, Paris, France
+Videt Technology, Shanghai, China
+VinAI Research
+VinAI Research, Vietnam
+VinFast, Hanoi, Vietnam
+Vision AI Lab., AI Center, NCSOFT, South Korea
+Visionairy
+Woundtech Innovative Healthcare Solutions
+Woven Core, Inc., Tokyo, Japan
+X, The Moonshot Factory
+Xmotors
+Xverse Inc., Shenzhen, Guangdong, China
+Yahoo Research
+Yandex Research
+fortiss GmbH
+´ETS Montr´eal

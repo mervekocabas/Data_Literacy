@@ -1,0 +1,146 @@
+-
+2Snap Inc., Santa Monica, CA, USA
+3ATERMES company, France
+3Bytedance Inc., Mountain View, CA, USA
+AI Labs, Alibaba Group
+AI.Reverie
+Adobe
+Adobe Inc., San Jose, California, USA
+Adobe Research
+Alibaba Youku Cognitive and Intelligent Lab, Beijing, China
+Amazon
+Amazon Alexa AI
+Amazon Prime Video
+Amazon Web Services
+Amazon Web Services, Palo Alto
+Amazon Web Services, Palo Alto, CA USA
+Amazon, AWS Rekognition
+Amazon, Barcelona Spain
+Amazon, T¨ubingen Germany
+Amazon.com, Inc.
+Apple
+Apple, Inc.
+BAE Systems Applied Intelligence
+BMW Group
+Baidu Research, China
+Beijing Advanced Innovation Center for Big Data-Based Precision Medicine, China
+Bigo Technology PTE. LTD, Singapore
+Biometrics Research Laboratories, NEC Corporation, Kawasaki, Kanagawa, Japan
+Blue Prism AI Labs, UK
+Bosch Center for Artiﬁcial Intelligence
+CVC, UB, Spain
+CVision AI
+Canadian Wildlife Service, Environment and Climate Change Canada
+Cloud to Street
+Corporate R&D Center, Toshiba, Japan
+Currently author is affiliated with MasterCard
+CyberAgent Inc.
+DEVCOM Army Research Laboratory
+DEVCOM Army Research Laboratory, Booz Allen Hamilton
+DFKI - German Research Center for Artiﬁcial Intelligence
+Dartmouth-Hitchcock Medical Center
+DeepVoxel Inc.
+Delta Research Center, Singapore
+Digital Lab, Swisscom, Switzerland
+ETRI, Daejeon, Korea
+Element AI
+Element AI, Montreal, Canada
+European Systems Integration, France
+Facebook
+Facebook AI
+Facebook AI Research
+Facebook Reality Labs
+Facebook Reality Labs in Pittsburgh
+Facebook Reality Labs†
+Fujitsu Laboratories of America, Pittsburgh, PA, USA
+German Research Center for Artiﬁcial Intelligence
+Google
+Google Brain
+Google Research
+Google Research (Brain Team)
+Google Research Amsterdam
+Herta Security, Barcelona, Catalonia, Spain
+Huawei Moscow Research Center (Russia)
+Huawei Noah’s Ark Lab
+Huawei Research Center, Nizhny Novgorod, Russia
+Huawei Research, Ireland
+Huawei Technologies Canada
+Huawei Technologies Ltd., Ireland Research Center, Ireland
+IBM Research Australia
+IBM Research-Almaden
+IDSS Corporation
+IEE S.A.
+IQT - CosmiQ Works
+Image Metrics Ltd, Manchester, UK
+Independent Researcher
+InnoPeak Technology, Palo Alto, CA
+Intel Corporation
+Inventec Corporation, Taiwan
+Ireland Research Center, Huawei Technologies Co. Ltd., Dublin, Ireland
+KDDI Research, Inc.
+Key Laboratory of Advanced Technology of Near Space Information System, Ministry of Industry and Information Technology of China
+Kitware, Inc.
+Kwai Inc.
+Landskape
+M.U.S.T, Macau
+Mathpresso Inc
+Media and Data Science Research Lab, Adobe
+Mercateo AG
+Microsoft
+Microsoft Corporation, Reading, UK
+Microsoft Dynamics 365 AI Research, Bellevue, WA, USA
+Microsoft Research, Beijing, China
+NA VER LABS Europe
+NA VERLABS, Korea
+NAVER LABS Europe
+NAVER LABS, South Korea
+NEC Laboratories America
+NEC Labs America
+NTT Corporation
+NVIDIA
+NVIDIA Research, Tel Aviv, Israel
+NVIDIA, Israel
+NVIDIA, Tel-Aviv, Israel
+NetEase Fuxi AI Lab, Hangzhou, China
+OPPO US Research Center
+ObjectEye Inc.
+Performance Genetics
+PingAn Technology US Research Lab
+Qualcomm India, Bangalore, India
+Renault S.A.S, Guyancourt, France
+Robert Bosch GmbH, 71229 Leonberg
+Robert Bosch GmbH, 71272 Renningen
+SAP AI Research, Berlin, Germany
+Salesforce Research
+Samsung AI Center Montreal, Canada
+Samsung AI Center – Moscow
+Samsung AI Center – Moscow, Russia
+Samsung AI Center – Toronto
+Samsung Inc, USA
+SenseTime Research
+SenseTime Research, Shanghai, China
+Shenzhen Forward Innovation Digital Technology Co. Ltd, China
+Shopee Data Science
+Siemens Corporate Technology
+Skywatch Innovation Inc., Taiwan
+SmartMore Corporation
+Spotify
+TCS Research, New Delhi
+TIB - Leibniz Information Centre for Science and Technology, Hannover, Germany
+TNO
+Technology Research, Samsung SDS, Seoul, Republic of Korea
+Tencent AI Lab
+Tencent America
+Toyota Motor Europe
+Uber ATG
+Uber Advanced Technologies Group, Louisville CO 80027
+Valeo
+Valeo DAR Kronach, Germany
+Valeo R&D, Egypt
+Valeo Vision Systems, Ireland
+Volograms
+Volvo Cars, Gothenburg, Sweden
+Woundtech Innovative Healthcare Solutions
+Woven CORE, Inc.
+Zoox Inc.
+iQIYI Inc, Chengdu, China
