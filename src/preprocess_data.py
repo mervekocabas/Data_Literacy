@@ -538,7 +538,8 @@ company_country_map = {
     'Woundtech Innovative Healthcare Solutions': "India", 
     'Woven CORE, Inc.': 'Japan', 
     'Zoox Inc.': 'USA',
-    'iQIYI Inc, Chengdu, China': 'China'
+    'iQIYI Inc, Chengdu, China': 'China',
+    
 }
 
 # Function to determine company country based on keywords in the affiliation
