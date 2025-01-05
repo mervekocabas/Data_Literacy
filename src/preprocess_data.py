@@ -57,7 +57,8 @@ def get_university_keywords():
         "IISER", "IMSE-CNM", "KTH, Sweden", "CEDRIC (EA4329)", "BUET, Bangladesh", "KIT, Karlsruhe", "ISTI-CNR Pisa, Italy",
         "MBZUAI, UAE", "NIT Srinagar", "U. of Bern", "U. of Haifa", "UFMG, Brazil", "UNC Charlotte", "UQ, Australia", "UST, Republic of Korea",
         "UNC-Chapel Hill", "BUAA", "ECNU", "HKU", "Harvard", "KIT", "KULeuven", "Unversity", "Scuola Superiore", "Unibersity", "sysu", "AIIMS",
-        "asu", "buaa", "hku", "iisc", "mila", "isti", "Northwestern", "shi", "USYD", "UT Dallas"
+        "asu", "buaa", "hku", "iisc", "mila", "isti", "Northwestern", "shi", "USYD", "UT Dallas", "´ETS Montr´eal",
+        "California Institite of Technology"
     ]
     return university_keywords
 
@@ -67,6 +68,10 @@ company_country_map = {
     "Amazon Rekognition": "USA",
     "Amazon Web Services (AWS)": "USA",
     "Air Force Research Laboratory": "USA",
+    "Adobe Experience Cloud": "United States",
+    "Adobe Research": "United States",
+    "Affectiva, USA": "United States",
+    "Air Shepherd": "United States",
     "ASAPP Inc.": "USA",
     "Butterfly Network": "USA",
     "Facebook AI Research": "USA",
@@ -121,6 +126,10 @@ company_country_map = {
     "Google Research, Brain Team": "USA",
     "Google Research, Mountain View, USA": "USA",
     "Google LLC": "USA",
+    "Arraiy, Inc.": "United States",
+    "Axon Enterprise": "United States",
+    "Baidu USA": "United States",
+    "Bloomberg L.P.": "United States",
     
     "Huawei Noah's Ark Lab": "China",
     "Alibaba Group": "China",
@@ -165,6 +174,9 @@ company_country_map = {
     "XForwardAI": "China",
     "Xilinx Inc., Beijing, China": "China",
     "ZhiJiang Laboratory": "China",
+    "Beijing Advanced Innovation Center for Big Data-Based Precision Medicine, Beijing, China": "China",
+    "Beijing Trusfort Technology Co., Ltd.": "China",
+    "ByteDance AI Lab": "China",
     
     "Anyvision Research Team, UK": "UK",
     "Tencent AI Lab, Seattle": "UK",
@@ -177,10 +189,12 @@ company_country_map = {
     "Bosch Center for Artificial Intelligence (BCAI)": "Germany",
     "Siemens AG": "Germany",
     "Amazon, Tübingen": "Germany",
+    "AUDI AG": "Germany",
     "ADC Automotive Distance Control Systems GmbH, Continental, Germany": "Germany",
     "Spleenlab GmbH, Saalburg-Ebersdorf, Germany": "Germany",
     "Valeo Schalter und Sensoren GmbH, Kronach, Germany": "Germany",
     "Valeo.ai": "Germany",
+    "AppTek GmbH, 52062 Aachen, Germany": "Germany",
     
     "Prophesee, Paris": "France",
     "Technicolor, Cesson Sévigné": "France",
@@ -188,6 +202,9 @@ company_country_map = {
     "EDF R&D, Chatou, France": "France",
     "IDE MIA, France": "France",
     "Orange, Cesson-Sévigné, France": "France",
+    "CEA, LIST, Laboratoire Vision et Apprentissage pour l’Analyse de Scene, Gif-sur-Yvette, France": "France",
+    "CEA, LIST, Vision and Learning Lab for Scene Analysis, PC 184, F-91191 Gif-sur-Yvette, France": "France",
+    "CMLA, ENS Paris-Saclay, France": "France",
     
     "Lunit Inc.": "South Korea",
     "Samsung AI Center, Seoul": "South Korea",
@@ -217,6 +234,7 @@ company_country_map = {
     "Vancouver General Hospital, Canada": "Canada",
     "Samsung AI Centre Toronto": "Canada",
     "Toronto AI Lab, LG Electronics Canada": "Canada",
+    "Borealis AI": "Canada",
     
     "MediaTek Inc., Hsinchu, Taiwan": "Taiwan",
     "ASUS Intelligent Cloud Services, Taiwan": "Taiwan",
