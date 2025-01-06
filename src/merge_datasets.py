@@ -30,6 +30,8 @@ def create_dataset(data_folder = "data", output_file='merged_dataset.csv'):
                     df = pd.read_csv(file_path)
                     # Extract year from the filename (e.g., 'cvpr2019.csv' -> '2019')
                     year = ''.join(filter(str.isdigit, os.path.splitext(file)[0]))
+
+                    # Extract the name of the conference
                     match = re.match(r"([a-zA-Z]+)(\d+)", os.path.splitext(file)[0])
                     if match:
                         conference = match.group(1) 
