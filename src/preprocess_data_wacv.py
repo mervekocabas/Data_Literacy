@@ -479,7 +479,7 @@ company_country_map = {
     'Key Laboratory of Advanced Technology of Near Space Information System, Ministry of Industry and Information Technology of China': 'China',
     'Kitware, Inc.': 'USA',
     'Kwai Inc.': 'China', 
-    'Landskape': "", 
+    'Landskape': "USA", 
     'M.U.S.T, Macau': 'Macau',
     'Mathpresso Inc': 'South Korea', 
     'Media and Data Science Research Lab, Adobe': 'USA',
@@ -564,7 +564,7 @@ company_country_map = {
     "BOE Technology Group Co., Ltd.": "China",
     "Bing Multimedia Team, Microsoft, China": "China",
     "Biometrics Research Laboratories, NEC Corporation, Japan": "Japan",
-    "Blackswan Technologies": "*",
+    "Blackswan Technologies": "USA",
     "BrainCreators B. V.": "Netherlands",
     "BuboAI, Middlesbrough, UK": "UK",
     "ByteDance AI Lab": "China",
@@ -582,7 +582,7 @@ company_country_map = {
     "Computer Vision & AI Technology Lab, Open8 Singapore": "Singapore",
     "Criteo AI Lab, Paris, France.": "France",
     "CyberCore AI, Ho Chi Minh, Viet Nam": "Vietnam",
-    "DZYNE Technologies": "*",
+    "DZYNE Technologies": "USA",
     "DeepNeuronic": "Portugal",
     "Ericsson, Global AI Accelerator, Montreal, Canada": "Canada",
     "Facebook": "USA",
@@ -658,7 +658,7 @@ company_country_map = {
     "SLiQ Labs, Sportlogiq, Montreal, QC., Canada": "Canada",
     "SM@RTS : Laboratory of Signals, systeMs, aRtificial Intelligence and neTworkS": "USA",
     "Hitachi, Ltd.": "Japan",
-    "Second Author's Affiliation": "Unknown", 
+    "Second Author's Affiliation": "", 
     "Toyota Motor Corporation, Tokyo, Japan": "Japan",
     "SRC Inc.": "USA",
     "Samsung AI Center Moscow": "Russia",
@@ -686,7 +686,7 @@ company_country_map = {
     "Visual Search & AR, Amazon": "USA",
     "Waymo": "USA",
     "Work done at Qualcomm AI Research": "USA",
-    "Xmotors": "*",
+    "Xmotors": "China",
     "exida LLC, Sellersville PA 18960": "USA",
     
     "10900 NE 8th St. Bellevue, Washington, USA": "USA",
@@ -790,9 +790,9 @@ company_country_map = {
     "German Research Center for Artificial Intelligence (DFKI)": "Germany",
     "Glass Imaging*": "USA",
 
-    "MetaDialog": "",
-    "AIBEE": "",
-    "ADV A Soft": "",
+    "MetaDialog": "USA",
+    "AIBEE": "USA",
+    "ADV A Soft": "USA",
     "AFRL, Wright-Patterson AFB": "USA",
     "AI Center, CJ Corporation": "South Korea",
     "ASU-Mayo Center for Innovative Imaging": "USA",
@@ -807,7 +807,7 @@ company_country_map = {
     "Aimmo Germany GmbH": "Germany",
     "Air Force Research Laboratory": "USA",
     "Alibaba Group": "China",
-    "AllRead MLT": "",
+    "AllRead MLT": "USA",
     "Amanda, 34 Avenue Des Champs Elys´ees, F-75008, Paris, France": "France",
     "Amazon": "USA",
     "Amazon Alexa AI": "USA",
@@ -819,7 +819,7 @@ company_country_map = {
     "Army Research Laboratory": "USA",
     "AstraZeneca, Gothenburg, Sweden": "Sweden",
     "Atos.": "France",
-    "Auris Health. Inc, JNJ": "",
+    "Auris Health. Inc, JNJ": "USA",
     "BBC Research and Development, United Kingdom.": "UK",
     "BMW Group": "Germany",
     "Baker Hughes, Florence, Italy": "Italy",
@@ -838,43 +838,43 @@ company_country_map = {
     "CTO, JPMorgan Chase": "USA",
     "Centre for Frontier AI Research, Agency for Science, Technology and Research, Singapore": "Singapore",
     "Centre for Intelligent Multidimensional Data Analysis, Science Park, Hong Kong": "Hong Kong",
-    "Cerrion, Inc.": "",
-    "Cinemersive Labs": "",
+    "Cerrion, Inc.": "USA",
+    "Cinemersive Labs": "USA",
     "Continental AG": "Germany",
     "ControlExpert GmbH": "Germany",
     "Corresponding author": "",
     "Customer Experience and Business Trends, Amazon.com": "USA",
     "CyberAgent, Inc.": "Japan",
     "CyberAgent, Japan": "Japan",
-    "Cyberverse Lab": "",
+    "Cyberverse Lab": "USA",
     "DEVCOM Army Research Laboratory, Los Angeles, California, USA": "USA",
     "DFKI": "Germany",
     "DYSL AI, DRDO": "India",
-    "DZYNE Technologies": "",
-    "Deep Render": "",
+    "DZYNE Technologies": "USA",
+    "Deep Render": "USA",
     "Deeping Source Inc.": "South Korea",
     "Deeplab, Athens": "Greece",
-    "Digital Sense": "",
+    "Digital Sense": "USA",
     "ETRI": "South Korea",
-    "ExploAI": "",
+    "ExploAI": "USA",
     "FA Research, Fast Accounting Co., Ltd. Japan": "Japan",
     "FAIR, Meta": "USA",
     "FPT Software AI Center, Vietnam": "Vietnam",
     "Faurecia IRYStec Inc., Montreal, Canada": "Canada",
-    "Flower Labs": "",
+    "Flower Labs": "USA",
     "Ford Motor Company": "USA",
     "Fujitsu R&D Center Co., Ltd.": "Japan",
     "Fujitsu Research India": "India",
     "Fujitsu Research of America": "USA",
     "GAIA Montreal, Ericsson Canada": "Canada",
     "GE HealthCare, Bangalore": "India",
-    "GENGENAI": "",
-    "GO Inc.": "",
+    "GENGENAI": "USA",
+    "GO Inc.": "USA",
     "General Motors, Technical Center Israel": "Israel",
     "German Cancer Research Center (DKFZ) Heidelberg, Division of Medical Image Computing, Germany": "Germany",
     "German Research Center for Artificial Intelligence (DFKI)": "Germany",
     "GoPro": "USA",
-    "GoPro & MAP5": "",
+    "GoPro & MAP5": "USA",
     "Google": "USA",
     "Google Cloud AI": "USA",
     "Google Research": "USA",
@@ -896,7 +896,7 @@ company_country_map = {
     "IBM Thomas J. Watson Research Ctr.": "USA",
     "IDEAS NCBR, Tooploox": "Poland",
     "IDEAS NCBR, Warsaw, Poland": "Poland",
-    "ISEE AI": "",
+    "ISEE AI": "USA",
     "Image Analytics, Australia": "Australia",
     "Independent Researcher": "",
     "InfoTech Labs, Toyota Motor North America R&D": "USA",
@@ -910,7 +910,7 @@ company_country_map = {
     "Kitware": "USA",
     "Kitware Inc., USA": "USA",
     "Kitware, Inc.": "USA",
-    "Klleon AI Research": "",
+    "Klleon AI Research": "USA",
     "Kuaishou Technology": "China",
     "LG AI Research": "South Korea",
     "LG Electronics": "South Korea",
@@ -965,7 +965,7 @@ company_country_map = {
     "PathAI Inc": "USA",
     "PathAI Inc, Boston, USA": "USA",
     "Pengcheng Laboratory, Shenzhen, China": "China",
-    "Perceive Inc.": "",
+    "Perceive Inc.": "USA",
     "Physical Sciences Inc": "USA",
     "Picsart AI Research (PAIR)": "USA",
     "Picup.AI": "Australia",
@@ -986,7 +986,7 @@ company_country_map = {
     "SHINSEGAE I&C": "South Korea",
     "SI Analytics, Daejeon, Korea": "South Korea",
     "SK Telecom": "South Korea",
-    "SM@RTS: Laboratory of Signals, Systems, Artificial Intelligence and Networks": "",
+    "SM@RTS: Laboratory of Signals, Systems, Artificial Intelligence and Networks": "USA",
     "SOCAR AI Research, Seoul, Korea": "South Korea",
     "SUSTech": "China",
     "Safrantech, Safran Group": "France",
@@ -1033,8 +1033,8 @@ company_country_map = {
     "Valeo.ai": "France",
     "Variance.ai": "USA",
     "Verily AI, Israel": "Israel",
-    "Verily, gleifman@google.com": "",
-    "Verily, melad@google.com": "",
+    "Verily, gleifman@google.com": "USA",
+    "Verily, melad@google.com": "USA",
     "VinAI Research": "Vietnam",
     "Visual Search & AR, Amazon": "USA",
     "Volvo Car Corporation, Sweden": "Sweden",
@@ -1047,7 +1047,7 @@ company_country_map = {
     "Xiaohongshu Inc.": "China",
     "Xpeng": "China",
     "Yazaki Corporation": "Japan",
-    "ZERO10": "",
+    "ZERO10": "USA",
     "Zeitview": "USA",
     "Zillow Group": "USA",
     "ZongmuTech": "China",
@@ -1493,7 +1493,7 @@ university_country_map={
     "Thermo Fisher Scientific, Eindhoven, The Netherlands": "Netherlands",
     "Gaoling School of Artiﬁcial Intelligence, Renmin University of China": "China",
     "CSIRO Data61, Brisbane, Australia": "Australia",
-    "aetherAI": "Unknown", 
+    "aetherAI": "USA", 
     "University of Georgia": "USA",
     "Murdoch University, Perth, Western Australia": "Australia",
     "University of Technology Sydney": "Australia",
@@ -2984,6 +2984,7 @@ def process_dataset(json_file_path, csv_file_path):
         "author",
         "aff",
         "university_affiliation",
+        "university_country",
         "company_affiliation",
         "company_country",
         "abstract",
@@ -3007,7 +3008,7 @@ def process_dataset(json_file_path, csv_file_path):
 
         entry["university_affiliation"] = university_percentage
         entry["company_affiliation"] = company_percentage
-
+        
         # Only assign company country if company percentage is greater than 0
         if company_percentage != "" and company_percentage > 0: 
             # Extract company country based on keywords in the affiliation
@@ -3023,11 +3024,28 @@ def process_dataset(json_file_path, csv_file_path):
         # If company_percentage is 0, do not assign company_country
         else:
             entry["company_country"] = ""
+            
+        # Extract university country names based on affiliations
+        university_countries = []
+        if university_percentage != "" and university_percentage > 0: 
+            if "aff" in entry and entry["aff"]:
+                affiliations = [aff.strip() for aff in entry["aff"].split(";") if aff.strip()]
+                for aff in affiliations:
+                    if is_university(aff):
+                        # Check for university affiliation in the map
+                        for university_name, country in university_country_map.items():
+                            if university_name.lower() in aff.lower():  # Case insensitive match
+                                university_countries.append(country)
+        else:
+            entry["university_country"] = ""
 
-        if "oa" in entry and entry["oa"]:
-            entry["abstract"] = scrape_abstract(entry["oa"])
-        elif "site" in entry and entry["site"]:
+        # Remove duplicates from university countries
+        entry["university_country"] = ", ".join(sorted(set(university_countries))) if university_countries else ""
+         
+        if "site" in entry and entry["site"]:
             entry["abstract"] = scrape_abstract(entry["site"])
+        elif "oa" in entry and entry["oa"]:
+            entry["abstract"] = scrape_abstract(entry["oa"])
         else:
             entry["abstract"] = ""
 
@@ -3050,7 +3068,7 @@ def main():
     # Change the file paths only
     # If you want the affiliation txt close the process the dataset part
     json_file_path = "data/wacv/wacv2024.json"
-    csv_file_path = "data/wacv/wacv2024.csv"
+    csv_file_path = "data/wacv_preprocessed/wacv2024.csv"
     
     
     
@@ -3061,20 +3079,20 @@ def main():
     filtered_affiliation_path = "data/wacv/filtered_non_university_affiliations_2024.txt"
     
     # Extract non-university affiliations
-    non_university_affiliations = extract_affiliations(json_file_path)
+    # non_university_affiliations = extract_affiliations(json_file_path)
 
-    # Save results to a file
-    with open(check_affiliation_path, "w", encoding="utf-8") as output_file:
-        for aff in non_university_affiliations:
-            output_file.write(f"{aff}\n")
+    # # Save results to a file
+    # with open(check_affiliation_path, "w", encoding="utf-8") as output_file:
+    #     for aff in non_university_affiliations:
+    #         output_file.write(f"{aff}\n")
             
-    # Extract non-unoversoty affiliations that are not listed in the company country map
-    filtered_affiliations = remove_company_affiliations(json_file_path, company_country_map)        
+    # # Extract non-unoversoty affiliations that are not listed in the company country map
+    # filtered_affiliations = remove_company_affiliations(json_file_path, company_country_map)        
     
-    # Save results to a file        
-    with open(filtered_affiliation_path, "w", encoding="utf-8") as output_file:
-        for aff in filtered_affiliations:
-            output_file.write(f"{aff}\n")
+    # # Save results to a file        
+    # with open(filtered_affiliation_path, "w", encoding="utf-8") as output_file:
+    #     for aff in filtered_affiliations:
+    #         output_file.write(f"{aff}\n")
     
     # You can use the below part to extract university list for the conference and
     # to extract the university list without the country information
