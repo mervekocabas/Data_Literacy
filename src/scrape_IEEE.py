@@ -129,14 +129,23 @@ def process_csv_and_update(input_csv):
         if not row.get('ieee_link'):  # Skip if the link already exists
             print(f"Processing title: {title}")
             ieee_link = get_ieee_link(title)
-            row['ieee_link'] = ieee_link
-            print(f"Link for '{title}': {ieee_link}")
-            ieee_keywords, ieee_index_terms, ieee_author_keywords, ieee_citations, ieee_abstract = scrape_ieee_data(ieee_link)
-            row['ieee_keywords'] = ieee_keywords
-            row['ieee_index_terms'] = ieee_index_terms
-            row['ieee_author_keywords'] = ieee_author_keywords
-            row['ieee_citations'] = ieee_citations
-            row['ieee_abstract'] = ieee_abstract
+            if ieee_link!=None:
+                row['ieee_link'] = ieee_link
+                print(f"Link for '{title}': {ieee_link}")
+                ieee_keywords, ieee_index_terms, ieee_author_keywords, ieee_citations, ieee_abstract = scrape_ieee_data(ieee_link)
+                row['ieee_keywords'] = ieee_keywords
+                row['ieee_index_terms'] = ieee_index_terms
+                row['ieee_author_keywords'] = ieee_author_keywords
+                row['ieee_citations'] = ieee_citations
+                row['ieee_abstract'] = ieee_abstract
+            else:
+                print(f"Link for '{title}' does not exist")
+                row['ieee_link'] = None
+                row['ieee_keywords'] = None
+                row['ieee_index_terms'] = None
+                row['ieee_author_keywords'] = None
+                row['ieee_citations'] = None
+                row['ieee_abstract'] = None        
 
     # Write back to the same CSV file
     with open(input_csv, 'w', newline='', encoding='utf-8') as outfile:
@@ -146,5 +155,5 @@ def process_csv_and_update(input_csv):
 
 
 if __name__ == "__main__":
-    input_csv = 'C:\\Users\\JAI GURU JI\\Desktop\\Data Lit\\Project\\Data_Literacy\\data\\cvpr_preprocessed\\cvpr2019.csv'  # Replace with your CSV file name
+    input_csv = 'C:\\Users\\JAI GURU JI\\Desktop\\Data Lit\\Project\\Data_Literacy\\data\\cvpr_preprocessed\\cvpr2020.csv'  # Replace with your CSV file name
     process_csv_and_update(input_csv)
