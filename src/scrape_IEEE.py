@@ -1,15 +1,22 @@
-from urllib.request import Request, urlopen
-import urllib.parse
-from bs4 import BeautifulSoup
-import json
-import csv
-import re
+from urllib.request import Request, urlopen  # Ensure this line is present
 from selenium import webdriver
-from selenium.webdriver.firefox.service import Service
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import urllib.parse
+from bs4 import BeautifulSoup
+import csv
+import re
+import json
 
+# Initialize a persistent Chrome WebDriver
+def initialize_driver():
+    options = Options()
+    options.add_experimental_option("detach", True)  # Keeps the browser open
+    driver = webdriver.Chrome(options=options)  # Ensure you have the correct driver for Chrome
+    return driver
 
 def scrape_ieee_data(site_url):
 
@@ -52,16 +59,13 @@ def scrape_ieee_data(site_url):
                 ieee_citations = int(metadata_json.get('citationCount')) if metadata_json.get('citationCount') else None
     return [ieee_keywords, ieee_index_terms, ieee_author_keywords, ieee_citations, ieee_abstract]
 
-
-def get_ieee_link(paper_title):
+def get_ieee_link(paper_title, driver):
     """
     Scrape IEEE Xplore for the link to a specific paper.
 
-    This function sends a GET request to the IEEE Xplore search page with the provided paper title
-    and searches for the link to the paper in the search results. The link is returned as a string.
-
     Args:
         paper_title (str): The title of the paper to search for.
+        driver: The WebDriver instance to use.
 
     Returns:
         str: The URL of the paper on IEEE Xplore, or None if the link is not found.
@@ -69,10 +73,7 @@ def get_ieee_link(paper_title):
     encoded_title = urllib.parse.quote(paper_title)
     search_url = f"https://ieeexplore.ieee.org/search/searchresult.jsp?newsearch=true&queryText={encoded_title}"
     
-    # Initialize Selenium WebDriver
-    driver = webdriver.Chrome()  # Ensure you have the correct driver for your browser
     driver.get(search_url)
-    
     try:
         # Wait for search results to load
         WebDriverWait(driver, 10).until(
@@ -88,23 +89,19 @@ def get_ieee_link(paper_title):
             if extracted_title.lower() == paper_title.lower():  # Match the titles (case-insensitive)
                 document_link = result['href']
                 full_link = f"https://ieeexplore.ieee.org{document_link}"
-                driver.quit()
                 return full_link
     except Exception as e:
         print(f"Error while fetching link for {paper_title}: {e}")
-    finally:
-        driver.quit()
     return None
 
-def process_csv_and_update(input_csv):
+
+def process_csv_and_update(input_csv, driver):
     """
     Process a CSV file and update it with IEEE Xplore data.
 
-    Given a CSV file, this function reads it into memory, checks if the columns 'ieee_link', 'ieee_keywords', 'ieee_citations', and 'ieee_abstract' exist, and adds them if not. 
-    Then, it scrapes the IEEE Xplore page for each paper title in the CSV and updates the rows with the scraped data. Finally, it writes the updated rows back to the same CSV file.
-
     Args:
         input_csv (str): The path to the CSV file to process.
+        driver: The WebDriver instance to use.
 
     Returns:
         None
@@ -128,8 +125,8 @@ def process_csv_and_update(input_csv):
         title = row['title']
         if not row.get('ieee_link'):  # Skip if the link already exists
             print(f"Processing title: {title}")
-            ieee_link = get_ieee_link(title)
-            if ieee_link!=None:
+            ieee_link = get_ieee_link(title, driver)
+            if ieee_link:
                 row['ieee_link'] = ieee_link
                 print(f"Link for '{title}': {ieee_link}")
                 ieee_keywords, ieee_index_terms, ieee_author_keywords, ieee_citations, ieee_abstract = scrape_ieee_data(ieee_link)
@@ -155,5 +152,6 @@ def process_csv_and_update(input_csv):
 
 
 if __name__ == "__main__":
+    driver = initialize_driver()  # Initialize the persistent browser
     input_csv = 'C:\\Users\\JAI GURU JI\\Desktop\\Data Lit\\Project\\Data_Literacy\\data\\cvpr_preprocessed\\cvpr2020.csv'  # Replace with your CSV file name
-    process_csv_and_update(input_csv)
+    process_csv_and_update(input_csv, driver)
