@@ -1,0 +1,23 @@
+3DFaceFill: An Analysis-by-Synthesis Approach To Face Completion
+Addressing Out-of-Distribution Label Noise in Webly-Labelled Data
+Adversarial Open Domain Adaptation for Sketch-to-Photo Synthesis
+Co-Net: A Collaborative Region-Contour-Driven Network for Fine-to-Finer Medical Image Segmentation
+Danish Fungi 2020 - Not Just Another Image Recognition Dataset
+Evaluation of Correctness in Unsupervised Many-to-Many Image Translation
+Few-Shot Object Detection by Attending to Per-Sample-Prototype
+Fully Convolutional Cross-Scale-Flows for Image-Based Defect Detection
+Measuring Representation of Race, Gender, and Age in Children's Books: Face Detection and Feature Classification in Illustrated Images
+Mixed-Dual-Head Meets Box Priors: A Robust Framework for Semi-Supervised Segmentation
+MovingFashion: A Benchmark for the Video-To-Shop Challenge
+PhotoWCT2: Compact Autoencoder for Photorealistic Style Transfer Resulting From Blockwise Training and Skip Connections of High-Frequency Residuals
+Pixel-by-Pixel Cross-Domain Alignment for Few-Shot Semantic Segmentation
+S2-MLP: Spatial-Shift MLP Architecture for Vision
+S2FGAN: Semantically Aware Interactive Sketch-To-Face Translation
+SBEVNet: End-to-End Deep Stereo Layout Estimation
+Semi-Supervised Domain Adaptation via Sample-to-Sample Self-Distillation
+StickyLocalization: Robust End-to-End Relocalization on Point Clouds Using Graph Neural Networks
+The Hitchhiker's Guide to Prior-Shift Adaptation
+The Untapped Potential of Off-the-Shelf Convolutional Neural Networks
+Transferable 3D Adversarial Textures Using End-to-End Optimization
+WEPDTOF: A Dataset and Benchmark Algorithms for In-the-Wild People Detection and Tracking From Overhead Fisheye Cameras
+edge-SR: Super-Resolution for the Masses
