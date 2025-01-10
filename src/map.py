@@ -3,11 +3,9 @@ import plotly.express as px
 import numpy as np
 import ast
 
-
 def split_and_deduplicate(countries):
     if pd.isna(countries):
         return []
-    # Split by comma, strip whitespace, and deduplicate while preserving order
     seen = set()
     deduplicated_countries = [c.strip() for c in countries.split(',') if c.strip() not in seen and not seen.add(c.strip())]
     return deduplicated_countries
@@ -22,7 +20,7 @@ def convert_to_list(entry):
 
 
 # Load your data
-data = pd.read_csv('data/updated_dataset.csv')
+data = pd.read_csv('../data/updated_dataset.csv')
 
 data['company_country_list'] = data['company_country'].apply(convert_to_list)
 data['company_deduplicated_countries'] = data['company_country_list'].apply(lambda countries: list(dict.fromkeys(countries)))
@@ -44,7 +42,6 @@ university_country_df = university_country_counts.copy()
 university_country_df['Log Count'] = np.log1p(university_country_df['Count'])
 
 # Plot choropleth map for university affiliations
-
 fig_university = px.choropleth(
     university_country_df,
     locations='Country',
@@ -56,11 +53,9 @@ fig_university = px.choropleth(
     projection="natural earth",
 )
 
-fig_university.show()
+fig_university.write_image('../graphs/university_affiliations.png', width=1920, height=1080, scale=3)
 
-
-
-# Plot choropleth map for country counts using logarithmic scale
+# Plot choropleth map for company affiliations
 fig_company = px.choropleth(
     company_country_df,
     locations='Country',
@@ -72,9 +67,5 @@ fig_company = px.choropleth(
     projection="natural earth",
 )
 
-fig_company.show()
+fig_company.write_image('../graphs/company_affiliations.png', width=1920, height=1080, scale=3)
 
-
-
-# unresolved_countries = set(data['university_country'].dropna()) - {country.name for country in pycountry.countries}
-# print(unresolved_countries)
