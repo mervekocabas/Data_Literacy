@@ -44,4 +44,9 @@ plt.legend(title="Conference Name", title_fontsize=14, fontsize=12)  # Adjust le
 plt.xticks(fontsize=12) # rotation=45  # Rotate and resize x-axis labels
 plt.yticks(fontsize=12)  # Resize y-axis labels
 plt.tight_layout()
-plt.show()
+
+# Save the plot as a PNG image to the specified destination
+output_file_path = "../graphs/corporate_ratio_graph.png"
+
+# Save the figure
+plt.savefig(output_file_path)
