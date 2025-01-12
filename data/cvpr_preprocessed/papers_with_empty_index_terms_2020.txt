@@ -1,0 +1,12 @@
+Correction Filter for Single Image Super-Resolution: Robustifying Off-the-Shelf Deep Super-Resolvers
+End-to-End Learnable Geometric Vision by Backpropagating PnP Optimization
+EventSR: From Asynchronous Events to Image Reconstruction, Restoration, and Super-Resolution via End-to-End Adversarial Learning
+Fast-MVSNet: Sparse-to-Dense Multi-View Stereo With Learned Propagation and Gauss-Newton Refinement
+From Patches to Pictures (PaQ-2-PiQ): Mapping the Perceptual Space of Picture Quality
+Google Landmarks Dataset v2 – A Large-Scale Benchmark for Instance-Level Recognition and Retrieval
+Seeing Around Street Corners: Non-Line-of-Sight Detection and Tracking In-the-Wild Using Doppler Radar
+Sign Language Transformers: Joint End-to-End Sign Language Recognition and Translation
+StereoGAN: Bridging Synthetic-to-Real Domain Gap by Joint Optimization of Domain Translation and Stereo Matching
+UnrealText: Synthesizing Realistic Scene Text Images From the Unreal World
+Where, What, Whether: Multi-Modal Learning Meets Pedestrian Detection
+“Looking at the Right Stuff” – Guided Semantic-Gaze for Autonomous Driving

@@ -1,34 +1,3 @@
-ADA-AT/DT: An Adversarial Approach for Cross-Domain and Cross-Task Knowledge Transfer
-Analyzing Deep Neural Network's Transferability via Frechet Distance
-Attention-Based Spatial Guidance for Image-to-Image Translation
-Attentional Feature Fusion
-Coarse Temporal Attention Network (CTA-Net) for Driver's Activity Recognition
-Coarse-to-Fine Gaze Redirection With Numerical and Pictorial Guidance
-DANCE: A Deep Attentive Contour Model for Efficient Instance Segmentation
-Deep Image Compositing
-Deep Unsupervised Anomaly Detection
-Driving Among Flatmobiles: Bird-Eye-View Occupancy Grids From a Monocular Camera for Holistic Trajectory Planning
-Dynamic Routing Networks
-EAGLE-Eye: Extreme-Pose Action Grader Using Detail Bird's-Eye View
-End-to-End Chinese Landscape Painting Creation Using Generative Adversarial Networks
-End-to-End Lane Shape Prediction With Transformers
-End-to-End Learning Improves Static Object Geo-Localization From Video
-Faces a la Carte: Text-to-Face Generation via Attribute Disentanglement
 Global Table Extractor (GTE): A Framework for Joint Table Identification and Cell Structure Recognition Using Visual Context
-Have Fun Storming the Castle(s)!
-HyperCon: Image-to-Video Model Transfer for Video-to-Video Translation Tasks
-Identity Unbiased Deception Detection by 2D-to-3D Face Reconstruction
-Let's Get Dirty: GAN Based Data Augmentation for Camera Lens Soiling Detection in Autonomous Driving
-PNPDet: Efficient Few-Shot Detection Without Forgetting via Plug-and-Play Sub-Networks
-Person-in-Context Synthesis With Compositional Structural Space
-Pretraining Boosts Out-of-Domain Robustness for Pose Estimation
-Representation Learning From Videos In-the-Wild: An Object-Centric Approach
-Revisiting Street-to-Aerial View Image Geo-Localization and Orientation Estimation
-Self Supervision for Attention Networks
-Shape From Semantic Segmentation via the Geometric Renyi Divergence
-SliceNets -- A Scalable Approach for Object Detection in 3D CT Scans
-SoFA: Source-Data-Free Feature Alignment for Unsupervised Domain Adaptation
 SuPEr-SAM: Using the Supervision Signal From a Pose Estimator to Train a Spatial Attention Module for Personal Protective Equipment Recognition
 Temporally Consistent 3D Human Pose Estimation Using Dual 360deg Cameras
-Text-to-Image Generation Grounded by Fine-Grained User Attention
-Unsupervised Multimodal Video-to-Video Translation via Self-Supervised Learning

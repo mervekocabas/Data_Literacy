@@ -1,0 +1,28 @@
+3D-POP – An Automated Annotation Approach to Facilitate Markerless 2D-3D Tracking of Freely Moving Birds With Marker-Based Motion Capture
+A New Path: Scaling Vision-and-Language Navigation With Synthetic Instructions and Imitation Learning
+A2J-Transformer: Anchor-to-Joint Transformer Network for 3D Interacting Hand Pose Estimation From a Single RGB Image
+AShapeFormer: Semantics-Guided Object-Level Active Shape Encoding for 3D Object Detection via Transformers
+Affordance Diffusion: Synthesizing Hand-Object Interactions
+BEVFormer v2: Adapting Modern Image Backbones to Bird’s-Eye-View Recognition via Perspective Supervision
+CiaoSR: Continuous Implicit Attention-in-Attention Network for Arbitrary-Scale Image Super-Resolution
+Clothing-Change Feature Augmentation for Person Re-Identification
+Collecting Cross-Modal Presence-Absence Evidence for Weakly-Supervised Audio-Visual Event Perception
+DeCo: Decomposition and Reconstruction for Compositional Temporal Grounding via Coarse-To-Fine Contrastive Ranking
+Devil Is in the Queries: Advancing Mask Transformers for Real-World Medical Image Segmentation and Out-of-Distribution Localization
+EC2: Emergent Communication for Embodied Control
+Gated Multi-Resolution Transfer Network for Burst Restoration and Enhancement
+GeoVLN: Learning Geometry-Enhanced Visual Representation With Slot Attention for Vision-and-Language Navigation
+GradMA: A Gradient-Memory-Based Accelerated Federated Learning With Alleviated Catastrophic Forgetting
+HRDFuse: Monocular 360° Depth Estimation by Collaboratively Learning Holistic-With-Regional Depth Distributions
+LASP: Text-to-Text Optimization for Language-Aware Soft Prompting of Vision & Language Models
+MarS3D: A Plug-and-Play Motion-Aware Model for Semantic Segmentation on Multi-Scan 3D Point Clouds
+Meta-Explore: Exploratory Hierarchical Vision-and-Language Navigation Using Scene Object Spectrum Grounding
+Multiscale Tensor Decomposition and Rendering Equation Encoding for View Synthesis
+On the Difficulty of Unpaired Infrared-to-Visible Video Translation: Fine-Grained Content-Rich Patches Transfer
+Overcoming the Trade-Off Between Accuracy and Plausibility in 3D Hand Shape Reconstruction
+PoseExaminer: Automated Testing of Out-of-Distribution Robustness in Human Pose and Shape Estimation
+RiDDLE: Reversible and Diversified De-Identification With Latent Encryptor
+Role of Transients in Two-Bounce Non-Line-of-Sight Imaging
+TBP-Former: Learning Temporal Bird’s-Eye-View Pyramid for Joint Perception and Prediction in Vision-Centric Autonomous Driving
+Understanding the Robustness of 3D Object Detection With Bird’s-Eye-View Representations in Autonomous Driving
+Vision Transformer With Super Token Sampling

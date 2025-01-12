@@ -1,68 +1,22 @@
 360MVSNet: Deep Multi-View Stereo Network With 360deg Images for Indoor Scene Reconstruction
-3D Neural Sculpting (3DNS): Editing Neural Signed Distance Functions
-A Priority Map for Vision-and-Language Navigation With Trajectory Plans and Feature-Location Cues
 A Quality Aware Sample-to-Sample Comparison for Face Recognition
 A Simple and Efficient Pipeline To Build an End-to-End Spatial-Temporal Action Detector
 AT-DDPM: Restoring Faces Degraded by Atmospheric Turbulence Using Denoising Diffusion Probabilistic Models
 Adaptive Local-Component-Aware Graph Convolutional Network for One-Shot Skeleton-Based Action Recognition
-Anomaly Clustering: Grouping Images Into Coherent Clusters of Anomaly Types
-Arbitrary Style Guidance for Enhanced Diffusion-Based Text-to-Image Generation
-Augmentation by Counterfactual Explanation - Fixing an Overconfident Classifier
-BrightFlow: Brightness-Change-Aware Unsupervised Learning of Optical Flow
-COPE: End-to-End Trainable Constant Runtime Object Pose Estimation
 CameraPose: Weakly-Supervised Monocular 3D Human Pose Estimation by Leveraging In-the-Wild 2D Annotations
-Can Shadows Reveal Biometric Information?
 Complementary Bi-Directional Feature Compression for Indoor 360deg Semantic Segmentation With Self-Distillation
 D2F2WOD: Learning Object Proposals for Weakly-Supervised Object Detection via Progressive Domain Adaptation
 DBCE: A Saliency Method for Medical Deep Learning Through Anatomically-Consistent Free-Form Deformations
-DyStyle: Dynamic Neural Network for Multi-Attribute-Conditioned Style Editings
-Dynamic Neural Portraits
-Efficient Reference-Based Video Super-Resolution (ERVSR): Single Reference Image Is All You Need
-Efficient Visual Tracking With Exemplar Transformers
-End-to-End Single-Frame Image Signal Processing for High Dynamic Range Scenes
 Exemplar Guided Deep Neural Network for Spatial Transcriptomics Analysis of Gene Expression Prediction
-FFM: Injecting Out-of-Domain Knowledge via Factorized Frequency Modification
 FLOAT: Fast Learnable Once-for-All Adversarial Training for Tunable Trade-Off Between Accuracy and Robustness
-FaceOff: A Video-to-Video Face Swapping System
-Fast Differentiable Transient Rendering for Non-Line-of-Sight Reconstruction
 Fractual Projection Forest: Fast and Explainable Point Cloud Classifier
-GLAD: A Global-to-Local Anomaly Detector
-Heatmap-Based Out-of-Distribution Detection
 High-Resolution Depth Estimation for 360deg Panoramas Through Perspective and Panoramic Depth Images Registration
-Human-in-the-Loop Video Semantic Segmentation Auto-Annotation
-HyperPosePDF - Hypernetworks Predicting the Probability Distribution on SO(3)
-Hyperdimensional Feature Fusion for Out-of-Distribution Detection
-Improving Saliency Models' Predictions of the Next Fixation With Humans' Intrinsic Cost of Gaze Shifts
 Kernel-Aware Burst Blind Super-Resolution
-LAVA: Label-Efficient Visual Learning and Adaptation
 LCS: Learning Compressible Subspaces for Efficient, Adaptive, Real-Time Network Compression at Inference Time
-Large-to-Small Image Resolution Asymmetry in Deep Metric Learning
-Leveraging Off-the-Shelf Diffusion Model for Multi-Attribute Fashion Image Manipulation
-MORGAN: Meta-Learning-Based Few-Shot Open-Set Recognition via Generative Adversarial Network
-MT-DETR: Robust End-to-End Multimodal Detection With Confidence Fusion
-Mesh-Tension Driven Expression-Based Wrinkles for Synthetic Faces
-Mixture Outlier Exposure: Towards Out-of-Distribution Detection in Fine-Grained Environments
-Modeling Stroke Mask for End-to-End Text Erasing
-No Shifted Augmentations (NSA): Compact Distributions for Robust Self-Supervised Anomaly Detection
-OCR-VQGAN: Taming Text-Within-Image Generation
-Out-of-Distribution Detection With Reconstruction Error and Typicality-Based Penalty
-Out-of-Distribution Detection via Frequency-Regularized Generative Models
-PIDS: Joint Point Interaction-Dimension Search for 3D Point Cloud
-Panoptic-Aware Image-to-Image Translation
-Perceiver-VL: Efficient Vision-and-Language Modeling With Iterative Latent Attention
 Performer: A Novel PPG-to-ECG Reconstruction Transformer for a Digital Biomarker of Cardiovascular Disease Detection
 Rethinking the Data Annotation Process for Multi-View 3D Pose Estimation With Active Learning and Self-Training
 SALAD: Source-Free Active Label-Agnostic Domain Adaptation for Classification, Segmentation and Detection
-SSFE-Net: Self-Supervised Feature Enhancement for Ultra-Fine-Grained Few-Shot Class Incremental Learning
-Self-Improving Multiplane-To-Layer Images for Novel View Synthesis
-Semantics-Depth-Symbiosis: Deeply Coupled Semi-Supervised Learning of Semantics and Depth
-Structure-Encoding Auxiliary Tasks for Improved Visual Representation in Vision-and-Language Navigation
 THOR-Net: End-to-End Graformer-Based Realistic Two Hands and Object Reconstruction With Self-Supervision
-TI2Net: Temporal Identity Inconsistency Network for Deepfake Detection
 Trans4Map: Revisiting Holistic Bird's-Eye-View Mapping From Egocentric Images to Allocentric Semantics With Vision Transformers
-TransPillars: Coarse-To-Fine Aggregation for Multi-Frame 3D Object Detection
-UVCGAN: UNet Vision Transformer Cycle-Consistent GAN for Unpaired Image-to-Image Translation
 Unsupervised Multi-Object Segmentation Using Attention and Soft-Argmax
-WHFL: Wavelet-Domain High Frequency Loss for Sketch-to-Image Translation
-X-Align: Cross-Modal Cross-View Alignment for Bird's-Eye-View Segmentation
 X-NeRF: Explicit Neural Radiance Field for Multi-Scene 360deg Insufficient RGB-D Views

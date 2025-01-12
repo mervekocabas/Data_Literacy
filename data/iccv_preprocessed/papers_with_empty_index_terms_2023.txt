@@ -1,214 +1,39 @@
 3D Motion Magnification: Visualizing Subtle Motions from Time-Varying Radiance Fields
-?-Adaptive Decoupled Prototype for Few-Shot Object Detection
-A Dynamic Dual-Processing Object Detection Framework Inspired by the Brain's Recognition Mechanism
-A Parse-Then-Place Approach for Generating Graphic Layouts from Textual Descriptions
-A-STAR: Test-time Attention Segregation and Retention for Text-to-image Synthesis
-ASAG: Building Strong One-Decoder-Layer Sparse Detectors via Adaptive Sparse Anchor Generation
-ASIC: Aligning Sparse in-the-wild Image Collections
-ATT3D: Amortized Text-to-3D Object Synthesis
-Ablating Concepts in Text-to-Image Diffusion Models
-Active Neural Mapping
-Ada3D : Exploiting the Spatial Redundancy with Adaptive Inference for Efficient 3D Object Detection
-AdaMV-MoE: Adaptive Multi-Task Vision Mixture-of-Experts
 Adaptive Calibrator Ensemble: Navigating Test Set Difficulty in Out-of-Distribution Scenarios
-Adding Conditional Control to Text-to-Image Diffusion Models
-AerialVLN: Vision-and-Language Navigation for UAVs
-All-to-Key Attention for Arbitrary Style Transfer
-Anti-DreamBooth: Protecting Users from Personalized Text-to-image Synthesis
-Audio-Enhanced Text-to-Video Retrieval using Text-Conditioned Feature Alignment
-AutoAD II: The Sequel - Who, When, and What in Movie Audio Description
 BEV-DG: Cross-Modal Learning under Bird's-Eye View for Domain Generalization of 3D Semantic Segmentation
-BEVPlace: Learning LiDAR-based Place Recognition using Bird's Eye View Images
 BT^2: Backward-compatible Training with Basis Transformation
-BUS: Efficient and Effective Vision-Language Pre-Training with Bottom-Up Patch Summarization.
-Be Everywhere - Hear Everything (BEE): Audio Scene Reconstruction by Sparse Audio-Visual Samples
-Beyond One-to-One: Rethinking the Referring Image Segmentation
-Bird's-Eye-View Scene Graph for Vision-Language Navigation
 Boosting 3-DoF Ground-to-Satellite Camera Localization Accuracy via Geometry-Guided Cross-View Transformer
-BoxDiff: Text-to-Image Synthesis with Training-Free Box-Constrained Diffusion
 Breaking Common Sense: WHOOPS! A Vision-and-Language Benchmark of Synthetic and Compositional Images
-Building3D: A Urban-Scale Dataset and Benchmarks for Learning Roof Structures from Point Clouds
-C2ST: Cross-Modal Contextualized Sequence Transduction for Continuous Sign Language Recognition
 CHORUS : Learning Canonicalized 3D Human-Object Spatial Relations from Unbounded Synthesized Images
 CTP:Towards Vision-Language Continual Pretraining via Compatible Momentum Contrast and Topology Preservation
-Can Language Models Learn to Listen?
-Center-Based Decoupled Point-cloud Registration for 6D Object Pose Estimation
-ChildPlay: A New Benchmark for Understanding Children's Gaze Behaviour
-Coarse-to-Fine Amodal Segmentation with Shape Prior
-Coarse-to-Fine: Learning Compact Discriminative Representation for Single-Stage Image Retrieval
-Collaborative Tracking Learning for Frame-Rate-Insensitive Multi-Object Tracking
-DALL-Eval: Probing the Reasoning Skills and Social Biases of Text-to-Image Generation Models
-DIFFGUARD: Semantic Mismatch-Guided Out-of-Distribution Detection Using Pre-Trained Diffusion Models
-DIME-FM : DIstilling Multimodal and Efficient Foundation Models
-DLGSANet: Lightweight Dynamic Local and Global Self-Attention Networks for Image Super-Resolution
-Dataset Quantization
 Decoupled DETR: Spatially Disentangling Localization and Classification for Improved End-to-End Object Detection
-Deep Feature Deblurring Diffusion for Detecting Out-of-Distribution Objects
-Deep Incubation: Training Large Models by Divide-and-Conquering
-Dense Text-to-Image Generation with Attention Modulation
 DenseShift: Towards Accurate and Efficient Low-Bit Power-of-Two Quantization
 DiLiGenT-Pi: Photometric Stereo for Planar Surfaces with Rich Details - Benchmark Dataset and Beyond
-DiffRate : Differentiable Compression Rate for Efficient Vision Transformers
 DiffV2S: Diffusion-Based Video-to-Speech Synthesis with Vision-Guided Speaker Embedding
-Diffusion in Style
-Discriminative Class Tokens for Text-to-Image Diffusion Models
-Disentangling Spatial and Temporal Learning for Efficient Image-to-Video Transfer Learning
-Distilling Coarse-to-Fine Semantic Matching Knowledge for Weakly Supervised 3D Visual Grounding
-Distilling Large Vision-Language Model with Out-of-Distribution Generalizability
 Divide&Classify: Fine-Grained Classification for City-Wide Visual Geo-Localization
-DreamBooth3D: Subject-Driven Text-to-3D Generation
-DreamPose: Fashion Video Synthesis with Stable Diffusion
 Dual Meta-Learning with Longitudinally Consistent Regularization for One-Shot Brain Tissue Segmentation Across the Human Lifespan
-Dynamic Point Fields
-E2E-LOAD: End-to-End Long-form Online Action Detection
-ELITE: Encoding Visual Concepts into Textual Embeddings for Customized Text-to-Image Generation
-EP2P-Loc: End-to-End 3D Point to 2D Pixel Localization for Large-Scale Visual Localization
-Editing Implicit Assumptions in Text-to-Image Diffusion Models
-Ego-Humans: An Ego-Centric 3D Multi-Human Benchmark
 Emotional Listener Portrait: Neural Listener Head Generation with Emotion
-End-to-End Diffusion Latent Optimization Improves Classifier Guidance
-End-to-end 3D Tracking with Decoupled Queries
 Enhancing NeRF akin to Enhancing LLMs: Generalizable NeRF Transformer with Mixture-of-View-Experts
-Enhancing Non-line-of-sight Imaging via Learnable Inverse Kernel and Attention Mechanisms
-Evaluating Data Attribution for Text-to-Image Models
-Exploring Predicate Visual Context in Detecting of Human-Object Interactions
-Expressive Text-to-Image Generation with Rich Text
-Fan-Beam Binarization Difference Projection (FB-BDP): A Novel Local Object Descriptor for Fine-Grained Leaf Image Retrieval
-Fantasia3D: Disentangling Geometry and Appearance for High-quality Text-to-3D Content Creation
-Fast Globally Optimal Surface Normal Estimation from an Affine Correspondence
-Feature Proliferation  the Cancer in StyleGAN and its Treatments
-Focal Network for Image Restoration
-FocalFormer3D: Focusing on Hard Instance for 3D Object Detection
-General Image-to-Image Translation with One-Shot Image Guidance
-Generating Realistic Images from In-the-wild Sounds
-GlueGen: Plug and Play Multi-modal Encoders for X-to-image Generation
-GridMM: Grid Memory Map for Vision-and-Language Navigation
-Grounded Entity-Landmark Adaptive Pre-Training for Vision-and-Language Navigation
-Group DETR: Fast DETR Training with Group-Wise One-to-Many Assignment
-Group Pose: A Simple Baseline for End-to-End Multi-Person Pose Estimation
-HM-ViT: Hetero-Modal Vehicle-to-Vehicle Cooperative Perception with Vision Transformer
-HOSNeRF: Dynamic Human-Object-Scene Neural Radiance Fields from a Single Video
-HRS-Bench: Holistic, Reliable and Scalable Benchmark for Text-to-Image Models
 Hard No-Box Adversarial Attack on Skeleton-Based Human Action Recognition with Skeleton-Motion-Informed Gradient
-Harnessing the Spatial-Temporal Attention of Diffusion Models for High-Fidelity Text-to-Image Synthesis
-Hidden Biases of End-to-End Driving Models
-Hierarchical Visual Categories Modeling: A Joint Representation Learning and Density Estimation Framework for Out-of-Distribution Detection
-I Can't Believe There's No Images! Learning Visual Tasks Using only Language Supervision
-IDiff-Face: Synthetic-based Face Recognition through Fizzy Identity-Conditioned Diffusion Model
-ITI-GEN: Inclusive Text-to-Image Generation
-Improving Equivariance in State-of-the-Art Supervised Depth and Normal Predictors
-Inspecting the Geographical Representativeness of Images from Text-to-Image Models
-InterFormer: Real-time Interactive Image Segmentation
-Keep It SimPool: Who Said Supervised Transformers Suffer from Attention Deficit?
-Learning Robust Representations with Information Bottleneck and Memory Network for RGB-D-based Gesture Recognition
-Learning Spatial-context-aware Global Visual Feature Representation for Instance Image Retrieval
-Learning Vision-and-Language Navigation from YouTube Videos
-Learning from Noisy Data for Semi-Supervised 3D Object Detection
-Learning to Generate Semantic Layouts for Higher Text-Image Correspondence in Text-to-Image Synthesis
-Lighting Every Darkness in Two Pairs: A Calibration-Free Pipeline for RAW Denoising
-Lightweight Image Super-Resolution with Superpixel Token Interaction
-Linear-Covariance Loss for End-to-End Learning of 6D Pose Estimation
 Lip2Vec: Efficient and Robust Visual Speech Recognition via Latent-to-Latent Visual to Audio Representation Mapping
-Localizing Object-Level Shape Variations with Text-to-Image Diffusion Models
 Locomotion-Action-Manipulation: Synthesizing Human-Scene Interactions in Complex 3D Environments
-MMVP: Motion-Matrix-Based Video Prediction
-MV-Map: Offboard HD-Map Generation with Multi-view Consistency
-MagicFusion: Boosting Text-to-Image Generation Performance by Fusing Diffusion Models
-Make-An-Animation: Large-Scale Text-conditional 3D Human Motion Generation
-Make-It-3D: High-fidelity 3D Creation from A Single Image with Diffusion Prior
-MapPrior: Bird's-Eye View Map Layout Estimation with Generative Models
-Mask-Attention-Free Transformer for 3D Instance Segmentation
-Memory-and-Anticipation Transformer for Online Action Understanding
-Mimic3D: Thriving 3D-Aware GANs via 3D-to-2D Imitation
-Misalign, Contrast then Distill: Rethinking Misalignments in Language-Image Pre-training
-Multi-Modal Gated Mixture of Local-to-Global Experts for Dynamic Image Fusion
-Muscles in Action
-NAPA-VQ: Neighborhood-Aware Prototype Augmentation with Vector Quantization for Continual Learning
-NLOS-NeuS: Non-line-of-sight Neural Implicit Surface
-Nearest Neighbor Guidance for Out-of-Distribution Detection
-Neglected Free Lunch - Learning Image Classifiers Using Annotation Byproducts
-Neural Fields for Structured Lighting
-Neural Radiance Field with LiDAR maps
-Occ^2Net: Robust Image Matching Based on 3D Occupancy Estimation for Occluded Regions
-On the Audio-visual Synchronization for Lip-to-Speech Synthesis
-Open Set Video HOI detection from Action-Centric Chain-of-Look Prompting
 Out-of-Distribution Detection for Monocular Depth Estimation
-Out-of-Domain GAN Inversion via Invertibility Decomposition for Photo-Realistic Human Face Manipulation
-PASTA: Proportional Amplitude Spectrum Training Augmentation for Syn-to-Real Domain Generalization
-PGFed: Personalize Each Client's Global Objective for Federated Learning
-PNI : Industrial Anomaly Detection using Position and Neighborhood Information
 PODIA-3D: Domain Adaptation of 3D Generative Model Across Large Domain Gap Using Pose-Preserved Text-to-Image Diffusion
 PVT++: A Simple End-to-End Latency-Aware Visual Tracking Framework
 ParCNetV2: Oversized Kernel with Enhanced Attention
 Parametric Depth Based Feature Representation Learning for Object Detection and Segmentation in Birds-Eye View
 Partition-And-Debias: Agnostic Biases Mitigation via a Mixture of Biases-Specific Experts
-PivotNet: Vectorized Pivot Learning for End-to-end HD Map Construction
-Pre-Training-Free Image Manipulation Localization through Non-Mutually Exclusive Contrastive Learning
-Protoype-based Dataset Comparison
-QD-BEV : Quantization-aware View-guided Distillation for Multi-view 3D Object Detection
 RLSAC: Reinforcement Learning Enhanced Sample Consensus for End-to-End Robust Estimation
-RPEFlow: Multimodal Fusion of RGB-PointCloud-Event for Joint Optical Flow and Scene Flow Estimation
 Rapid Network Adaptation: Learning to Adapt Neural Networks Using Test-Time Feedback
-ReLeaPS : Reinforcement Learning-based Illumination Planning for Generalized Photometric Stereo
-Recovering a Molecule's 3D Dynamics from Liquid-phase Electron Microscopy Movies
-RecursiveDet: End-to-End Region-Based Recursive Object Detection
-Residual Pattern Learning for Pixel-Wise Out-of-Distribution Detection in Semantic Segmentation
 Revisit PCA-based Technique for Out-of-Distribution Detection
-Rickrolling the Artist: Injecting Backdoors into Text Encoders for Text-to-Image Synthesis
-Robust Frame-to-Frame Camera Rotation Estimation in Crowded Scenes
 Robust Mixture-of-Expert Training for Convolutional Neural Networks
-Robust Object Modeling for Visual Tracking
-SA-BEV: Generating Semantic-Aware Bird's-Eye-View Feature for Multi-view 3D Object Detection
-SAFE: Sensitivity-Aware Features for Out-of-Distribution Object Detection
 SIGMA: Scale-Invariant Global Sparse Shape Matching
-SIRA-PCR: Sim-to-Real Adaptation for 3D Point Cloud Registration
-Scaling Data Generation in Vision-and-Language Navigation
-Scanning Only Once: An End-to-end Framework for Fast Temporal Grounding in Long Videos
-Scene as Occupancy
-Scenimefy: Learning to Craft Anime Scene via Semi-Supervised Image-to-Image Translation
-Scratch Each Other's Back: Incomplete Multi-Modal Brain Tumor Segmentation via Category Aware Group Self-Support Learning
-Segment Anything
-Self-Supervised Character-to-Character Distillation for Text Recognition
-Self-supervised Monocular Depth Estimation: Let's Talk About The Weather
 Semantic Information in Contrastive Learning
 Shortcut-V2V: Compression Framework for Video-to-Video Translation Based on Temporal Redundancy Reduction
-Simple and Effective Out-of-Distribution Detection via Cosine-based Softmax Loss
-Small Object Detection via Coarse-to-fine Proposal Generation and Imitation Learning
-Steered Diffusion: A Generalized Framework for Plug-and-Play Conditional Image Synthesis
 Strata-NeRF : Neural Radiance Fields for Stratified Scenes
-TMR: Text-to-Motion Retrieval Using Contrastive 3D Human Motion Synthesis
-Take-A-Photo: 3D-to-2D Generative Pre-training of Point Cloud Models
-Talking Head Generation with Probabilistic Audio-to-Visual Diffusion Priors
-Task-Oriented Multi-Modal Mutual Leaning for Vision-Language Models
 TaskExpert: Dynamically Assembling Multi-Task Representations with Memorial Mixture-of-Experts
-Text-Conditioned Sampling Framework for Text-to-Image Generation with Masked Generative Models
-Text2Room: Extracting Textured 3D Meshes from 2D Text-to-Image Models
-Text2Video-Zero: Text-to-Image Diffusion Models are Zero-Shot Video Generators
-The Power of Sound (TPoS): Audio Reactive Video Generation with Stable Diffusion
-TiDy-PSFs: Computational Imaging with Time-Averaged Dynamic Point-Spread-Functions
-Time-to-Contact Map by Joint Estimation of Up-to-Scale Inverse Depth and Global Motion using a Single Event Camera
-Towards Nonlinear-Motion-Aware and Occlusion-Robust Rolling Shutter Correction
-Towards Unifying Medical Vision-and-Language Pre-Training via Soft Prompts
-Towards Viewpoint Robustness in Birds Eye View Segmentation
-Translating Images to Road Network: A Non-Autoregressive Sequence-to-Sequence Approach
-Tune-A-Video: One-Shot Tuning of Image Diffusion Models for Text-to-Video Generation
 Two-in-One Depth: Bridging the Gap Between Monocular and Binocular Self-Supervised Depth Estimation
-UGC: Unified GAN Compression for Efficient Image-to-Image Translation
-UHDNeRF: Ultra-High-Definition Neural Radiance Fields
-Understanding the Feature Norm for Out-of-Distribution Detection
-UniFusion: Unified Multi-View Fusion Transformer for Spatial-Temporal Representation in Birds-Eye-View
-UniTR: A Unified and Efficient Multi-Modal Transformer for Bird's-Eye-View Representation
-Unified Coarse-to-Fine Alignment for Video-Text Retrieval
-Unified Out-Of-Distribution Detection: A Model-Specific Perspective
-Unified Pre-Training with Pseudo Texts for Text-To-Image Person Re-Identification
-Unleashing Text-to-Image Diffusion Models for Visual Perception
-Unsupervised Compositional Concepts Discovery with Text-to-Image Generative Models
-VL-PET: Vision-and-Language Parameter-Efficient Tuning via Granularity Control
-VLN-PETL: Parameter-Efficient Transfer Learning for Vision-and-Language Navigation
-VLSlice: Interactive Vision-and-Language Slice Discovery
 Video Adverse-Weather-Component Suppression Network via Weather Messenger and Adversarial Backpropagation
 WDiscOOD: Out-of-Distribution Detection via Whitened Linear Discriminant Analysis
 Window-Based Early-Exit Cascades for Uncertainty Estimation: When Deep Ensembles are More Efficient than Single Models
-Zero-1-to-3: Zero-shot One Image to 3D Object
-Zero-Shot Spatial Layout Conditioning for Text-to-Image Diffusion Models
 uSplit: Image Decomposition for Fluorescence Microscopy
