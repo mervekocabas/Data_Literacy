@@ -1,0 +1,22 @@
+Keyword                        Total Papers    Company Papers  University Papers
+---------------------------------------------------------------------------
+Augmented Reality (AR) and Virtual Reality (VR) 101             0               101            
+Autonomous Vehicles and Robotics 54              0               54             
+Core Vision Algorithms         417             0               417            
+Data Collection and Management 271             0               271            
+Datasets and Benchmarks        141             0               141            
+Ethics and Fairness in Vision  21              0               21             
+Generative Models and Creativity 66              0               66             
+Human-Centric Vision           45              0               45             
+Industrial and Manufacturing Applications 124             0               124            
+Mathematical Foundations       224             0               224            
+Medical Imaging and Healthcare 40              0               40             
+Miscellaneous                  797             0               797            
+Natural Language Processing    210             0               210            
+Natural Scenes and Environmental Analysis 66              0               66             
+Scene Understanding and Reconstruction 164             0               164            
+Security and Surveillance      55              0               55             
+Signal and Statistical Processing 60              0               60             
+Tools and Frameworks           158             0               158            
+Video Analysis and Action Recognition 129             0               129            
+Vision for Social Good         27              0               27             

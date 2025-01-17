@@ -9,58 +9,153 @@ keyword_groups = {
         "Learning systems", "Text-to-image synthesis", "Natural language processing", "Natural languages", "Linguistics", "Message passing", "Inference algorithms", 
         "Markov processes", "Markov random fields", "Mixture models", "Pragmatics", "Prediction algorithms", "Predictive models", "Probabilistic logic",
         "Semantics", "Search problems", "Sequential analysis", "Supervised learning", "Vocabulary", "Text recognition", "Syntactics", "Taxonomy",
+        "Character recognition",
+        "Context-aware services",
+        "Handwriting recognition",
+        "Optical character recognition software",
+        "Phonetics",
+        "Speech enhancement",
+        "Speech recognition",
+        "Twitter",
+        "Voice activity detection", "Annotations",
+        "Semantic search",
+        "Sentiment analysis",
+        "Text analysis",
+        "Text categorization",
+        "Writing", "Information filters",
+        "Prediction methods"
     ],
-    "Medical Imaging and Healthcare": [
+    "Medical Imaging and Healthcare": [ "Auditory system", "Embryo","Body regions", "Heart", "Human activity recognition",
         "Medical imaging", "Biomedical imaging", "Computed tomography", "Cancer", 
         "Biomedical optical imaging", "Disease diagnosis", "Blood vessels", "Bones",
         "Diseases", "Biomedical imaging", "Disease diagnosis", "X-ray imaging",
         "Medical diagnostic imaging", "Magnetic resonance imaging", "Lesions", "Liver",
         "Positron emission tomography", "Pancreas", "Pathology", "Retina", "Medical diagnostic imaging",
         "Genomics", "Mel frequency cepstral coefficient", "Optical imaging", "Optical filters", 
-        "Optical propagation", "Optical scattering", "Picture archiving and communication systems", "Prognostics and health management"
+        "Optical propagation", "Optical scattering", "Picture archiving and communication systems", "Prognostics and health management", "Assisted living",
+        "Biomedical monitoring", "Biopsy", "Calcium", "Heart rate", "Hospitals", "Plethysmography", "Phantoms", "Thorax", "Teeth", "Veins", "X-rays",
+        "Blindness","Autism", "Axons", "Colonoscopy", "Diabetic retinopathy", "Functional magnetic resonance imaging", 
+        "Gait recognition", "Lung", "Lung cancer", "Medical diagnosis", "Neurological diseases", 
+        "Pneumonia", "Surgery", "Telemedicine", "Visual impairment",
+        "Heart beat",
+        "Hemorrhaging",
+        "Pediatrics",
+        "Radiometry",
+        "X-ray scattering", "Microscopy",
+        "Neural activity",
+        "Neuroscience",
+        "Fingerprint recognition",
+        "Face detection",
+        "Iris recognition", "COVID-19",
+        "Histopathology",
+        "Melanoma",
+        "Medical services",
+        "Myocardium",
+        "Radiography",
+        "Retinopathy",
+        "Toxicology",
+        "Wounds", "Iris",
+        "MIMICs",
+        "Photothermal effects",
+        "Temperature distribution",
+        "Thermal analysis",
+        "Thermal lensing",
+        "Thermal stresses", "Angiography", "Biology", "Cells (biology)", "Medical conditions", "Minimally invasive surgery", 
+        "Photoplethysmography", "Physiology", "Radiology", "Retinal vessels", "Scanning electron microscopy", 
+        "Fluorescence", "Ultrasonic imaging"
     ],
-    "Autonomous Vehicles and Robotics": [
+    "Autonomous Vehicles and Robotics": ["Autonomous aerial vehicles", "Human-robot interaction", "Vehicle detection",
         "Autonomous driving", "Autonomous automobiles", "Autonomous vehicles", 
         "Robotics", "Automation", "Aerospace electronics", "Path planning", 
         "SLAM", "Collision avoidance", "Navigation", "UAVs", "Drone vision", 
         "Aerial vehicle navigation", "Remote inspections", 
-        "Swarm intelligence", "Autonomous systems",
+        "Swarm intelligence", "Autonomous systems","Global Positioning System", "Wireless sensor networks",
         "Automobiles", "Autonomous vehicles", "Robotics", "Path planning", "Navigation", 
         "UAVs", "Drone vision", "Aerial vehicle navigation",
         "Engines", "Humanoid robots", "Marine vehicles", "Legged locomotion", "Manipulators",
         "Robot sensing systems", "Robot vision systems", "Robots", "Simultaneous localization and mapping", "Motion compensation", 
         "Motion estimation", "Object detection", "Object recognition", "Object segmentation", "Object tracking", 
-        "Robot vision systems", "Unmanned aerial vehicles", "Vehicle dynamics", "Vehicles", "Visual odometry", "Visual perception", "Visual systems"
+        "Robot vision systems", "Unmanned aerial vehicles", "Vehicle dynamics", "Vehicles", "Visual odometry", "Visual perception", "Visual systems", "Autonomous robots",
+        "Drones",
+        "Helicopters",
+        "Motorcycles",
+        "Servosystems", "Aircraft",
+        "Boats",
+        "Lane detection",
+        "Propulsion",
+        "Robot kinematics",
+        "Service robots",
+        "Trajectory planning", "Machine vision",
+        "Sensor fusion",
+        "Traffic control"
     ],
-    "Human-Centric Vision": [
+    "Human-Centric Vision": ["Usability", "Affordances", "Forehead", "Pain","Human computer interaction", "Human in the loop", "Oral communication", "Sign language",
         "Activity recognition", "Human pose estimation", "Gesture recognition", 
         "Facial recognition", "Emotion analysis", "Gait analysis", "Cognition", 
-        "Assistive technology", "Creativity",
+        "Assistive technology", "Creativity","Behavioral sciences", "Eyelids", "Fingers", "User experience", "User interfaces",
         "Emotion recognition", "Gesture recognition", "Facial recognition", "Cognition",
         "Face recognition", "Facial features", "Gaze tracking", "Face", "Facial recognition", "Head", "Lips",
         "Mouth", "Hip", "Neck", "Muscles", "Hippocampus", "Psychology", "Hair", "Microphones", "Nose",
-        "Elbow", "Ear", "Skin", "Torso", "Wrist"
+        "Elbow", "Ear", "Skin", "Torso", "Wrist", "Face detection",
+        "Fingerprint recognition",
+        "Iris recognition",
+        "Identification of persons", "Biometrics (access control)",
+        "Faces",
+        "Facial animation",
+        "Human factors",
+        "Human image synthesis",
+        "Tactile sensors", "Force",
+        "Stress",
+        "Weight measurement"
     ],
-    "Natural Scenes and Environmental Analysis": [
+    "Natural Scenes and Environmental Analysis": ["Fluids", "Water", "Climate change", "Flora", "Flowering plants", "Geospatial analysis", "Land surface", "Phenology", "Plant diseases", 
+        "Plantations",
         "Agriculture", "Atmospheric measurements", "Atmospheric modeling", 
         "Clouds", "Remote sensing", "Ocean monitoring", "Aerial imagery", 
-        "Satellite images", "Climate analysis",
+        "Satellite images", "Climate analysis","Floods", "Sea surface",
         "Agriculture", "Atmospheric measurements", "Clouds", "Ocean monitoring", "Climate analysis",
         "Geophysical measurement techniques", "Ground penetrating radar", "Extraterrestrial measurements", "Meteorology",
         "Rain", "Rivers", "Snow", "Roads", "Public transportation", "Geophysical measurement techniques", 
         "Acoustics", "Animals", "Birds", "Clutter", "Liquids", "Monitoring", "Pipelines", "Powders", "Photonics",
         "Satellites", "Sensors", "Sensor arrays", "Spatial resolution", "Spatial coherence", 
-        "Vegetation", "Urban areas", "Water resources"
+        "Vegetation", "Urban areas", "Water resources", "Biodiversity",
+        "Earth",
+        "Environmental analysis",
+        "Geology",
+        "Natural scenes",
+        "Sea measurements",
+        "Vegetation mapping",
+        "Wildlife", "Forestry",
+        "Fungi",
+        "Methane",
+        "Rocks",
+        "Whales",
+        "Lightning", "Ecosystems",
+        "Horses",
+        "Hurricanes",
+        "Oceans",
+        "Plants (biology)",
+        "Reservoirs",
+        "Spaceborne radar",  "Irrigation",
+        "Systematics"
     ],
-    "Augmented Reality (AR) and Virtual Reality (VR)": [
+    "Augmented Reality (AR) and Virtual Reality (VR)": ["Blogs", "Headphones", "Keyboards", "Wheels",
         "Augmented reality", "Virtual reality", "3D reconstruction", 
         "Avatars", "Holography", "Immersive environments",
         "3D reconstruction", "Immersive environments",
-        "Graphics", "Graphics processing units",
+        "Graphics", "Graphics processing units","Telepresence",
         "Rendering (computer graphics)", "Virtual reality", "3D reconstruction", "Immersive environments",
-        "Three-dimensional displays", "Two dimensional displays"
+        "Three-dimensional displays", "Two dimensional displays", "Augmented reality",
+        "Extended reality",
+        "Immersive experience",
+        "Mixed reality",
+        "Virtual environments",
+        "Virtual private networks",
+        "X reality", "Animation",  "Image motion analysis",
+        "Optical flow",
+        "Radar imaging", "Visual effects"
     ],
-    "Video Analysis and Action Recognition": [
+    "Video Analysis and Action Recognition": ["Digital images", "Image forensics", "Sensor systems and applications", "Vision sensors",
         "Video processing", "Motion segmentation", "Event detection", 
         "Temporal analysis", "Video summarization", "Action recognition",
         "Motion segmentation", "Event detection", "Video summarization", "Action recognition",
@@ -68,29 +163,61 @@ keyword_groups = {
         "Motion pictures", "Pattern recognition", "Pose estimation", "Saliency detection", "Motion compensation", "Motion estimation",
         "Joints", "Junctions", "Kinematics", "Kinetic theory",  "Message passing", "Monitoring",
         "Structure from motion", "Streaming media",
-        "Target recognition", "Target tracking", "Tracking", "Video surveillance", "Video sequences", "Videos", "Video compression"   
+        "Target recognition", "Target tracking", "Tracking", "Video surveillance", "Video sequences", "Videos", "Video compression", "Action recognition",
+        "Motion capture",
+        "Video coding","Instance segmentation",
+        "Video description",
+        "Video games", "Image sequences", "Stereo image processing",
+        "Video on demand",
+        "Video recording",
+        "Video tracking", "Synthetic aperture radar",
+        "Radar tracking",
+        "Sonar detection", "Character generation",
+        "Human image synthesis" , "Radar",
+        "Firing",
+        "Explosions"  
     ],
-    "Generative Models and Creativity": [
+    "Generative Models and Creativity": ["Multilayer perceptrons",
         "GANs", "Image generation", "Style transfer", "Artistic applications", 
         "Artificial intelligence", "Boosting", 
         "Brain modeling", "Artificial neural networks",
         "Art", "Boosting", "Artificial neural networks",
         "Generative adversarial networks", "Image generation", "Image representation",
-        "Painting", "Paints", "Multimedia communication", "Art", "Generative adversarial networks"
+        "Painting", "Paints", "Multimedia communication", "Art", "Generative adversarial networks", "Deepfakes",
+        "Generative models",
+        "Image synthesis","Federated learning", "Self-supervised learning", "Music",
+        "Photorealism",
+        "Representation learning", "Mashups",
+        "Synthetic data",
+        "Zero-shot learning", "Active appearance model",
+        "Animation", "Collaborative work"
     ],
-    "Security and Surveillance": [
+    "Security and Surveillance": ["Access control", "Copyright protection", "Encryption", "Threat modeling",
         "Surveillance systems", "Anomaly detection", "Crowd monitoring", 
         "Camera networks", "License plate recognition", "Security applications", 
         "Alarm systems", "Broadcasting",
         "Surveillance systems", "Anomaly detection", "Camera networks", "License plate recognition", "Security applications",
         "Forensics", "Forgery", "Face recognition", "Image registration", "Image quality", "Image sensors",
         "Privacy", "Security", "Search engines", "Protocols", "Forensics", "Forgery", "Anomaly detection",
-        "Surveillance", "Video surveillance"
+        "Surveillance", "Video surveillance", "Adversarial machine learning",
+        "Authentication",
+        "Cyber-physical systems",
+        "Law enforcement",
+        "Safety","Information filtering", "Information sharing", "Telecommunication traffic",
+        "Security",
+        "Surveillance", "Face detection",
+        "Fingerprint recognition",
+        "Iris recognition",
+        "Synthetic aperture radar", "Radar detection",
+        "Radar imaging",
+        "Weapons", "Radar",
+        "Splicing"
     ],
-    "Scene Understanding and Reconstruction": [
+    "Scene Understanding and Reconstruction": ["Knowledge representation", "Inference mechanisms", "Visual analytics",
         "Scene segmentation", "Semantic segmentation", "Depth estimation", 
         "Scene parsing", "Clustering algorithms", "Clustering methods", 
-        "Context modeling", "3D reconstruction",
+        "Context modeling", "3D reconstruction",        "Knowledge graphs", "Surface cracks"
+,
         "Scene segmentation", "Depth estimation", "3D reconstruction",
         "Image segmentation", "Image reconstruction", "Image denoising", "Image decomposition", "Image edge detection",
         "Image analysis", "Image segmentation", "Object detection", "Object segmentation", "Scene parsing", "Scattering", 
@@ -98,39 +225,96 @@ keyword_groups = {
         "Optical computing", "Optical distortion", "Optical sensors", "Optical surface waves", 
         "Optical variables control", "Optical wavelength conversion", "Refractive index",
         "Surface reconstruction", "Surface morphology", "Surface texture", "Surface treatment", "Surface acoustic waves",
-        "Skeleton", "Surface waves"
+        "Skeleton", "Surface waves", "3D reconstruction",
+        "Bundle adjustment",
+        "Depth estimation","Context awareness", "Intelligent systems", "Interactive systems", "Spatial databases",
+        "Image fusion",
+        "Octrees",
+        "Point cloud compression",
+        "Scene understanding",
+        "Stereo vision", "Image capture",
+        "Image enhancement",
+        "Inspection", "Optical flow",
+        "Superresolution",
+        "Three-dimensional printing", "Gabor filters",
+        "Machine vision", "Code", "Internet", "Information retrieval", "Search methods"
     ],
     "Vision for Social Good": [
         "Accessibility", "Wildlife monitoring", "Disaster management", 
         "Social media analysis", "Assistive technology", "Crowdsourcing",
         "Wildlife monitoring", "Disaster management", "Social media analysis",
         "Market research", "Social media analysis", "Location awareness", "Disaster management",
-        "Social network services", "Disaster management", "Wildlife monitoring", "Crowdsourcing", "Crowd monitoring"
+        "Social network services", "Disaster management", "Wildlife monitoring", "Crowdsourcing", "Crowd monitoring", "Accessibility",
+        "Assistive technologies",
+        "Education",
+        "Healthcare",
+        "Smart agriculture",
+        "Vision for social good", "Employment",
+        "Ergonomics",
+        "Risk management", "Green products",
+        "Social factors", "Traffic control",
+        "Irrigation", "Light fields", "Optics", "Optical variables measurement"
     ],    
     "Datasets and Benchmarks": [
         "Large-scale datasets", "Benchmark testing", "Vision datasets", 
         "Training techniques", "Evaluation protocols", "Dataset creation",
         "Large-scale datasets", "Benchmark testing", "Vision datasets",
-        "Image databases", "Indexes", "Indexing", "Training data"
+        "Image databases", "Indexes", "Indexing", "Training data", "Benchmarks",
+        "Data augmentation",
+        "Datasets","Demography", "Geography", "Meteorological radar", "Millimeter wave radar", "Mars",
+        "Evaluation metrics",
+        "Ground truth","Big Data applications", "Reviews", "Surveys",
+        "Performance evaluation",
+        "Reproducibility of results", "NIST", "Annotations", "Measurement units",
+        "Throughput", "Medical conditions", "Crops", "Economic indicators"
     ],
-    "Tools and Frameworks": [
+    "Tools and Frameworks": [ "Internet of Things", "Actuators", "Instruments", 
         "Toolkits", "OpenCV", "Software tools", "Hardware tools", 
         "Development frameworks", "Programming libraries",
         "Software tools", "Hardware", 
         "Adaptive optics",  "Memory management", "Memory modules", "Network architecture", "Network topology", 
         "Next generation networking", "Neural networks", "Neurons", "Microprocessors", 
         "Minimization methods", "Parallel processing", "Peer-to-peer computing", "Routing", "Registers", "Real-time systems",
-        "Software", "Servers", "Runtime", "Stacking",  "Tools", "Web services"
+        "Software", "Servers", "Runtime", "Stacking",  "Tools", "Web services", "APIs",
+        "Frameworks",
+        "Libraries",
+        "Machine learning algorithms","Additive noise", "Array signal processing", "Beam steering", "Low-pass filters", "Multiple signal classification", 
+        "Partitioning algorithms", "Source coding", "System-on-chip",
+        "Programming tools",
+        "Software development management",
+        "Toolkits", "Printers","Conditional random fields", "Filters", "Logic programming", "Markov decision processes", "Metasearch", 
+        "Nearest neighbor methods", "Noise", "YOLO",
+        "Portable document format",
+        "Tutorials", "Simulation",
+        "Numerical simulation", "Deep learning",
+        "Evolutionary computation",
+        "Control systems",
+        "Computational neuroscience",
+        "Timing", "Band-pass filters", "Fast Fourier transforms", "Entropy coding", "Phase estimation", "Maximum a posteriori estimation", 
+        "Mean square error methods", "Frequency synthesizers", "Neural circuits", "Neural implants", "Soft sensors", "Transformer cores", 
+        "Synthesizers", "Sensors systems and applications", "X3D"
     ],
-    "Data Collection and Management": [
+    "Data Collection and Management": [ "Inventory management",
         "Data collection", "Data mining", "Data models", 
         "Data acquisition", "Metadata", "Annotation tools",
         "Data collection", "Data mining", "Data models", "Data acquisition", "Metadata", "Annotation tools",
         "Data models", "Data acquisition", "Metadata", "Annotation tools",
         "Merging", "Probes", "Random access memory", "Random variables",
-         "Sampling methods", "Sorting", "Tagging", "Testing", "Task analysis", "Training"
+         "Sampling methods", "Sorting", "Tagging", "Testing", "Task analysis", "Training", "Big Data",
+        "Data collection",
+        "Data privacy",
+        "Data protection","Embedded systems", "Sensor phenomena and characterization", "Volume measurement", "Wavelength measurement",
+        "Data-driven modeling",
+        "Distributed databases","Data compression", "Data preprocessing", "Debugging", "Energy conservation", "Load modeling", 
+        "Power supplies", "Production systems", "Programming", "Random processes", "Recycling", "Systems modeling",
+        "Storage management", "Data assimilation",
+        "Resource management", "Data transfer",
+        "Decontamination",
+        "Cleaning", "Channel estimation",
+        "Current measurement", "Position measurement", "Measurement uncertainty", "Power grids", "Power system stability", "Power industry", "Sensor systems"
     ],
-    "Core Vision Algorithms": [
+    "Core Vision Algorithms": [ "Fitting", "Human intelligence", "Codes",
+        "Anisotropic magnetoresistance","Differential privacy", "Phase measurement", "Surface fitting",
         "Feature extraction", "Image processing", "Convolution", 
         "Convolutional neural networks", "Computational modeling", 
         "Clustering algorithms", "Semantic segmentation",
@@ -141,9 +325,26 @@ keyword_groups = {
         "Iterative methods", "Kernel", "Level set", "Inference algorithms", "Markov processes", "Markov random fields", "Mixture models"
         "Prediction algorithms", "Predictive models", "Quantization (signal)", "Rate distortion theory", "Rate-distortion",
         "Support vector machines", "Self-organizing feature maps",
-        "Transform coding", "Transforms", "Viterbi algorithm", "Recurrent neural networks"
+        "Transform coding", "Transforms", "Viterbi algorithm", "Recurrent neural networks", "Classification algorithms",
+        "Feature detection",
+        "Filtering algorithms",
+        "Image classification",
+        "Object detection",
+        "Segmentation",
+        "Tracking", "Thresholding (Imaging)",
+        "Iterative algorithms",
+        "Matching pursuit algorithms",
+        "Multiresolution analysis", "Matched filters",
+        "Residual neural networks",
+        "Reinforcement learning",
+        "Transfer learning", "Sensor fusion",
+        "Deep learning",
+        "Fuzzy logic",
+        "Gabor filters","Frequency estimation", "Frequency measurement", "Gradient methods", "Optical character recognition", "Symbols",
+        "Optical buffering",
+        "Optical switches", "Deep architecture", "Graph neural networks", "Neural network compression"
     ],
-    "Mathematical Foundations": [
+    "Mathematical Foundations": ["Hilbert space",
         "Optimization techniques", "Closed-form solutions", 
         "Approximation algorithms", "Computational complexity", 
         "Covariance matrices", "Algebra",
@@ -158,11 +359,31 @@ keyword_groups = {
         "Mathematical model", "Method of moments", "Minimization",
         "Manifolds", "Numerical models", "Probabilistic logic", "Quaternions", "Random variables", "Differential equations",
         "Finite element analysis", "Radon", "Sparse matrices", "Stochastic processes", "Semisupervised learning", "Semantics",
-        "Symmetric matrices", "Transfer functions", "Tree graphs", "Upper bound"
+        "Symmetric matrices", "Transfer functions", "Tree graphs", "Upper bound", "Calculus",
+        "Linear algebra",
+        "Optimization",
+        "Probability theory",
+        "Statistics",
+        "Tensors",
+        "Vector quantization", "Parameter estimation",
+        "Optimal matching",
+        "Estimation error",
+        "Angular velocity",
+        "Time-domain analysis", "Correlation coefficient",
+        "Linear regression",
+        "Linearity","Diffusion processes", "Directed graphs", "Mathematical models", "Sensitivity analysis",
+        "Ordinary differential equations",
+        "Stability analysis", "Nash equilibrium",
+        "Limiting",
+        "Performance gain", "Nash equilibrium",
+        "Limiting",
+        "Performance gain", "Complex networks", "Heterogeneous networks", "Diversity methods", "Fractals", "Entropy coding"
+
     ],
-    "Signal and Statistical Processing": [
+    "Signal and Statistical Processing": ["Friction",
+        "Laser beams",  "Fluctuations", "Frequency estimation", "Frequency measurement", "Low-pass filters", "Optical noise",
         "Correlation", "Covariance matrices", "Noise reduction", 
-        "Bayesian methods", "Statistical models",
+        "Bayesian methods", "Statistical models","AWGN", "Noise", "Random processes",
         "Correlation", "Covariance matrices", "Noise reduction", "Bayesian methods", "Statistical models",
         "Bayesian methods", "Noise reduction", "Statistical models", "Gaussian distribution", "Gaussian mixture model", 
         "Gaussian noise", "Gaussian processes", "Kalman filters", "Hidden Markov models", "Filtering", "Frequency modulation",
@@ -174,9 +395,23 @@ keyword_groups = {
         "Loss measurement", "Nonlinear distortion", "Nonlinear optics", "Modulation",
         "Optimized production technology", "Power demand", "Potential energy", "Redundancy",
         "RF signals", "Radio frequency", "Spectral analysis", "Spectrogram", "Sensitivity", "Smoothing methods",
-        "Source separation", "Wavelet domain", "Wavelet transforms"
+        "Source separation", "Wavelet domain", "Wavelet transforms", "Discrete wavelet transforms",
+        "Fourier series",
+        "Image filtering",
+        "Signal processing algorithms",
+        "Statistical analysis",
+        "Time series analysis",
+        "Time-frequency analysis", "Transmission line measurements",
+        "Magnetic losses",
+        "Magnetic separation", "Compressed sensing",
+        "Diversity reception",
+        "Spread spectrum communication", "Channel estimation",
+        "Current measurement",
+        "Splicing", "Channel estimation",
+        "Current measurement",
+        "Splicing", "Band-pass filters", "Fast Fourier transforms", "Entropy coding", "Transportation"
     ],
-    "Industrial and Manufacturing Applications": [
+    "Industrial and Manufacturing Applications": ["Tungsten",
         "Quality control", "Factory automation", "Defect detection", 
         "Assembly line monitoring", "Industrial vision", "Batch production systems", 
         "Buildings", "Architecture", "Bridges",
@@ -189,14 +424,50 @@ keyword_groups = {
         "Geometrical optics", "Integrated optics", "Electronics packaging", "Geophysical measurement techniques",
         "Additives", "Aggregates", "Generators", "Industries", "Lenses", "Manganese", "Mirrors",  "Ovens", "Periodic structures", "Photonics",
         "Proposals", "Prototypes", "Surface cleaning", "Switched mode power supplies", "Silicon", "Silicon carbide",
-        "Toy manufacturing industry", "Technological innovation", "Variable speed drives", "Tires"
+        "Toy manufacturing industry", "Technological innovation", "Variable speed drives", "Tires", "Aerospace electronics",
+        "Heating systems", "Fabrication",
+        "Fasteners","Casting", "Concrete", "Motors", "Power capacitors", "Resistance",
+        "Filling",
+        "Pressing",
+        "Production",
+        "Refining",
+        "Three-dimensional printing",
+        "Integrated circuits",
+        "Optical detectors",
+        "Pipelines",
+        "Switches", "3D printing",
+        "Automation",
+        "Industrial inspection",
+        "Manufacturing processes",
+        "Process control",
+        "Quality assurance",
+        "Robotic arms", "Integrated circuit modeling",
+        "Light emitting diodes",
+        "Magnetic heads",
+        "Printers",
+        "Mixers", "Biomedical equipment", "Materials reliability", "Semiconductor device modeling", "Pumps", "Radar antennas",
+        "Meters",
+        "Vegetable oils",
+        "Vents", "Catalysts","Metasurfaces", "Sensor phenomena and characterization",
+        "Product design",
+        "Traffic control", "CMOS image sensors", "Electronic commerce", "Energy consumption", "Power line communications", "Power system stability", 
+        "Microwave integrated circuits", "Organic light emitting diodes", "Transformer cores", "Transformers", "Space missions"
     ],
     "Ethics and Fairness in Vision": [
-        "Fairness in AI", "Bias in datasets", "Ethical AI", 
+        "Fairness in AI", "Bias in datasets", "Ethical AI", "Social networking (online)",
         "Privacy in vision systems", "Explainable AI",
-        "Intellectual property"       
+        "Intellectual property", "Bias detection",
+        "Guidelines",
+        "Uncertainty", "Bias mitigation",
+        "Ethics",
+        "Fairness", "Philosophical considerations",
+        "Privacy concerns",
+        "Regulation","Risk minimization",
+        "Transparency","Humanities",
+        "Trustworthiness", "Collaborative work", "Diversity methods", "Ethical considerations in design"       
     ],
-    "Miscellaneous": [
+    "Miscellaneous": ["Glass box", "Machine translation", "Pollution", "Road transportation", "Solids", "Stereo image processing", 
+        "Telecommunication traffic", "Working environment noise","Floors",
         "Asia", "Australia", "Europe", "Facebook", "Flickr", "Google", "Microsoft Windows", "Mobile handsets", "Fans", 
         "Feeds", "Feedback loop", "Fuses", "Gallium nitride", "Games", "Grippers", "Grounding", "Gyroscopes", "Hafnium", 
         "Hamming distance", "Handheld computers", "Harmonic analysis", "Heating systems", "Heuristic algorithms", 
@@ -221,7 +492,60 @@ keyword_groups = {
         "Synchronization", "Tensile stress", "Time factors", "Time measurement", "Topology", 
         "Transmission line matrix methods", "Tuning", "UHDTV", "Uncertainty", "Wiring", "Xenon", "Zinc", "Zirconium",
         "Optical fiber networks", "Optical network units", "Smart phones", "Solid modeling", "Spatiotemporal phenomena",
-        "TV", "Trajectory", "Unsupervised learning", "Visualization", "Watermarking" , "Windows", "Wireless communication", "YouTube"
+        "TV", "Trajectory", "Unsupervised learning", "Visualization", "Watermarking" , "Windows", "Wireless communication", "YouTube",  "Architecture",
+        "Games","Archeology", "Boundary conditions", "Cause effect analysis", "Communication cables", "Corporate acquisitions", 
+        "Current transformers", "Customer relationship management", "DNA", "Documentation", "Drugs", "Entertainment industry", 
+        "Excavation", "Extraterrestrial phenomena", "Fatigue", "Fault detection", "Finance", "Fires", "Government", "Grasping", 
+        "Green energy", "Greenhouses", "High dynamic range", "High-temperature superconductors", "Impedance matching", 
+        "Indoor environment", "Inductors", "Information processing", "Insects", "Lung", "Licenses", "Magnetic devices", 
+        "Maintenance", "Memory", "Metalearning", "Metals", "Motion detection", "Nuclear measurements", "Nuclear power generation", 
+        "Ontologies", "Oscilloscopes", "PROM", "Pairwise error probability", "Pedestrians", "Pneumonia", "Portable computers", 
+        "Power measurement", "Protection", "Publishing", "Pulse measurements", "Punching", "Purification", "Recycling", 
+        "Road safety", "Shape measurement", "Size measurement", "Space mapping", "Sparse approximation", "Stability criteria", 
+        "Stars", "Streams", "Supply chains", "Telemedicine", "Text detection", "Thesauri", "Tokenization", "Urban planning", 
+        "Vectors", "Watches", "Web sites",
+        "History", "Anisotropic", "Deformation", "Developing countries", "Digital humans", "Disasters", "Filters", "Greedy algorithms", 
+        "Lead acid batteries", "Logic programming", "Markov decision processes", "Materials science and technology", 
+        "Metasearch", "Multispectral imaging", "Plugs", "Production systems", "Productivity", "Program processors", 
+        "Programming", "Rigidity", "Road accidents", "Spatial audio", "Steganography", "Sun", "US Department of Homeland Security",
+        "Psychology","Anisotropic", "Deformation", "Developing countries", "Digital humans", "Disasters", "Greedy algorithms", 
+        "Lead acid batteries", "Logic programming", "Markov decision processes", "Materials science and technology", 
+        "Metasearch", "Multispectral imaging", "Plugs", "Production systems", "Productivity", "Program processors", 
+        "Programming", "Rigidity", "Road accidents", "Spatial audio", "Steganography", "Sun", "US Department of Homeland Security"
+        "Vocabulary", "Artificial intelligence",
+        "Data visualization",
+        "Exploration",
+        "Innovations",
+        "Miscellaneous topics",
+        "Open challenges",
+        "Trends", "Brightness",
+        "DVD",
+        "Foot",
+        "Photography",
+        "Rhythm",
+        "Space vehicles",
+        "Temperature measurement",
+        "Velocity measurement", "Mice",  "Conferences",
+        "IEEE Constitution",
+        "Maintenance engineering",
+        "Media","Vehicular ad hoc networks", "Two-dimensional displays", "Organizations", "Genetics",
+        "Voting", "Computer bugs",
+        "Economics",
+        "Electronic publishing",
+        "Multimedia Web sites",
+        "Reliability engineering",
+        "Reliability theory", "Length measurement", "Mobile applications", "Phase change materials", "System performance", "Ash", "Business", "Companies", "Costs", "Customer satisfaction", "Design methodology", "Distance measurement", "Economic indicators", 
+        "Electronic commerce", "Fault tolerant systems", "Genetic expression", "Glands", "Headphones", "Law", "Lead", "Maximum a posteriori estimation", 
+        "Measurement uncertainty", "Microwave integrated circuits", "Morphology", "Multitasking", "Neural circuits", "Neural implants", 
+        "Observers", "Orifices", "Pandemics", "Patents", "Performance analysis", "Phase estimation", "Position measurement", 
+        "Power grids", "Proteins", "Reflection", "Reverse engineering", "Satellite broadcasting", "Sensor systems", 
+        "Sociology", "Solution design", "Speckle", "Speech processing", "Surges", "Telescopes", "Thermal sensors", 
+        "Tomography", "Turning", "Valves", "Fats", "High frequency", "Appraisal", "Certification", "Closed box", "Comets", "Commonsense reasoning", "Computer network reliability", "Costing", 
+        "Data processing", "Dentistry", "Earth Observing System", "Ensemble learning", "Fabrics", "Films", "Knowledge acquisition", 
+        "Mobile robots", "Motion measurement", "Multisensory integration", "Neuromorphics", "Observability", "Optical pumping", 
+        "Philosophical considerations", "Polarization", "Question answering (information retrieval)", "Recording", "Reflectivity", 
+        "Research and development", "Space exploration", "Stimulated emission", "Symbiosis", "Tail", "Teleconferencing", 
+        "Termination of employment", "Torque", "Ultraviolet sources", "Uniform resource locators", "Web pages"
     ]
 }
 
@@ -229,16 +553,19 @@ def process_csv(file_path):
     # Dictionaries to store counts
     grouped_counts = defaultdict(lambda: {"total": 0, "company": 0, "university": 0})
 
-    with open(file_path, 'r') as csvfile:
+    with open(file_path, 'r', encoding="utf-8") as csvfile:
         reader = csv.DictReader(csvfile)
 
         for row in reader:
             # Check if "ieee_keywords" section is empty
             if not row.get('ieee_keywords'):
                 continue
-
-            # Extract company affiliation percentage
-            company_affiliation = float(row['company_affiliation'])
+            
+            if type((row['company_affiliation'])) == float:
+                company_affiliation = float(row['company_affiliation'])
+            else:
+                company_affiliation = 0
+            
 
             # Determine if the paper is company or university
             is_company = company_affiliation > 0
@@ -258,7 +585,7 @@ def process_csv(file_path):
     return grouped_counts
 
 def write_results_to_file(keyword_counts, output_file):
-    with open(output_file, 'w') as f:
+    with open(output_file, 'w', encoding="utf-8") as f:
         f.write(f"{'Keyword':<30} {'Total Papers':<15} {'Company Papers':<15} {'University Papers':<15}\n")
         f.write("-" * 75 + "\n")
         for keyword, counts in sorted(keyword_counts.items(), key=lambda x: x[0]):
@@ -270,7 +597,7 @@ def extract_unique_keywords(file_path, output_file):
     
     unmatched_keywords = set()  # Use a set to store unique unmatched keywords
 
-    with open(file_path, 'r') as csvfile:
+    with open(file_path, 'r', encoding="utf-8") as csvfile:
         reader = csv.DictReader(csvfile)
 
         for row in reader:
@@ -289,14 +616,14 @@ def extract_unique_keywords(file_path, output_file):
                 continue
 
     # Write unmatched keywords to the output file
-    with open(output_file, 'w') as outfile:
+    with open(output_file, 'w', encoding="utf-8") as outfile:
         for keyword in sorted(unmatched_keywords):  # Sort keywords alphabetically
             outfile.write(keyword + '\n')
 
 # Replace 'your_file.csv' with the path to your CSV file
-file_path = '/Users/merve/Data_Literacy-1/data/iccv_preprocessed/iccv2021.csv'
-output_file = '/Users/merve/Data_Literacy-1/data//iccv_preprocessed/results_21.txt'
-keyword_file = '/Users/merve/Data_Literacy-1/data//iccv_preprocessed/keywords_21.txt'
+file_path = 'data/wacv_preprocessed/wacv2024.csv'
+output_file = 'data/wacv_preprocessed/results_24.txt'
+keyword_file = 'data/wacv_preprocessed/keywords_24.txt'
 extract_unique_keywords(file_path, keyword_file)
 keyword_counts = process_csv(file_path)
 write_results_to_file(keyword_counts, output_file)
