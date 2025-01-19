@@ -561,10 +561,9 @@ def process_csv(file_path):
             if not row.get('ieee_keywords'):
                 continue
             
-            if type((row['company_affiliation'])) == float:
-                company_affiliation = float(row['company_affiliation'])
-            else:
-                company_affiliation = 0
+            
+            company_affiliation = float(row['company_affiliation'])
+
             
 
             # Determine if the paper is company or university
