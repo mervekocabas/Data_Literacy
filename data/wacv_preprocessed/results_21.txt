@@ -1,22 +1,22 @@
 Keyword                        Total Papers    Company Papers  University Papers
 ---------------------------------------------------------------------------
-Augmented Reality (AR) and Virtual Reality (VR) 83              0               83             
-Autonomous Vehicles and Robotics 61              0               61             
-Core Vision Algorithms         307             0               307            
-Data Collection and Management 258             0               258            
-Datasets and Benchmarks        120             0               120            
-Ethics and Fairness in Vision  18              0               18             
-Generative Models and Creativity 45              0               45             
-Human-Centric Vision           47              0               47             
-Industrial and Manufacturing Applications 100             0               100            
-Mathematical Foundations       202             0               202            
-Medical Imaging and Healthcare 46              0               46             
-Miscellaneous                  977             0               977            
-Natural Language Processing    189             0               189            
-Natural Scenes and Environmental Analysis 63              0               63             
-Scene Understanding and Reconstruction 149             0               149            
-Security and Surveillance      46              0               46             
-Signal and Statistical Processing 85              0               85             
-Tools and Frameworks           147             0               147            
-Video Analysis and Action Recognition 131             0               131            
-Vision for Social Good         35              0               35             
+Augmented Reality (AR) and Virtual Reality (VR) 83              31              52             
+Autonomous Vehicles and Robotics 61              24              37             
+Core Vision Algorithms         307             109             198            
+Data Collection and Management 258             88              170            
+Datasets and Benchmarks        120             35              85             
+Ethics and Fairness in Vision  18              4               14             
+Generative Models and Creativity 45              16              29             
+Human-Centric Vision           47              13              34             
+Industrial and Manufacturing Applications 100             30              70             
+Mathematical Foundations       202             68              134            
+Medical Imaging and Healthcare 46              18              28             
+Miscellaneous                  976             369             607            
+Natural Language Processing    189             70              119            
+Natural Scenes and Environmental Analysis 63              23              40             
+Scene Understanding and Reconstruction 149             69              80             
+Security and Surveillance      46              10              36             
+Signal and Statistical Processing 85              21              64             
+Tools and Frameworks           147             56              91             
+Video Analysis and Action Recognition 131             53              78             
+Vision for Social Good         35              11              24             
