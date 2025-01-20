@@ -1,22 +1,22 @@
 Keyword                        Total Papers    Company Papers  University Papers
 ---------------------------------------------------------------------------
-Augmented Reality (AR) and Virtual Reality (VR) 661             325             336            
-Autonomous Vehicles and Robotics 428             207             221            
-Core Vision Algorithms         2047            919             1128           
-Data Collection and Management 1058            496             562            
-Datasets and Benchmarks        593             273             320            
+Augmented Reality (AR) and Virtual Reality (VR) 669             328             341            
+Autonomous Vehicles and Robotics 445             215             230            
+Core Vision Algorithms         2057            920             1137           
+Data Collection and Management 1064            497             567            
+Datasets and Benchmarks        727             340             387            
 Ethics and Fairness in Vision  105             48              57             
-Generative Models and Creativity 453             238             215            
-Human-Centric Vision           237             106             131            
-Industrial and Manufacturing Applications 747             402             345            
-Mathematical Foundations       1091            461             630            
-Medical Imaging and Healthcare 76              21              55             
-Miscellaneous                  3844            1752            2092           
-Natural Language Processing    1044            474             570            
-Natural Scenes and Environmental Analysis 276             123             153            
-Scene Understanding and Reconstruction 885             420             465            
-Security and Surveillance      238             117             121            
-Signal and Statistical Processing 326             144             182            
-Tools and Frameworks           585             233             352            
-Video Analysis and Action Recognition 1180            533             647            
-Vision for Social Good         133             61              72             
+Generative Models and Creativity 459             238             221            
+Human-Centric Vision           244             109             135            
+Industrial and Manufacturing Applications 768             410             358            
+Mathematical Foundations       1110            465             645            
+Medical Imaging and Healthcare 100             32              68             
+Miscellaneous                  3860            1760            2100           
+Natural Language Processing    1051            474             577            
+Natural Scenes and Environmental Analysis 291             129             162            
+Scene Understanding and Reconstruction 897             423             474            
+Security and Surveillance      245             121             124            
+Signal and Statistical Processing 351             156             195            
+Tools and Frameworks           605             245             360            
+Video Analysis and Action Recognition 1185            537             648            
+Vision for Social Good         143             63              80             
