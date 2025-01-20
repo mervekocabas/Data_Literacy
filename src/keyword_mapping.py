@@ -561,8 +561,10 @@ def process_csv(file_path):
             if not row.get('ieee_keywords'):
                 continue
             
-            
-            company_affiliation = float(row['company_affiliation'])
+            if row['company_affiliation'] == '':  # Skip rows with missing company affiliation
+                company_affiliation = 0
+            else:
+                company_affiliation = float(row['company_affiliation'])
 
             
 
@@ -620,9 +622,9 @@ def extract_unique_keywords(file_path, output_file):
             outfile.write(keyword + '\n')
 
 # Replace 'your_file.csv' with the path to your CSV file
-file_path = 'data/wacv_preprocessed/wacv2024.csv'
-output_file = 'data/wacv_preprocessed/results_24.txt'
-keyword_file = 'data/wacv_preprocessed/keywords_24.txt'
+file_path = '/Users/irem/Desktop/Data_Literacy_Project/Data_Literacy/data/cvpr_preprocessed/cvpr2019.csv'
+output_file = '/Users/irem/Desktop/Data_Literacy_Project/Data_Literacy/data/cvpr_preprocessed/results_19.txt'
+keyword_file = '/Users/irem/Desktop/Data_Literacy_Project/Data_Literacy/data/cvpr_preprocessed/keywords_19.txt'
 extract_unique_keywords(file_path, keyword_file)
 keyword_counts = process_csv(file_path)
 write_results_to_file(keyword_counts, output_file)
