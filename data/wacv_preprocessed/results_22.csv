@@ -1,21 +1,21 @@
 Keyword,Total Papers,Company Papers,University Papers
 Augmented Reality (AR) and Virtual Reality (VR),101,28,73
-Autonomous Vehicles and Robotics,54,17,37
+Autonomous Vehicles and Robotics,211,68,143
 Core Vision Algorithms,417,140,277
-Data Collection and Management,271,97,174
+Data Collection and Management,355,125,230
 Datasets and Benchmarks,175,65,110
 Ethics and Fairness in Vision,21,14,7
 Generative Models and Creativity,66,27,39
-Human-Centric Vision,45,14,31
-Industrial and Manufacturing Applications,124,38,86
-Mathematical Foundations,224,71,153
-Medical Imaging and Healthcare,40,9,31
-Miscellaneous,797,285,512
-Natural Language Processing,210,78,132
-Natural Scenes and Environmental Analysis,66,19,47
-Scene Understanding and Reconstruction,164,60,104
-Security and Surveillance,55,17,38
-Signal and Statistical Processing,60,13,47
-Tools and Frameworks,158,51,107
-Video Analysis and Action Recognition,129,47,82
-Vision for Social Good,27,7,20
+Human-Centric Vision,50,18,32
+Industrial and Manufacturing Applications,130,39,91
+Mathematical Foundations,294,100,194
+Medical Imaging and Healthcare,53,10,43
+Miscellaneous,388,149,239
+Natural Language Processing,211,79,132
+Natural Scenes and Environmental Analysis,67,19,48
+Scene Understanding and Reconstruction,176,66,110
+Security and Surveillance,58,18,40
+Signal and Statistical Processing,68,15,53
+Tools and Frameworks,164,54,110
+Video Analysis and Action Recognition,155,51,104
+Vision for Social Good,38,10,28
