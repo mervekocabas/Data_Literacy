@@ -157,6 +157,261 @@ def extract_unique_keywords(file_path, output_file):
         for keyword in sorted(unmatched_keywords):  # Sort keywords alphabetically
             outfile.write(keyword + '\n')
 
+def process_csv_by_conference(file_path):
+    # Dictionaries to store counts for each conference
+    conference_counts = {
+        "CVPR": defaultdict(lambda: {"total": 0, "company": 0, "university": 0}),
+        "ICCV": defaultdict(lambda: {"total": 0, "company": 0, "university": 0}),
+        "WACV": defaultdict(lambda: {"total": 0, "company": 0, "university": 0}),
+    }
+
+    with open(file_path, 'r', encoding="utf-8") as csvfile:
+        reader = csv.DictReader(csvfile)
+
+        for row in reader:
+            # Check if "ieee_keywords" section is empty
+            if not row.get('ieee_keywords') or not row.get('Conference'):
+                continue
+            
+            # Get the conference name and validate it
+            conference = row['Conference'].strip().upper()
+            if conference not in conference_counts:
+                continue  # Skip rows with invalid conference names
+
+            # Determine if the paper is company-affiliated
+            company_affiliation = float(row['company_affiliation']) if row['company_affiliation'] else 0
+            is_company = company_affiliation > 0
+
+            # Extract keywords from the "ieee_keywords" column
+            keywords = ast.literal_eval(row['ieee_keywords'])  # Convert string list to actual list
+
+            for keyword in keywords:
+                for group, group_keywords in keyword_groups.items():
+                    if keyword in group_keywords:
+                        conference_counts[conference][group]["total"] += 1
+                        if is_company:
+                            conference_counts[conference][group]["company"] += 1
+                        else:
+                            conference_counts[conference][group]["university"] += 1
+
+    return conference_counts
+
+def write_results_by_conference(conference_counts, output_file):
+    with open(output_file, 'w', encoding="utf-8") as f:
+        for conference, keyword_counts in conference_counts.items():
+            f.write(f"Conference: {conference}\n")
+            f.write(f"{'Keyword':<30} {'Total Papers':<15} {'Company Papers':<15} {'University Papers':<15}\n")
+            f.write("-" * 75 + "\n")
+            for keyword, counts in sorted(keyword_counts.items(), key=lambda x: x[0]):
+                f.write(f"{keyword:<30} {counts['total']:<15} {counts['company']:<15} {counts['university']:<15}\n")
+            f.write("\n")
+
+def plot_radar_chart(keyword_counts):
+    total_university_papers = sum(counts['university'] for counts in keyword_counts.values())
+    total_company_papers = sum(counts['company'] for counts in keyword_counts.values())
+
+    # Normalize university and company counts within each group
+    normalized_counts = {
+        group: {
+            "university": counts["university"] /  total_university_papers,
+            "company": counts["company"] /  total_company_papers
+        }
+        for group, counts in keyword_counts.items()
+    }
+
+    # Sort groups alphabetically for consistency
+    groups = sorted(normalized_counts.keys())
+    university_values = [normalized_counts[group]["university"] for group in groups]
+    company_values = [normalized_counts[group]["company"] for group in groups]
+
+   # Ensure the plot is circular by closing the loop
+    university_values.append(university_values[0])
+    company_values.append(company_values[0])
+    angles = np.linspace(0, 2 * np.pi, len(groups), endpoint=False).tolist()
+    angles += angles[:1]
+
+    GREY12 = "#1f1f1f"
+    company_color = "#4c78a8"
+    university_color = "#e57f4e"
+
+    # Initialize layout in polar coordinates
+    fig, ax = plt.subplots(figsize=(9, 9), subplot_kw={"projection": "polar"})
+
+    # Set background color to white, both axis and figure.
+    fig.patch.set_facecolor("white")
+    ax.set_facecolor("white")
+
+    ax.set_theta_offset(1.2 * np.pi / 2)
+
+    # Add bars for company papers
+    ax.bar(angles, company_values, color=company_color, alpha=1, width=0.2, zorder=9, label='Corporate Papers')
+
+    # Add bars for university papers
+    ax.bar(angles, university_values, color=university_color, alpha=1, width=0.2, zorder=9, label='Academia Papers')
+
+    # Wrap categories for better visualization
+    wrapped_categories = ["\n".join(wrap(r, 8, break_long_words=False)) for r in groups]
+
+    # Add a label for the first category to close the loop
+    wrapped_categories += [wrapped_categories[0]]
+
+    # Set the labels with reduced size
+    ax.set_xticks(angles)
+    ax.set_xticklabels(wrapped_categories, size=8)  # Reduce size of labels to 8
+
+    # Add a legend with reduced font size
+    ax.legend(loc='upper right', bbox_to_anchor=(1.1, 1), fontsize=8)  # Reduce font size of the legend
+
+    # Set the title of the chart
+    ax.set_title('Comparison of Corporate and Academia Papers in Keyword Categories', fontsize=12)
+
+    # Show the plot
+    plt.tight_layout()
+    plt.show()
+
+def plot_radarline_chart(keyword_counts):
+    total_university_papers = sum(counts['university'] for counts in keyword_counts.values())
+    total_company_papers = sum(counts['company'] for counts in keyword_counts.values())
+
+    # Normalize university and company counts within each group
+    normalized_counts = {
+        group: {
+            "university": counts["university"] / total_university_papers,
+            "company": counts["company"] / total_company_papers
+        }
+        for group, counts in keyword_counts.items()
+    }
+
+    # Sort groups alphabetically for consistency
+    groups = sorted(normalized_counts.keys())
+    university_values = [normalized_counts[group]["university"] for group in groups]
+    company_values = [normalized_counts[group]["company"] for group in groups]
+
+    # Ensure the plot is circular by closing the loop
+    university_values.append(university_values[0])
+    company_values.append(company_values[0])
+    angles = np.linspace(0, 2 * np.pi, len(groups), endpoint=False).tolist()
+    angles += angles[:1]
+
+    GREY12 = "#1f1f1f"
+    company_color = "#4c78a8"
+    university_color = "#e57f4e"
+
+    # Initialize layout in polar coordinates
+    fig, ax = plt.subplots(figsize=(9, 9), subplot_kw={"projection": "polar"})
+
+    # Set background color to white, both axis and figure.
+    fig.patch.set_facecolor("white")
+    ax.set_facecolor("white")
+
+    ax.set_theta_offset(1.2 * np.pi / 2)
+
+    # Plot line for company papers
+    ax.plot(angles, company_values, color=company_color, linewidth=2, linestyle='solid', label='Corporate Papers')
+
+    # Plot line for university papers
+    ax.plot(angles, university_values, color=university_color, linewidth=1, linestyle='solid', label='Academia Papers')
+
+    # Wrap categories for better visualization
+    wrapped_categories = ["\n".join(wrap(r, 7, break_long_words=False)) for r in groups]
+
+    # Add a label for the first category to close the loop
+    wrapped_categories += [wrapped_categories[0]]
+
+    # Set the labels with reduced size
+    ax.set_xticks(angles)
+    ax.set_xticklabels(wrapped_categories, size=8)  # Reduce size of labels to 8
+
+    # Add a legend with reduced font size
+    ax.legend(loc='upper right', bbox_to_anchor=(1.1, 1), fontsize=8)  # Reduce font size of the legend
+
+    # Set the title of the chart
+    ax.set_title('Comparison of Corporate and Academia Papers in Keyword Categories', fontsize=12)
+
+    # Show the plot
+    plt.tight_layout()
+    plt.show()
+    
+def plot_radar_chart_by_conference(conference_counts):
+    for conference, keyword_counts in conference_counts.items():
+        # Normalize university and company counts within each group
+        normalized_counts = {
+            group: {
+                "university": counts["university"] / counts["total"] if counts["total"] > 0 else 0,
+                "company": counts["company"] / counts["total"] if counts["total"] > 0 else 0,
+            }
+            for group, counts in keyword_counts.items()
+        }
+
+        # Sort groups alphabetically for consistency
+        groups = sorted(normalized_counts.keys())
+        university_values = [normalized_counts[group]["university"] for group in groups]
+        company_values = [normalized_counts[group]["company"] for group in groups]
+
+        # Create angles for the radar plot
+        angles = np.linspace(0, 2 * np.pi, len(groups), endpoint=False).tolist()
+ 
+        # Initialize the plot
+        fig, ax = plt.subplots(figsize=(10, 10), subplot_kw=dict(polar=True))
+
+        # Plot for universities
+        ax.fill(angles, university_values, color='skyblue', alpha=0.4, label='University')
+        ax.plot(angles, university_values, color='blue', linewidth=2)
+
+        # Plot for companies
+        ax.fill(angles, company_values, color='lightgreen', alpha=0.4, label='Company')
+        ax.plot(angles, company_values, color='green', linewidth=2)
+
+        # Add labels and legend
+        ax.set_yticks([])
+        ax.set_xticks(angles)
+        ax.set_xticklabels(groups, fontsize=10, ha='center')
+
+        plt.title(f"Relative Contributions (University vs. Company) in {conference}", size=16, weight='bold', pad=20)
+        plt.legend(loc='upper right', bbox_to_anchor=(1.2, 1.1))
+        plt.tight_layout()
+
+        # Show the plot
+        plt.show()
+
+def write_keyword_dictionaries_by_keywords(keyword_counts, keyword_groups, company_file, university_file):
+    """
+    Writes two text files: one with the keyword dictionary for company papers 
+    and the other for university papers, based on individual keywords.
+
+    :param keyword_counts: Dictionary containing counts for groups of keywords.
+    :param keyword_groups: Dictionary mapping groups to individual keywords.
+    :param company_file: Path to the output text file for company-related keywords.
+    :param university_file: Path to the output text file for university-related keywords.
+    """
+    # Flatten keyword_groups into a keyword-to-group mapping
+    keyword_to_group = {keyword: group for group, keywords in keyword_groups.items() for keyword in keywords}
+
+    # Initialize dictionaries for individual keyword counts
+    company_keywords = defaultdict(int)
+    university_keywords = defaultdict(int)
+
+    # Iterate over the grouped counts and distribute to individual keywords
+    for group, counts in keyword_counts.items():
+        if group in keyword_groups:
+            for keyword in keyword_groups[group]:
+                company_keywords[keyword] += counts["company"]
+                university_keywords[keyword] += counts["university"]
+          
+    # Write company keyword dictionary
+    with open(company_file, 'w', encoding="utf-8") as company_out:
+        company_out.write(f"{'Keyword':<50} {'Company Papers':<15}\n")
+        company_out.write("-" * 65 + "\n")
+        for keyword, count in sorted(company_keywords.items(), key=lambda x: x[0]):
+            company_out.write(f"{keyword:<50} {count:<15}\n")
+
+    # Write university keyword dictionary
+    with open(university_file, 'w', encoding="utf-8") as university_out:
+        university_out.write(f"{'Keyword':<50} {'University Papers':<15}\n")
+        university_out.write("-" * 65 + "\n")
+        for keyword, count in sorted(university_keywords.items(), key=lambda x: x[0]):
+            university_out.write(f"{keyword:<50} {count:<15}\n")
+
 # Replace 'your_file.csv' with the path to your CSV file
 file_path = 'C:\\Users\\JAI GURU JI\\Desktop\\Data Lit\\Project\\Data_Literacy\\data\\wacv_preprocessed\\wacv2024.csv'
 output_file = 'C:\\Users\\JAI GURU JI\\Desktop\\Data Lit\\Project\\Data_Literacy\\data\\wacv_preprocessed\\results_24.csv'
@@ -165,6 +420,8 @@ extract_unique_keywords(file_path, keyword_file)
 keyword_counts = process_csv(file_path)
 write_results_to_csv(keyword_counts, output_file)
 
+plot_radarline_chart(keyword_counts)
+plot_radar_chart(keyword_counts)
 
 # Merge two keyword_groups
 # for group, keywords in ieee_categories.items():
