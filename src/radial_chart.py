@@ -74,7 +74,7 @@ ax.set_xticklabels(wrapped_categories, size=8)  # Reduce size of labels to 8
 # Add a legend with reduced font size
 ax.legend(loc='upper right', bbox_to_anchor=(1.1, 1), fontsize=10)  # Reduce font size of the legend
 
-ax.set_title('Comparison of Company and University Papers in Various Categories (CVPR, ICCV, WACV)', fontsize=12)
+ax.set_title('Comparison of Corporate and University Papers in Various Categories (CVPR, ICCV, WACV)', fontsize=12)
 
 # Show the plot
 plt.tight_layout()
