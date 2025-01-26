@@ -1,6 +1,36 @@
 # Import necessary libraries
 import csv
 import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+
+# Manually set NeurIPS 2023 style
+plt.rcParams.update({
+    'font.size': 12,  # Base font size
+    'axes.labelsize': 14,  # Font size for axis labels
+    'axes.titlesize': 14,  # Font size for axes title
+    'legend.fontsize': 12,  # Font size for legend
+    'xtick.labelsize': 12,  # Font size for x ticks
+    'ytick.labelsize': 12,  # Font size for y ticks
+    'figure.figsize': (12, 6),  # Figure size for NeurIPS
+    'figure.constrained_layout.use': True,  # Use constrained layout
+    'savefig.bbox': 'tight',  # Save figure with tight bounding box
+    'savefig.pad_inches': 0.015,  # Padding when saving
+    'lines.linewidth': 0.8,  # Line width
+    'axes.linewidth': 0.5,  # Axes line width
+    'grid.linewidth': 0.5,  # Grid line width
+    'xtick.major.width': 0.5,  # Major tick width
+    'ytick.major.width': 0.5,  # Major tick width
+    'legend.edgecolor': 'inherit',  # Inherit edge color for legend
+    'axes.axisbelow': True,  # Place grid lines below the plot elements
+    'text.usetex': False,  # Disable LaTeX formatting
+    'font.family': 'serif',  # Use serif font
+    'font.serif': ['Times'],  # Use Times font
+    'mathtext.fontset': 'stix',  # Use STIX math font
+    'mathtext.rm': 'Times',  # Roman font for math text
+    'mathtext.it': 'Times:italic',  # Italic math font
+    'mathtext.bf': 'Times:bold',  # Bold math font
+})
 
 company_category_map = {
     "MediaTek Inc., Taiwan": "big",
@@ -540,50 +570,99 @@ def count_papers_by_category(csv_file_path, company_category_map):
 
     return category_paper_counts
 
-# Function to plot a pie chart
-def plot_pie_chart(group_counts):
+# Function to count the number of companies for each category
+def count_companies_by_category(company_category_map):
     """
-    Plot a pie chart for the paper counts by company group.
+    Count the number of companies for each category.
 
     Args:
-        group_counts (dict): A dictionary with counts for each category.
+        company_category_map (dict): A dictionary mapping company names to categories.
+
+    Returns:
+        dict: A dictionary with company counts for each category.
     """
-    labels = group_counts.keys()
-    sizes = group_counts.values()
+    category_counts = {"big": 0, "mid-size": 0, "scaleup": 0, "startup": 0}
 
-    #explode = (0.1, 0, 0, 0)  # Explode the first slice (optional)
-    labels = [label.title() for label in labels]
-    plt.figure(figsize=(8, 6))
-    plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=270)
-    plt.title("Distribution of Papers by Company Sizes")
-    plt.axis("equal")  # Equal aspect ratio ensures the pie chart is circular.
-    output_file_path = "../graphs/distribution_of_papers_by_company_sizes.png"
-    plt.savefig(output_file_path, dpi=600)
-
-def plot_pie():
-    # Count the number of companies in each category
-    category_counts = {}
     for category in company_category_map.values():
-        category_counts[category] = category_counts.get(category, 0) + 1
+        category_counts[category] += 1
 
-    # Prepare data for the pie chart
-    labels = category_counts.keys()
-    sizes = category_counts.values()
-    labels = [label.title() for label in labels]
-    # Create the pie chart
-    plt.figure(figsize=(8, 8))
-    #plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140, colors=plt.cm.Paired.colors)
-    plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=270)
-    plt.title("Distribution of Companies by Size")
-    output_file_path = "../graphs/distribution_of_company_sizes.png"
-    plt.savefig(output_file_path, dpi=600)
+    return category_counts
 
+# Function to convert counts to percentages
+def convert_to_percentages(counts, total):
+    """
+    Convert raw counts to percentages.
+    
+    Args:
+        counts (dict): A dictionary with counts for each category.
+        total (int): The total count to calculate percentages against.
+
+    Returns:
+        dict: A dictionary with percentages for each category.
+    """
+    return {category: (count / total) * 100 for category, count in counts.items()}
+
+# Function to plot a grouped bar chart for companies and papers (percentages)
+def plot_grouped_bar_chart(company_counts, paper_counts):
+    """
+    Plot a grouped bar chart for company counts and paper counts by company category (as percentages).
+
+    Args:
+        company_counts (dict): A dictionary with the number of companies in each category (percentages).
+        paper_counts (dict): A dictionary with the number of papers in each category (percentages).
+    """
+
+    categories = company_counts.keys() # Get the company categories (big, mid-size, etc.)
+    categories = [category.capitalize() for category in categories]
+     
+    # Set up positions for bars and width
+    x = np.arange(len(categories))  # the label locations
+    width = 0.35  # width of the bars
+
+    # Create the figure and axis
+    fig, ax = plt.subplots(figsize=(12, 6))
+    
+    # Plot the bars for companies and papers with specific colors (muted orange and blue)
+    ax.bar(x - width / 2, list(company_counts.values()), width, label='Corporates', color="#4c78a8")
+    ax.bar(x + width / 2, list(paper_counts.values()), width, label='Papers', color="#e57f4e")
+
+    # Add some labels, title, and custom x-axis labels
+    ax.set_xlabel('Corporate Size')
+    ax.set_ylabel('Percentage (%)')
+    ax.set_title('Corporate Size and Paper Distribution (Percentages)')
+    ax.set_xticks(x)
+    ax.set_xticklabels(list(categories))
+    ax.legend()
+    plt.tight_layout()
+    # Save the plot
+    output_file_path = "../graphs/corporate_paper_distribution.png"
+    plt.savefig(output_file_path)
+
+
+# Main function to execute the analysis and plotting
 def main():
     csv_file_path = "../data/merged_dataset.csv"
+    
+    # Count the number of papers by category
     paper_counts = count_papers_by_category(csv_file_path, company_category_map)
-    print("Paper counts by category:", paper_counts)
-    plot_pie_chart(paper_counts)
-    plot_pie()
+  
+    
+    # Count the number of companies by category
+    company_counts = count_companies_by_category(company_category_map)
+   
+
+    # Calculate total counts for companies and papers
+    total_companies = sum(company_counts.values())
+    total_papers = sum(paper_counts.values())
+    
+    # Convert the counts to percentages
+    company_percentages = convert_to_percentages(company_counts, total_companies)
+    paper_percentages = convert_to_percentages(paper_counts, total_papers)
+
+    # Plot the grouped bar chart with percentages
+    plot_grouped_bar_chart(company_percentages, paper_percentages)
 
 if __name__ == "__main__":
     main()
+
+   
