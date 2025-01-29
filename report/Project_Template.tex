@@ -64,7 +64,7 @@
 \begin{abstract}
   % \emph{[Use this abstract to briefly explain what you are planning to do. Here is an example:]} We are planning to use the collection of \href{https://openreview-py.readthedocs.io/en/latest/getting_data.html}{all papers ever \emph{submitted} to the ICLR conference} to see how well paper acceptance can be predicted from trivial features, such as the paper's overall length, number of words or number of figures. We are planning to use logistic regression for this purpose.
 
-  In this project, we analyse the corporate and academia involvement in popular Computer Vision conferences such as CVPR, ICCV and WACV. 
+  Corporate involvement in computer vision research has grown significantly in recent years, raising questions about its influence on the field. This study analyzes corporate-affiliated papers in top-tier computer vision conferences, including CVPR, ICCV, and WACV, to assess trends in publication volume, research focus, and impact. Our findings reveal a consistent increase in corporate-affiliated papers, with industry participation reaching its highest levels to date. However, academia still dominates in terms of total publications. Citation analysis using the Mann–Whitney U test indicates that corporate-affiliated papers receive significantly higher citation counts on average, suggesting stronger influence within the research community. A breakdown of research areas shows that while both academia and industry prioritize Core Vision Algorithms, corporate research is more prevalent in applied domains such as Autonomous Vehicles, AR/VR, Video Analysis, and Natural Language Processing, whereas academia focuses more on Mathematical Foundations and Tools and Frameworks. Additionally, corporate research is highly concentrated among a small number of large technology firms, predominantly based in the USA and China, whereas academic contributions are more globally distributed. This resource imbalance raises concerns about the long-term trajectory of computer vision research and the extent to which corporate priorities shape the field. Our study underscores the need for stronger academic-industry collaborations, open-access initiatives, and shared research resources to ensure a balanced and diverse research landscape. 
 \end{abstract}
 
 % You can find a detailed example and instructions on how to use this style file in the attached \texttt{neurips\_2023.tex} file. This includes instructions for how to lay out citations.
@@ -75,7 +75,7 @@
 \section{Data and Methods}
 DATASET (dataset parts, collection, reprocessing, facts about dataset etc.)
 
-Methods (spearman rank correlation, one-tailed t-test)
+Methods (spearman correlation, Mann-Whitney U Test)
 
 
 \section{Results}
@@ -92,7 +92,7 @@ To explore the hypothesis—Do papers from corporate-affiliated researchers have
 \centering
 \begin{tabular}{|l|c|c|c|}
 \hline
-\textbf{Conference} & \textbf{Spearman Rank Correlation} & \textbf{P-value} & \textbf{Significant Relationship?} \\ \hline
+\textbf{Conference} & \textbf{Spearman Correlation} & \textbf{P-value} & \textbf{Significant Relationship?} \\ \hline
 CVPR & 0.9429 & 0.0048 & Yes \\ \hline
 ICCV & 1.0000 & 0.0000 & Yes \\ \hline
 WACV & 0.9000 & 0.0374 & Yes \\ \hline
@@ -102,9 +102,17 @@ Total & 0.8857 & 0.0188 & Yes \\ \hline
 \label{tab:spearman_results}
 \end{table}
 
-Building on the observed upward trend in the number of corporate-affiliated papers, we now turn our attention to their impact. A critical metric for evaluating research influence is citation count, which reflects the reach and recognition of a paper within the scientific community. To assess this, we compare the citation performance of corporate-affiliated papers to those from academia across top-tier computer vision conferences. Specifically, we examine whether corporate-affiliated papers, despite their lower overall proportion, exhibit higher citation counts, thereby offering insight into their relative impact as hypothesized. 
+Building on the observed upward trend in the number of corporate-affiliated papers, we now turn our attention to their impact. A critical metric for evaluating research influence is citation count, which reflects the reach and recognition of a paper within the scientific community. To assess this, we compare the citation performance of corporate-affiliated papers to those from academia across top-tier computer vision conferences. Specifically, we examine whether corporate-affiliated papers, despite their lower overall proportion, exhibit higher citation counts, thereby offering insight into their relative impact as hypothesized. We first analyze the distributions of corporate and academia affiliated paper citations. As illustrated in \cref{fig:ieee_citations}, both the number of academia papers and corporate co-authored papers in general have lower citation counts; however, co-authored corporate papers seem to be more prevalent for higher citation counts. The highest citation count (13127) belongs to "Swin Transformer: Hierarchical Vision Transformer using Shifted Windows" authored by Microsoft which makes it an exceptional outlier. To test if corporate affiliated papers have a higher mean citation count ($\mu_2$) than the mean citation of academic papers ($\mu_1$), we perform Mann–Whitney U test. We set $\alpha$ to be 0.05. The null $(H_0)$ and alternative hypothesis $H_\alpha$ are stated below as follows,
 
-In order to evaluate the IEEE citation counts, we first analyse the distributions of corporate and academia affiliated paper citations. As illustrated in \cref{fig:ieee_citations}, the number of academia papers seem to be more for lower citation counts and academia papers seem to be more prevalent for higher citation counts.  
+\[
+H_0 = \mu_2 \leq \mu_1 (\mathrm{Corporate \ papers\ have \ a \ smaller \ or \ equal \ mean \ than \ academia \ ones})
+\]
+
+\[
+H_\alpha = \mu_2 > \mu_1 (\mathrm{Corporate \ papers\ have \ a \ larger \ mean\ than \ academia \ ones)}
+\]
+
+The test results in a p-value of $1.26 \times 10^{-8}$. Thus, we can reject $H_0$, and say that there is a statistically significant difference to indicate that the corporate co-authored papers have a higher IEEE citation mean than academia affiliated papers.   
 
 \begin{figure}
     \centering
@@ -113,23 +121,12 @@ In order to evaluate the IEEE citation counts, we first analyse the distribution
     \label{fig:ieee_citations}
 \end{figure}
 
-To test if industry affiliated papers have a higher mean citation count ($\mu_2$) than the mean citation of academic papers ($\mu_1$), we perform a one sided T-Test. We set $\alpha$ to be 0.05. The null $(H_0)$ and alternative hypothesis $H_\alpha$ are stated below as follows,
-
-\[
-H_0 = \mu_2 \leq \mu_1 (\mathrm{Industry \  IEEE \  citations \ have\  a \ smaller\  or\  equal\  mean \ than\  Academic\  papers})
-\]
-
-\[
-H_\alpha = \mu_2 \geq \mu_1 (\mathrm{Industry \ IEEE\ citations \ have \ a \ higher\ mean \ than \ Academia \ papers)}
-\]
-
-The test results in a p-value of $1.05 \times 10^{-7}$. Thus, we can reject $H_0$, and say that there is a statistically significant difference to indicate that the Industry papers have a higher IEEE citation mean than Academia affiliated papers. 
-
 After observing the upward trend in the number of corporate-affiliated papers and their higher IEEE citation counts, it becomes essential to further explore which types of corporations are driving this influence in top-tier computer vision conferences. The dominance of large corporations is particularly striking as shown in Figure \ref{fig:corporate_size_graph}. Big companies contribute over 60\% of corporate representation and nearly 80\% of affiliated papers, solidifying their central role in shaping the research landscape. This is not surprising given that computer vision research often requires immense computational resources, including high-performance hardware, access to large-scale datasets, and advanced machine learning infrastructure—factors that demand significant financial investment. Such resources are more readily available to large corporations, enabling them to produce impactful research and maintain a strong presence in these conferences. The list of the top 10 companies with the highest number of papers—Google, Facebook, Microsoft, Huawei, Adobe, Tencent, Alibaba, Amazon, Nvidia, and Apple—further supports this trend, as all are classified as big companies. 
 
 Notably, these corporations are predominantly based in the USA and China, as reflected in the geographical distribution shown in Figure \ref{fig:corporate_countries}. In contrast, the academic-affiliation choropleth in Figure \ref{fig:academia_countries} reveals a broader, more diverse geographical representation of institutions contributing to computer vision research. Academic institutions from regions worldwide participate in shaping the field, yet there remains significant variability in their research output and influence. This geographical disparity underscores the broader imbalance in resources available to academic institutions compared to corporations.
 
-Smaller organizations, such as scaleups and startups, face additional challenges stemming from this imbalance. Often more geographically dispersed and resource-constrained, these organizations struggle to compete with the financial and computational power of large corporations. This concentration of research output raises critical questions about the extent to which corporate priorities influence the direction of computer vision research. To better understand these dynamics, we analyzed the key research areas explored by corporate and academic-affiliated papers at these top-tier conferences.
+Smaller organizations, such as scaleups and startups, face additional challenges stemming from this imbalance. Often more geographically dispersed and resource-constrained, these organizations struggle to compete with the financial and computational power of large corporations. This concentration of research output raises critical questions about the extent to which corporate priorities influence the direction of computer vision research. To better understand these dynamics, we analyzed the key research areas explored by corporate and academic-affiliated papers at these top-tier conferences. 
+
 
 \begin{figure}[ht]
   \centering
@@ -138,12 +135,29 @@ Smaller organizations, such as scaleups and startups, face additional challenges
   \label{fig:corporate_size_graph}
 \end{figure}
 
-RESEARCH FOCUS AREAS
+As illustrated in Figure \ref{fig:research_focus_radar}, Core Vision Algorithms emerge as the dominant research area for both corporate and academic papers, with academia exhibiting a stronger presence, reflecting its emphasis on foundational advancements. Data Collection and Management, the second most prevalent category, receives slightly greater attention from corporate-affiliated research, which aligns with the resource-intensive nature of large-scale data collection—an endeavor where corporations often have a distinct advantage due to their financial and infrastructural capacity. Notably, Mathematical Foundations also rank among the top focus areas, with academia contributing more significantly, yet corporate involvement remains substantial, underscoring the necessity of theoretical advancements even in industry-driven research.
+
+Beyond these core categories, corporate research demonstrates a clear preference for application-oriented fields that align with commercial and industrial interests. Specifically, corporate-affiliated papers exhibit greater attention to Autonomous Vehicles and Robotics, Augmented Reality (AR) and Virtual Reality (VR), Video Analysis and Action Recognition, Generative Models and Creativity, and Natural Language Processing (NLP), all of which represent rapidly growing domains with direct technological applications. Similarly, corporate papers place more emphasis on Datasets and Benchmarks, Industrial and Manufacturing Applications, Human-Centric Vision, and Scene Understanding and Reconstruction, further reflecting corporate interests in scalable, real-world applications of computer vision technologies.
+
+In contrast, academia demonstrates stronger contributions in areas such as Tools and Frameworks and Signal and Statistical Processing—domains that are crucial for developing open-source methodologies, advancing algorithmic efficiency, and refining statistical models for improved interpretability. These findings highlight a distinct contrast between corporate and academic research priorities: while academia continues to drive fundamental innovation, corporate contributions are increasingly shaping the field through resource-intensive, application-driven advancements. This divergence raises important questions about the evolving balance between theoretical exploration and commercially motivated research in computer vision.
+
+
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\textwidth]{}  
+  \caption{Corporate and academia affiliated papers given in categories.}
+  \label{fig:research_focus_radar}
+\end{figure}
 
 \section{Discussion and Conclusion}
+Our study highlights the increasing presence of corporate-affiliated research in top-tier computer vision conferences, with a steady upward trend in corporate contributions. Despite this growth, academia remains dominant, as corporate-affiliated papers have yet to surpass 50\% of total publications. Spearman correlation results confirm this sustained increase, indicating corporate research is becoming a more integral part of the field.
 
-\section{Future Work}
+In terms of influence, corporate-affiliated papers exhibit significantly higher citation counts than their academic counterparts, as confirmed by the Mann–Whitney U test. This suggests that industry-backed research has substantial influence, likely due to access to vast computational resources, proprietary datasets, and commercial applications. The dominance of large corporations—such as Google, Facebook, and Microsoft—further underscores this trend, with the majority of corporate-affiliated papers originating from a small set of tech giants. Geographically, corporate research is heavily concentrated in the USA and China, whereas academic contributions exhibit a more globally distributed pattern. This highlights disparities in resources, as smaller organizations, including startups and scaleups, struggle to compete in an increasingly resource-intensive research landscape.
 
+The analysis of research focus areas reveals distinct priorities between academia and corporate. Both emphasize Core Vision Algorithms, but academia places greater focus on Mathematical Foundations and Tools and Frameworks, aligning with fundamental research. In contrast, corporations prioritize applied domains such as Autonomous Vehicles, AR/VR, Video Analysis, and Natural Language Processing, reflecting commercial objectives. Corporates also dedicates more attention to Data Collection and Management, reinforcing its advantage in large-scale datasets.
+
+To ensure a balanced research ecosystem, it is crucial to foster stronger collaborations between academia and industry while preserving the role of fundamental research. Open-access initiatives, shared datasets, and interdisciplinary partnerships could mitigate the risk of research monopolization and maintain a diversity of perspectives in shaping the future of computer vision. Future work should explore the long-term implications of corporate influence on the direction of research, including its impact on funding structures, knowledge dissemination, and ethical considerations surrounding proprietary datasets and closed-source models. Additionally, further investigation into collaboration patterns between academic and corporate researchers may provide insights into how these two sectors can collectively contribute to the advancement of computer vision while maintaining a sustainable and inclusive research environment.
 \section{Contributions Statement}
 % This is the last section before the references. 
 
