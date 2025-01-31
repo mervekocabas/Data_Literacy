@@ -28,6 +28,8 @@
 \usepackage{xcolor}         % colors
 \usepackage{graphicx}
 \usepackage{cleveref}
+\usepackage{wrapfig}
+\usepackage{mwe}
 
 \title{Corporate vs. Academia: Who Dominates Computer Vision Conferences?}
 
@@ -78,7 +80,23 @@ Research has explored the growing role of corporate involvement in AI publicatio
 This report provides an analysis of corporate and academic participation in CVPR, ICCV, and WACV. Specifically, we examine co-authored corporate involvement over the years, the impact of corporate vs. academic contributions in terms of IEEE citation metrics, and a keyword analysis to identify prevailing research trends. By investigating these aspects, we aim to gain insights into the shifting dynamics of research contributions and their implications for the future of computer vision.
 
 \section{Data and Methods}
-DATASET (dataset parts, collection, reprocessing, facts about dataset etc.)
+The data used in this study is sourced from the Paper Copilot GitHub repository, which contains comprehensive metadata for the conferences we are interested in—CVPR (held annually), ICCV (held biennially), and WACV (held annually since 2020). Among these, CVPR is the largest conference, contributing nearly half of the papers in our dataset, while ICCV, being biennial, has fewer papers. WACV, as a more recent conference with its first edition in 2020, accounts for the smallest share in the dataset. We focus on the timeframe from 2019 to 2024, resulting in a dataset of 18,925 papers. This period allows us to analyze citation trends over time—older papers, such as those from 2019, are expected to have higher citation counts compared to more recent ones from 2024, as citations accumulate over time.
+
+For each paper, we extract the title, authors, and affiliations. Since the proceedings of CVPR, ICCV, and WACV are published on IEEE Xplore, we use paper titles to scrape their respective IEEE Xplore pages and extract their citation count and IEEE keywords.
+
+\begin{wrapfigure}{L}{0.4\textwidth}
+\centering
+\vspace{-10pt}
+\includegraphics[width=.95\linewidth]{report/images/affiliation-combination.png}
+\caption{Exemplary paper-author-\\
+affiliation combinations [1]}
+\label{fig:affiliation-combination}
+\vspace{-50pt}
+\end{wrapfigure}
+To analyse our research question, we categorize each paper based on the affiliations of its authors, as illustrated in Figure \ref{fig:affiliation-combination}. Each paper is analyzed to assign a percentage representation for corporate and academic institutions. By examining the affiliations of all contributing authors, we determine the proportion attributed to corporate entities versus academic institutions.
+
+
+
 
 Methods (spearman correlation, Mann-Whitney U Test)
 
@@ -107,16 +125,13 @@ Total & 0.8857 & 0.0188 & Yes \\ \hline
 \label{tab:spearman_results}
 \end{table}
 
-Building on the observed upward trend in the number of corporate-affiliated papers, we now turn our attention to their impact. A critical metric for evaluating research influence is citation count, which reflects the reach and recognition of a paper within the scientific community. To assess this, we compare the citation performance of corporate-affiliated papers to those from academia across top-tier computer vision conferences. Specifically, we examine whether corporate-affiliated papers, despite their lower overall proportion, exhibit higher citation counts, thereby offering insight into their relative impact as hypothesized. We first analyze the distributions of corporate and academia affiliated paper citations. As illustrated in \cref{fig:ieee_citations}, both the number of academia papers and corporate co-authored papers in general have lower citation counts; however, co-authored corporate papers seem to be more prevalent for higher citation counts. The highest citation count (13127) belongs to "Swin Transformer: Hierarchical Vision Transformer using Shifted Windows" authored by Microsoft which makes it an exceptional outlier. To test if corporate affiliated papers have a higher mean citation count ($\mu_2$) than the mean citation of academic papers ($\mu_1$), we perform Mann–Whitney U test. We set $\alpha$ to be 0.05. The null $(H_0)$ and alternative hypothesis $H_\alpha$ are stated below as follows,
-
+Building on the observed upward trend in the number of corporate-affiliated papers, we now turn our attention to their impact. A critical metric for evaluating research influence is citation count, which reflects the reach and recognition of a paper within the scientific community. To assess this, we compare the citation performance of corporate-affiliated papers to those from academia across top-tier computer vision conferences. Specifically, we examine whether corporate-affiliated papers, despite their lower overall proportion, exhibit higher citation counts, thereby offering insight into their relative impact as hypothesized. We first analyze the distributions of corporate and academia affiliated paper citations. As illustrated in Figure \ref{fig:ieee_citations}, both the number of academia papers and corporate co-authored papers in general have lower citation counts; however, co-authored corporate papers seem to be more prevalent for higher citation counts. The highest citation count (13127) belongs to "Swin Transformer: Hierarchical Vision Transformer using Shifted Windows" authored by Microsoft which makes it an exceptional outlier. To test if corporate affiliated papers have a higher mean citation count ($\mu_2$) than the mean citation of academic papers ($\mu_1$), we perform Mann–Whitney U test. We set $\alpha$ to be 0.05. The null $(H_0)$ and alternative hypothesis $H_\alpha$ are stated below as follows,
 \[
 H_0 = \mu_2 \leq \mu_1 (\mathrm{Corporate \ papers\ have \ a \ smaller \ or \ equal \ mean \ than \ academia \ ones})
 \]
-
 \[
 H_\alpha = \mu_2 > \mu_1 (\mathrm{Corporate \ papers\ have \ a \ larger \ mean\ than \ academia \ ones)}
 \]
-
 The test results in a p-value of $1.26 \times 10^{-8}$. Thus, we can reject $H_0$, and say that there is a statistically significant difference to indicate that the corporate co-authored papers have a higher IEEE citation mean than academia affiliated papers.   
 
 \begin{figure}
