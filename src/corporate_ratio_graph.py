@@ -6,7 +6,7 @@ from scipy.stats import spearmanr
 
 
 # Load the dataset
-file_path = "../data/merged_v1.csv"
+file_path = "../data/merged_dataset_v0.csv"
 data = pd.read_csv(file_path)
 
 # Ensure conferences have data for correct years
