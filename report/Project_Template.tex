@@ -82,10 +82,13 @@ Research has highlighted the growing role of corporate involvement in AI publica
 In this report, we begin by examining the quantity of corporate-affiliated papers over the years to assess the extent of industry involvement in these major conferences. We then explore IEEE citation metrics, an important indicator of research impact, to better understand how corporate and academic papers contribute to the overall influence in the field. Next, we categorize corporate participation based on company size to understand how various corporate entities influence the research landscape, particularly as large technology companies may have a more significant presence and potentially shape research priorities. Finally, we investigate the research areas represented in corporate and academic papers by analyzing keyword trends. This provides insight into the types of research that are being prioritized by both sectors, highlighting the differences in focus between corporate-driven and academic research.
 
 \section{Data and Methods}
+\vspace{-5pt}
 \subsection{Data processing}
-The data used in this study is sourced from the Paper Copilot GitHub repository (citation), which contains comprehensive metadata for the conferences we are interested in—CVPR (held annually), ICCV (held biennially), and WACV (held annually). Among these, CVPR is the largest conference, contributing nearly half of the papers in our dataset, while ICCV and WACV account for smaller shares. We focus on the timeframe from 2019 to 2024, resulting in a dataset of 18,925 papers. This period allows us to analyze citation trends over time—older papers, such as those from 2019, are expected to have higher citation counts compared to more recent ones from 2024, as citations accumulate over time.
+For our study, we focus on the most influential Computer Vision conferences that attract high-quality submissions from both academia and industry. CVPR and ICCV, ranked \#1 and \#2 respectively on the Best Computer Science Conferences list by Research.com [3], are natural choices for examining the influence of corporate and academic contributions in the Computer Vision landscape. WACV, although ranked at \#22, serves as an important platform for presenting applied research, distinguishing it from the more theoretical focus of CVPR and ICCV. 
 
-For each paper, we extract the title, authors, and affiliations. Since the proceedings of CVPR, ICCV, and WACV are published on IEEE Xplore, we use paper titles to scrape their respective IEEE Xplore pages and extract their citation count and IEEE keywords.
+We use the Paper Copilot GitHub repository [4], which contains comprehensive metadata for the conferences we are interested in—CVPR (held annually), ICCV (held biennially), and WACV (held annually). Among these, CVPR is the largest conference, contributing nearly half of the papers in our dataset, while ICCV and WACV account for smaller shares. We focus on the timeframe from 2019 to 2024, resulting in a dataset of 18,925 papers. This period allows us to analyze citation trends over time—older papers, such as those from 2019, are expected to have higher citation counts compared to more recent ones from 2024, as citations accumulate over time.
+
+For each paper, we extract the title, authors, and affiliations. Since the proceedings of CVPR, ICCV, and WACV are published on IEEE Xplore, we use paper titles to scrape their respective IEEE Xplore pages and extract their citation count (both IEEE and other publishers) and IEEE keywords.
 
 \begin{wrapfigure}{L}{0.4\textwidth}
 \centering
@@ -94,12 +97,14 @@ For each paper, we extract the title, authors, and affiliations. Since the proce
 \caption{Exemplary paper-author-\\
 affiliation combinations [1]}
 \label{fig:affiliation-combination}
-\vspace{-50pt}
+\vspace{-20pt}
 \end{wrapfigure}
-To analyse our research question, we categorize each paper based on the affiliations of its authors, as illustrated in Figure \ref{fig:affiliation-combination}. For each paper, we examine the affiliations of all contributing authors to determine the proportion attributed to corporate entities versus academic institutions.
+To analyse our research question, we categorize each paper based on the affiliations of its authors, as illustrated in Figure \ref{fig:affiliation-combination}. For each paper, we examine the affiliations of all contributing authors to determine the proportion attributed to corporate entities versus academic institutions. We give each paper an academic affiliation and a corporate affiliation score. 
+
+The extracted keywords for each paper are categorized into 14 keyword categories. The keyword categories were initially identified using the ICCV dataset, with ChatGPT assisting in the categorization process. These categories were then applied to the datasets of the other two conferences.
 
 
-
+\clearpage
 
 \subsection{Spearman's Rank Correlation Coefficient}
 To analyze the temporal trend in the proportion of corporate-affiliated papers presented at conferences, we employed Spearman's Rank Correlation Coefficient ($\rho_s$), a non-parametric statistical method suitable for detecting monotonic relationships in time series data [3]. This method is effective for small datasets and does not require the assumption of normally distributed variables [4]. Spearman's $\rho_s$ is calculated using the following equation:
