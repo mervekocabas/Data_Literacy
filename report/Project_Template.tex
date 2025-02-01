@@ -84,11 +84,9 @@ In this report, we begin by examining the quantity of corporate-affiliated paper
 \section{Data and Methods}
 \vspace{-5pt}
 \subsection{Data processing}
-For our study, we focus on the most influential Computer Vision conferences that attract high-quality submissions from both academia and industry. CVPR and ICCV, ranked \#1 and \#2 respectively on the Best Computer Science Conferences list by Research.com [3], are natural choices for examining the influence of corporate and academic contributions in the Computer Vision landscape. WACV, although ranked at \#22, serves as an important platform for presenting applied research, distinguishing it from the more theoretical focus of CVPR and ICCV. 
+For this report, we focus on the most influential Computer Vision conferences that attract high-quality submissions from both academia and industry. CVPR (held annually) and ICCV (held biennially), ranked \#1 and \#2 respectively on the Best Computer Science Conferences list by Research.com [3], are natural choices for examining the influence of corporate and academic contributions in the Computer Vision landscape. WACV (held annually), although ranked at \#22, serves as an important platform for presenting applied research, distinguishing it from the more theoretical focus of CVPR and ICCV. 
 
-We use the Paper Copilot GitHub repository [4], which contains comprehensive metadata for the conferences we are interested in—CVPR (held annually), ICCV (held biennially), and WACV (held annually). Among these, CVPR is the largest conference, contributing nearly half of the papers in our dataset, while ICCV and WACV account for smaller shares. We focus on the timeframe from 2019 to 2024, resulting in a dataset of 18,925 papers. This period allows us to analyze citation trends over time—older papers, such as those from 2019, are expected to have higher citation counts compared to more recent ones from 2024, as citations accumulate over time.
-
-For each paper, we extract the title, authors, and affiliations. Since the proceedings of CVPR, ICCV, and WACV are published on IEEE Xplore, we use paper titles to scrape their respective IEEE Xplore pages and extract their citation count (both IEEE and other publishers) and IEEE keywords.
+For creating the dataset, we extract the title, authors, and affiliations of each paper utilizing Paper Copilot GitHub [4]. Since the proceedings of CVPR, ICCV, and WACV are published on IEEE Xplore, we use paper titles to scrape their respective IEEE Xplore pages and extract their citation count (both IEEE and other publishers) and IEEE keywords. Among the conferences, CVPR is the largest, contributing nearly half of the papers in our dataset, while ICCV and WACV account for smaller shares. We focus on the timeframe from 2019 to 2024, resulting in a dataset of 18,925 papers. This period allows us to analyze citation trends over time—older papers, such as those from 2019, are expected to have higher citation counts compared to more recent ones from 2024, as citations accumulate over time.
 
 \begin{wrapfigure}{L}{0.4\textwidth}
 \centering
@@ -99,15 +97,13 @@ affiliation combinations [1]}
 \label{fig:affiliation-combination}
 \vspace{-20pt}
 \end{wrapfigure}
-To analyse our research question, we categorize each paper based on the affiliations of its authors, as illustrated in Figure \ref{fig:affiliation-combination}. For each paper, we examine the affiliations of all contributing authors to determine the proportion attributed to corporate entities versus academic institutions. We give each paper an academic affiliation and a corporate affiliation score. 
+Each paper is categorized based on the affiliations of its authors, as illustrated in Figure \ref{fig:affiliation-combination}. We begin by examining the affiliations of the authors and categorizing them into two groups: corporate and academic. If an author has dual affiliations (both from a company and academia), we divide their contribution accordingly. For example, if an author is affiliated with one company and one academic institution, they contribute 0.5 to each category. Based on these calculations, if any corporate affiliation is present (greater than 0\%), the paper is considered to have corporate co-authors; thus, corporate affiliated. If the proportion of corporate contributors reaches 50\% or more, the paper is classified as corporate-led.
 
-The extracted keywords for each paper are categorized into 14 keyword categories. The keyword categories were initially identified using the ICCV dataset, with ChatGPT assisting in the categorization process. These categories were then applied to the datasets of the other two conferences.
+Additionally, companies are categorized as big, mid-size, scaleup, and startup according to their turnover, employee number, and growth rates with the help of Dun \& Bradstreet Business Directory [5]. For the extracted keywords, each paper is categorized into 15 keyword categories (including miscellaneous) with the help of arXiv category taxonomy[6] and ChatGPT. 
 
-
-\clearpage
 
 \subsection{Spearman's Rank Correlation Coefficient}
-To analyze the temporal trend in the proportion of corporate-affiliated papers presented at conferences, we employed Spearman's Rank Correlation Coefficient ($\rho_s$), a non-parametric statistical method suitable for detecting monotonic relationships in time series data [3]. This method is effective for small datasets and does not require the assumption of normally distributed variables [4]. Spearman's $\rho_s$ is calculated using the following equation:
+To analyze the temporal trend in the proportion of corporate-affiliated papers presented at conferences, we employed Spearman's Rank Correlation Coefficient ($\rho_s$), a non-parametric statistical method suitable for detecting monotonic relationships in time series data [7]. This method is effective for small datasets and does not require the assumption of normally distributed variables [8]. Spearman's $\rho_s$ is calculated using the following equation:
 
 \begin{equation}
 \rho_s = 1 - \frac{6 \sum d_i^2}{n(n^2 - 1)}
@@ -116,7 +112,7 @@ To analyze the temporal trend in the proportion of corporate-affiliated papers p
 where $d_i$ is the difference between the ranks of corresponding values in the two variables, and $n$ is the number of observations. The coefficient ranges from $-1$ to $1$, where closer to $1$ indicate a strong positive monotonic relationship, values closer to $-1$ indicate a strong negative monotonic relationship, and values near $0$ indicate no monotonic relationship. To assess the statistical significance of the observed correlation, a significance test by computing the p-value is conducted. A p-value less than a predetermined significance level (0.05) indicates that the observed correlation is statistically significant, implying that the relationship between the variables is unlikely to have occurred by chance.
 
 \subsection{Mann-Whitney U test}
-To analyze the IEEE citations in corporate co-authored papers and academia papers which do not have a normal distribution, one sided Mann-Whitney U test is used. The Mann-Whitney U test compares two independent samples by ranking all observations together and summing the ranks for each group [5]. The U statistic measures how often a value in one group is greater than a value in the other is calculated as follows,
+To analyze the IEEE citations in corporate co-authored papers and academia papers which do not have a normal distribution, one sided Mann-Whitney U test is used. The Mann-Whitney U test compares two independent samples by ranking all observations together and summing the ranks for each group [9]. The U statistic measures how often a value in one group is greater than a value in the other is calculated as follows,
 
 \begin{equation}
 U_x = n_xn_y\frac{n_x(n_x+1)}{2}-R_1
@@ -141,7 +137,7 @@ where $n_x$ and $n_y$ are the sample sizes for both the groups and $R_1$ and $R_
     Z = \frac{U - \mu_U}{\sigma_U} = \frac{U - \frac{n_x n_y}{2}}{\sqrt{\frac{n_x n_y (n_x + n_y + 1)}{12}}}
 \end{equation}
 
-where $U$ is either $U_x$ or $U_y$. The z-score $Z$ is compared to a critical value $\alpha$ to determine statistical significance, leading to either acceptance or rejection of the null hypothesis [5].
+where $U$ is either $U_x$ or $U_y$. The z-score $Z$ is compared to a critical value $\alpha$ to determine statistical significance, leading to either acceptance or rejection of the null hypothesis [9].
 
 
 % \clearpage
@@ -234,7 +230,9 @@ The analysis of research focus areas reveals distinct priorities between academi
 To ensure a balanced research ecosystem, it is crucial to foster stronger collaborations between academia and industry while preserving the role of fundamental research. Open-access initiatives, shared datasets, and interdisciplinary partnerships could mitigate the risk of research monopolization and maintain a diversity of perspectives in shaping the future of computer vision. 
 
 \section{Limitations and Future Work}
-Future work, limitation dataset, accepted papers (submitting papers)
+
+Future work, 
+limitations: dataset, accepted papers (submitting papers)
 
 Future work should explore the long-term implications of corporate influence on the direction of research, including its impact on funding structures, knowledge dissemination, and ethical considerations surrounding proprietary datasets and closed-source models. Additionally, further investigation into collaboration patterns between academic and corporate researchers may provide insights into how these two sectors can collectively contribute to the advancement of computer vision while maintaining a sustainable and inclusive research environment.
 
@@ -256,9 +254,17 @@ Future work should explore the long-term implications of corporate influence on 
 
 [2] D. I. Yue, "Google: Estimating the Impact of Corporate Involvement on AI Research," SSRN, Nov. 25, 2024. [Online]. Available: https://ssrn.com/abstract=5033334. doi: 10.2139/ssrn.5033334.
 
-[3] T. D. Gauthier, "Detecting Trends Using Spearman's Rank Correlation Coefficient," Environmental Forensics, vol. 2, no. 4, pp. 359-362, 2001. [Online]. Available: https://www.sciencedirect.com/science/article/pii/S1527592201900618. doi: 10.1006/enfo.2001.0061.
+[3] 
 
-[4] Yue, Sheng \& Pilon, Paul \& Cavadias, George. (2002). Power of the Mann-Kendall and Spearman's Rho Tests For Detecting Monotonic Trends in Hydrological Series. Journal of Hydrology. 259. 254-271. 10.1016/S0022-1694(01)00594-7. 
+[4]
 
-[5] H. B. Mann and D. R. Whitney, “On a Test of Whether one of Two Random Variables is Stochastically Larger than the Other,” The Annals of Mathematical Statistics, vol. 18, no. 1, pp. 50–60, 1947, doi: 10.1214/aoms/1177730491.
+[5] Dun \& Bradstreet. (n.d.). Business directory. Retrieved February 1, 2025, from https://www.dnb.com/business-directory.html
+
+[6] arXiv. (n.d.). arXiv category taxonomy. arXiv. Retrieved February 1, 2025, from https://arxiv.org/category\textunderscore taxonomy
+
+[7] T. D. Gauthier, "Detecting Trends Using Spearman's Rank Correlation Coefficient," Environmental Forensics, vol. 2, no. 4, pp. 359-362, 2001. [Online]. Available: https://www.sciencedirect.com/science/article/pii/S1527592201900618. doi: 10.1006/enfo.2001.0061.
+
+[8] Yue, Sheng \& Pilon, Paul \& Cavadias, George. (2002). Power of the Mann-Kendall and Spearman's Rho Tests For Detecting Monotonic Trends in Hydrological Series. Journal of Hydrology. 259. 254-271. 10.1016/S0022-1694(01)00594-7. 
+
+[9] H. B. Mann and D. R. Whitney, “On a Test of Whether one of Two Random Variables is Stochastically Larger than the Other,” The Annals of Mathematical Statistics, vol. 18, no. 1, pp. 50–60, 1947, doi: 10.1214/aoms/1177730491.
 \end{document}
