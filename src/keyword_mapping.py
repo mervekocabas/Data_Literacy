@@ -385,9 +385,10 @@ def plot_radar_citations(keyword_counts):
     # Add title with context for the max mean citation count
     ax.set_title(f'Normalized mean citations & dominance in number of papers by research area \n(1.0 corresponds to {max_mean_citation:.2f} citations)', fontsize=12)
 
-    # Display plot
+    # Save plot
     plt.tight_layout()
-    plt.show()
+    output_file_path = "../graphs/citation_radar_plot.png"
+    plt.savefig(output_file_path)
          
 # Replace 'your_file.csv' with the path to your CSV file
 file_path = '/Users/merve/Data_Literacy/data/merged_dataset.csv'
