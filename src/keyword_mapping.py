@@ -3,6 +3,8 @@ from collections import defaultdict
 import ast
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches 
+import textwrap 
 
 keyword_groups={
 'Natural Language Processing': ['Machine translation', 'Question answering (information retrieval)', 'Speech processing', 'Fake news','Grammar', 'Text detection', 'Thesauri', 'Tokenization', 'Teleconferencing', 'US Department of Homeland SecurityVocabulary', 'Dictionaries', 'Decision making', 'Decoding', 'Error analysis', 'Encoding', 'Knowledge based systems', 'Knowledge discovery', 'Knowledge engineering', 'Knowledge transfer', 'Labeling', 'Learning (artificial intelligence)', 'Learning systems', 'Text-to-image synthesis', 'Natural language processing', 'Natural languages', 'Linguistics', 'Message passing', 'Inference algorithms', 'Markov processes', 'Markov random fields', 'Mixture models', 'Pragmatics', 'Prediction algorithms', 'Predictive models', 'Probabilistic logic', 'Semantics', 'Search problems', 'Sequential analysis', 'Supervised learning', 'Vocabulary', 'Text recognition', 'Syntactics', 'Taxonomy', 'Character recognition', 'Context-aware services', 'Handwriting recognition', 'Optical character recognition software', 'Phonetics', 'Speech enhancement', 'Speech recognition', 'Twitter', 'Voice activity detection', 'Annotations', 'Semantic search', 'Sentiment analysis', 'Text analysis', 'Text categorization', 'Writing', 'Information filters', 'Prediction methods', 'Electronic mail', 'Web and internet services', 'Web and internet services', 'Web conferencing', 'Webcams', 'Hypertext systems', 'Unified modeling language', 'User-generated content', 'Webcams', 'Browsers', 'Open Access', 'Resource description framework', 'QR codes', 'Query processing', 'Virtual assistants', 'Speech coding', 'Vocoders', 'Large language models', 'Text summarization', 'Text to image', 'Text to speech', 'Text to video', 'Recommender systems', 'Formal languages'], 
@@ -35,8 +37,8 @@ keyword_groups={
 
 'Scene Understanding and Reconstruction': ['Spatiotemporal phenomena', 'Grounding', 'Position measurement', 'Layout','Reflectivity', 'Dogs', 'Cats', 'Cows', 'Rats', 'Indoor environment', 'Indoor environments', 'Grasping', 'Stereo image processing', 'Spatial indexes', 'Spatial temporal resolution', 'Information geometry', 'Continuous wavelet transforms', 'Image sampling', 'Scene Understanding and Reconstruction','Knowledge representation', 'Inference mechanisms', 'Visual analytics', 'Scene segmentation', 'Semantic segmentation', 'Depth estimation', 'Scene parsing', 'Clustering algorithms', 'Clustering methods', 'Context modeling', '3D reconstruction', 'Knowledge graphs', 'Surface cracks', 'Scene segmentation', 'Depth estimation', '3D reconstruction', 'Image segmentation', 'Image reconstruction', 'Image denoising', 'Image decomposition', 'Image edge detection', 'Image analysis', 'Image segmentation', 'Object detection', 'Object segmentation', 'Scene parsing', 'Scattering', 'Active contours', 'Apertures', 'Measurement', 'Optical detectors', 'Optical losses', 'Optical computing', 'Optical distortion', 'Optical sensors', 'Optical surface waves', 'Optical variables control', 'Optical wavelength conversion', 'Refractive index', 'Surface reconstruction', 'Surface morphology', 'Surface texture', 'Surface treatment', 'Surface acoustic waves', 'Skeleton', 'Surface waves', '3D reconstruction', 'Bundle adjustment', 'Depth estimation', 'Context awareness', 'Intelligent systems', 'Interactive systems', 'Spatial databases', 'Image fusion', 'Octrees', 'Point cloud compression', 'Scene understanding', 'Stereo vision', 'Image capture', 'Image enhancement', 'Inspection', 'Optical flow', 'Superresolution', 'Three-dimensional printing', 'Gabor filters', 'Machine vision', 'Code', 'Internet', 'Information retrieval', 'Search methods', 'Partial differential equations', 'Nonlinear filters', 'Relaxation methods', 'Corner detection', 'Strips', 'Subspace constraints', 'Diffraction', 'Flow graphs', 'Diffraction', 'Ray tracing', 'Shape control', 'Scientific computing', 'Sequences', 'Bifurcation', 'Null space', 'Bifurcation', 'Null space', 'Planing', 'Porcelain', 'Pansharpening', 'Optical polarization', 'Computational geometry', 'Optical interferometry', 'Phase locked loops', 'Line-of-sight propagation', 'Phase frequency detectors', 'Graph convolutional networks', 'Neural radiance field'], 
 
-'Vision for Social Good': ['Economic indicators', 'Economics',  'Customer satisfaction','Voting', 'Customer relationship management', 'Service-oriented architecture', 'Organizations',  'Research and development', 'Electronic commerce', 'Urban planning', 'Purification', 'Recycling', 'Psychology', 'Anisotropic', 'Law','Wireless communication', 'Architecture','Archeology', 'Communication cables', 'Finance', 'Fires', 'Government',
-        'History', 'Sociology', 'Green energy', 'Greenhouses', 'Developing countries','Disasters', 'History', 'Anisotropic', 'Philosophical considerations', 'GSM', 'Credit cards', 'Stairs', 'Workstations', 'Energy loss', 'Energy efficiency', 'IEC', 'IP networks', 'Global communication', 'Wires', '3G mobile communication', 'Telecommunications', 'Pollution', 'Road transportation', 'Ambient assisted living', 'Vision for Social Good','Accessibility', 'Wildlife monitoring', 'Disaster management', 'Social media analysis', 'Assistive technology', 'Crowdsourcing', 'Wildlife monitoring', 'Disaster management', 'Social media analysis', 'Market research', 'Social media analysis', 'Location awareness', 'Disaster management', 'Social network services', 'Disaster management', 'Wildlife monitoring', 'Crowdsourcing', 'Crowd monitoring', 'Accessibility', 'Assistive technologies', 'Education', 'Healthcare', 'Smart agriculture', 'Vision for social good', 'Employment', 'Ergonomics', 'Risk management', 'Green products', 'Social factors', 'Traffic control', 'Irrigation', 'Light fields', 'Optics', 'Optical variables measurement', 'Franchising', 'Spinning', 'Emergency services', 'Procurement', 'Business process re-engineering', 'Smart homes', 'Distance learning', 'Distance learning', 'International trade', 'Military computing', 'Social robots', 'Computer aided instruction', 'Scholarships', 'Waste materials', 'Precision agriculture', 'Preventative and mitigation measures', 'Continuing education', 'Smart cities', 'Prevention and mitigation'], 
+#'Vision for Social Good': ['Economic indicators', 'Economics',  'Customer satisfaction','Voting', 'Customer relationship management', 'Service-oriented architecture', 'Organizations',  'Research and development', 'Electronic commerce', 'Urban planning', 'Purification', 'Recycling', 'Psychology', 'Anisotropic', 'Law','Wireless communication', 'Architecture','Archeology', 'Communication cables', 'Finance', 'Fires', 'Government',
+#        'History', 'Sociology', 'Green energy', 'Greenhouses', 'Developing countries','Disasters', 'History', 'Anisotropic', 'Philosophical considerations', 'GSM', 'Credit cards', 'Stairs', 'Workstations', 'Energy loss', 'Energy efficiency', 'IEC', 'IP networks', 'Global communication', 'Wires', '3G mobile communication', 'Telecommunications', 'Pollution', 'Road transportation', 'Ambient assisted living', 'Vision for Social Good','Accessibility', 'Wildlife monitoring', 'Disaster management', 'Social media analysis', 'Assistive technology', 'Crowdsourcing', 'Wildlife monitoring', 'Disaster management', 'Social media analysis', 'Market research', 'Social media analysis', 'Location awareness', 'Disaster management', 'Social network services', 'Disaster management', 'Wildlife monitoring', 'Crowdsourcing', 'Crowd monitoring', 'Accessibility', 'Assistive technologies', 'Education', 'Healthcare', 'Smart agriculture', 'Vision for social good', 'Employment', 'Ergonomics', 'Risk management', 'Green products', 'Social factors', 'Traffic control', 'Irrigation', 'Light fields', 'Optics', 'Optical variables measurement', 'Franchising', 'Spinning', 'Emergency services', 'Procurement', 'Business process re-engineering', 'Smart homes', 'Distance learning', 'Distance learning', 'International trade', 'Military computing', 'Social robots', 'Computer aided instruction', 'Scholarships', 'Waste materials', 'Precision agriculture', 'Preventative and mitigation measures', 'Continuing education', 'Smart cities', 'Prevention and mitigation'], 
 
 'Datasets and Benchmarks': ['Information processing', 'Large-scale datasets', 'Benchmark testing', 'Vision datasets', 'Training techniques', 'Evaluation protocols', 'Dataset creation', 'Large-scale datasets', 'Benchmark testing', 'Vision datasets', 'Image databases', 'Indexes', 'Indexing', 'Training data', 'Benchmarks', 'Data augmentation', 'Datasets', 'Demography', 'Geography', 'Meteorological radar', 'Millimeter wave radar', 'Mars', 'Evaluation metrics', 'Ground truth', 'Big Data applications', 'Reviews', 'Surveys', 'Performance evaluation', 'Reproducibility of results', 'NIST', 'Annotations', 'Measurement units', 'Throughput', 'Medical conditions', 'Crops', 'Economic indicators', 'Data analysis', 'Table lookup', 'Time complexity', 'Data mining', 'Data models', 'Data acquisition', 'Metadata', 'Annotation tools', 'Data aggregation', 'Data analysis', 'Data science', 'Data analysis', 'Data integrity', 'Multimedia databases', 'Information exchange', 'Information representation', 'Information exchange', 'Information representation', 'Triples (Data structure)', 'Queueing analysis', 'Data centers', 'Integer linear programming', 'Integer programming', 'Data integration', 'Data security', 'Collaborative filtering', 'Contrastive learning', 'Data integration', 'Information theory', 'Arrays'], 
 
@@ -60,47 +62,40 @@ keyword_groups={
         'Clamps', 'Fabrics', 'Punching', 'Couplers', 'Cotton', 'Crop yield', 'Fluid flow measurement', 'Maintenance engineering',
         'Design methodology',  'Valves', 'Turning','Surface contamination', 'Thermal factors', 'Wheelchairs', 'Windings',"Heat-assisted magnetic recording", 'Tungsten', 'Quality control', 'Factory automation', 'Defect detection', 'Assembly line monitoring', 'Industrial vision', 'Batch production systems', 'Buildings', 'Architecture', 'Bridges', 'Quality control', 'Factory automation', 'Defect detection', 'Industrial vision', 'Batch production systems', 'Flyback transformers', 'Micromechanical devices', 'Laser modes', 'Laser radar', 'Lasers', 'Integrated circuits', 'Integrated optics', 'Geometrical optics', 'Electronics packaging', 'Quality assessment', 'Quality control', 'Factory automation', 'Defect detection', 'Industrial vision', 'Batch production systems', 'Particle measurements', 'Particle separators', 'Printing', 'Micromechanical devices', 'Laser radar', 'Flyback transformers', 'Integrated circuits', 'Laser modes', 'Laser radar', 'Resists', 'Geometrical optics', 'Integrated optics', 'Electronics packaging', 'Geophysical measurement techniques', 'Additives', 'Aggregates', 'Generators', 'Industries', 'Lenses', 'Manganese', 'Mirrors', 'Ovens', 'Periodic structures', 'Photonics', 'Proposals', 'Prototypes', 'Surface cleaning', 'Switched mode power supplies', 'Silicon', 'Silicon carbide', 'Toy manufacturing industry', 'Technological innovation', 'Variable speed drives', 'Tires', 'Aerospace electronics', 'Heating systems', 'Fabrication', 'Fasteners', 'Casting', 'Concrete', 'Motors', 'Power capacitors', 'Resistance', 'Filling', 'Pressing', 'Production', 'Refining', 'Three-dimensional printing', 'Integrated circuits', 'Optical detectors', 'Pipelines', 'Switches', '3D printing', 'Automation', 'Industrial inspection', 'Manufacturing processes', 'Process control', 'Quality assurance', 'Robotic arms', 'Integrated circuit modeling', 'Light emitting diodes', 'Magnetic heads', 'Printers', 'Mixers', 'Biomedical equipment', 'Materials reliability', 'Semiconductor device modeling', 'Pumps', 'Radar antennas', 'Meters', 'Vegetable oils', 'Vents', 'Catalysts', 'Metasurfaces', 'Sensor phenomena and characterization', 'Product design', 'Traffic control', 'CMOS image sensors', 'Electronic commerce', 'Energy consumption', 'Power line communications', 'Power system stability', 'Microwave integrated circuits', 'Organic light emitting diodes', 'Transformer cores', 'Transformers', 'Space missions', 'Hybrid power systems', 'Fluid dynamics', 'Spinning', 'Hybrid power systems', 'Nanobioscience', 'Nanoelectromechanical systems', 'Nanoscale devices', 'Optical device fabrication', 'Presses', 'Voltage control', 'Poles and towers', 'Elasticity', 'Presses', 'Hybrid fiber coaxial cables', 'Substrates', 'Curing', 'Hybrid power systems', 'Poles and towers', 'Weaving', 'Dams', 'Microstrip', 'Thermodynamics', 'Temperature control', 'Atomic layer deposition', 'Rotation measurement', 'Tracking loops', 'Tracking loops', 'Semiconductor lasers', 'Semiconductor device manufacture', 'Power system harmonics', 'Rails', 'Rapid prototyping', "Young's modulus", 'Electric breakdown', 'Hand tools', 'Germanium', 'Connectors', 'Bending', 'Cooling', 'Energy measurement', 'Energy resolution', 'Manufacturing', 'Thermal conductivity', 'Thermal stability', 'Power lasers', 'Micrometers', 'Transducers', 'Lightweight structures', 'Insulation', 'Pressure sensors', 'Production facilities', 'Gears', 'Gallium arsenide', 'Optical materials', 'Optical mixing', 'Transmitters', 'Tuners', 'Atom optics'], 
 
-'Ethics and Fairness in Vision': ['Fairness in AI', 'Bias in datasets', 'Ethical AI', 'Social networking (online)', 'Privacy in vision systems', 'Explainable AI', 'Intellectual property', 'Bias detection', 'Guidelines', 'Uncertainty', 'Bias mitigation', 'Ethics', 'Fairness', 'Philosophical considerations', 'Privacy concerns', 'Regulation', 'Risk minimization', 'Transparency', 'Humanities', 'Trustworthiness', 'Collaborative work', 'Diversity methods', 'Ethical considerations in design'], 
+#'Ethics and Fairness in Vision': ['Fairness in AI', 'Bias in datasets', 'Ethical AI', 'Social networking (online)', 'Privacy in vision systems', 'Explainable AI', 'Intellectual property', 'Bias detection', 'Guidelines', 'Uncertainty', 'Bias mitigation', 'Ethics', 'Fairness', 'Philosophical considerations', 'Privacy concerns', 'Regulation', 'Risk minimization', 'Transparency', 'Humanities', 'Trustworthiness', 'Collaborative work', 'Diversity methods', 'Ethical considerations in design'], 
 
-'Miscellaneous': [ 'Concurrent computing', 'Context', 'Core loss', 'Damping', 'Extensibility', 'FAA', 'Finishing', 
-        'IEEE Regions',  'Phased arrays', 'Rabbits',  'Rodents', 'Seminars', 'Sports', 
-        'Floors', 'Asia', 'Australia', 'Europe', 'Facebook', 'Flickr', 'Google', 'Microsoft Windows', 
-        'Fans',  'Handheld computers', 'Clocks', 'IEEE Constitution', 'Computer bugs', 
-        'Containers', 'Cascading style sheets', 'Couplings', 'DSL','Encyclopedias', 'Uncertainty', 'Unsupervised learning', 
-        'Watermarking', 'Windows',  'YouTube',   'Corporate acquisitions', 'Insects',   
-        'PROM',   'Portable computers',  'Publishing',  'Web sites',  'Miscellaneous topics', 'Open challenges', 
-        'Trends', 'Brightness', 'DVD', 'Conferences', 'Business', 'Companies', 'Costs',   'Distance measurement', 
-        'Multimedia Web sites', 'Length measurement', 
-        'Lead',  'Fats', 'Appraisal', 'Certification', 'Closed box', 
-        'Commonsense reasoning',  'Costing', 'Films', 'Observability', 'Optical pumping', 'Recording', 
-        'Tail', 'Termination of employment', 'Uniform resource locators', 'Web pages', 'Table lookup', 
-         'Meetings', 'Portfolios', 'Chaos', 'FCC', 'Cost accounting',  'Feathers', 
-        ]}
+#'Miscellaneous': [ 'Concurrent computing', 'Context', 'Core loss', 'Damping', 'Extensibility', 'FAA', 'Finishing', 
+#        'IEEE Regions',  'Phased arrays', 'Rabbits',  'Rodents', 'Seminars', 'Sports', 
+#        'Floors', 'Asia', 'Australia', 'Europe', 'Facebook', 'Flickr', 'Google', 'Microsoft Windows', 
+#        'Fans',  'Handheld computers', 'Clocks', 'IEEE Constitution', 'Computer bugs', 
+#        'Containers', 'Cascading style sheets', 'Couplings', 'DSL','Encyclopedias', 'Uncertainty', 'Unsupervised learning', 
+#        'Watermarking', 'Windows',  'YouTube',   'Corporate acquisitions', 'Insects',   
+#        'PROM',   'Portable computers',  'Publishing',  'Web sites',  'Miscellaneous topics', 'Open challenges', 
+#        'Trends', 'Brightness', 'DVD', 'Conferences', 'Business', 'Companies', 'Costs',   'Distance measurement', 
+#        'Multimedia Web sites', 'Length measurement', 
+#        'Lead',  'Fats', 'Appraisal', 'Certification', 'Closed box', 
+#        'Commonsense reasoning',  'Costing', 'Films', 'Observability', 'Optical pumping', 'Recording', 
+#        'Tail', 'Termination of employment', 'Uniform resource locators', 'Web pages', 'Table lookup', 
+#         'Meetings', 'Portfolios', 'Chaos', 'FCC', 'Cost accounting',  'Feathers', ]
+}
 
 def process_csv(file_path):
-    # Dictionaries to store counts
-    grouped_counts = defaultdict(lambda: {"total": 0, "company": 0, "university": 0})
+    grouped_counts = defaultdict(lambda: {"total": 0, "company": 0, "university": 0,
+                                          "company_citations": 0, "university_citations": 0})
 
     with open(file_path, 'r', encoding="utf-8") as csvfile:
         reader = csv.DictReader(csvfile)
 
         for row in reader:
-            # Check if "ieee_keywords" section is empty
-            if not row.get('ieee_keywords'):
-                continue
-            
-            if row['company_affiliation'] == '':  # Skip rows with missing company affiliation
-                company_affiliation = 0
-            else:
-                company_affiliation = float(row['company_affiliation'])
+            if not row.get('ieee_keywords') or not row.get('ieee_citations'):
+                continue  # Skip if no keywords or citations
 
-            
-
-            # Determine if the paper is company or university
+            company_affiliation = float(row['company_affiliation']) if row['company_affiliation'] else 0
             is_company = company_affiliation > 0
 
-            # Extract keywords from the "ieee_keywords" column
-            keywords = ast.literal_eval(row['ieee_keywords'])  # Convert string list to actual list
+            citations = float(row['ieee_citations'])  # Extract citations as integer
+            
+            keywords = ast.literal_eval(row['ieee_keywords'])  # Convert string to list
 
             for keyword in keywords:
                 for group, group_keywords in keyword_groups.items():
@@ -108,28 +103,30 @@ def process_csv(file_path):
                         grouped_counts[group]["total"] += 1
                         if is_company:
                             grouped_counts[group]["company"] += 1
+                            grouped_counts[group]["company_citations"] += citations
                         else:
                             grouped_counts[group]["university"] += 1
+                            grouped_counts[group]["university_citations"] += citations
 
     return grouped_counts
 
 def write_results_to_file(keyword_counts, output_file):
     with open(output_file, 'w', encoding="utf-8") as f:
-        f.write(f"{'Keyword':<30} {'Total Papers':<15} {'Company Papers':<15} {'University Papers':<15}\n")
-        f.write("-" * 75 + "\n")
+        f.write(f"{'Keyword':<30} {'Total Papers':<15} {'Company Papers':<15} {'University Papers':<15} {'Company Citations':<20} {'University Citations':<20}\n")
+        f.write("-" * 110 + "\n")  # Adjusted length for better formatting
         for keyword, counts in sorted(keyword_counts.items(), key=lambda x: x[0]):
-            f.write(f"{keyword:<30} {counts['total']:<15} {counts['company']:<15} {counts['university']:<15}\n")
-            
+            f.write(f"{keyword:<30} {counts['total']:<15} {counts['company']:<15} {counts['university']:<15} {counts['company_citations']:<20} {counts['university_citations']:<20}\n")
+
 def write_results_to_csv(keyword_counts, output_file):
     with open(output_file, 'w', encoding="utf-8", newline='') as csvfile:
         writer = csv.writer(csvfile)
         # Write the header
-        writer.writerow(["Keyword", "Total Papers", "Company Papers", "University Papers"])
+        writer.writerow(["Keyword", "Total Papers", "Company Papers", "University Papers", "Company Citations", "University Citations"])
         
         # Write the data sorted by keyword
         for keyword, counts in sorted(keyword_counts.items(), key=lambda x: x[0]):
-            writer.writerow([keyword, counts['total'], counts['company'], counts['university']])
-                        
+            writer.writerow([keyword, counts['total'], counts['company'], counts['university'], counts['company_citations'], counts['university_citations']])
+
 def extract_unique_keywords(file_path, output_file):
      # Flatten the keyword_groups dictionary into a set of grouped keywords
     grouped_keywords = set(keyword for group in keyword_groups.values() for keyword in group)
@@ -252,7 +249,7 @@ def plot_radar_chart(keyword_counts):
     ax.bar(angles, university_values, color=university_color, alpha=1, width=0.2, zorder=9, label='Academia Papers')
 
     # Wrap categories for better visualization
-    wrapped_categories = ["\n".join(wrap(r, 8, break_long_words=False)) for r in groups]
+    wrapped_categories = ["\n".join(textwrap.wrap(r, 8, break_long_words=False)) for r in groups]
 
     # Add a label for the first category to close the loop
     wrapped_categories += [wrapped_categories[0]]
@@ -271,165 +268,133 @@ def plot_radar_chart(keyword_counts):
     plt.tight_layout()
     plt.show()
 
-def plot_radarline_chart(keyword_counts):
+def plot_radar_citations(keyword_counts):
+    # Compute mean citations per paper
+    mean_university_citations = {
+        group: counts['university_citations'] / counts['university'] if counts['university'] > 0 else 0
+        for group, counts in keyword_counts.items()
+    }
+    mean_company_citations = {
+        group: counts['company_citations'] / counts['company'] if counts['company'] > 0 else 0
+        for group, counts in keyword_counts.items()
+    }
+
+    # Compute total number of papers in each group
     total_university_papers = sum(counts['university'] for counts in keyword_counts.values())
     total_company_papers = sum(counts['company'] for counts in keyword_counts.values())
 
-    # Normalize university and company counts within each group
-    normalized_counts = {
+    # Normalize university and company paper counts within each group
+    normalized_paper_counts = {
         group: {
-            "university": counts["university"] / total_university_papers,
-            "company": counts["company"] / total_company_papers
+            "university": counts["university"] / total_university_papers if total_university_papers > 0 else 0,
+            "company": counts["company"] / total_company_papers if total_company_papers > 0 else 0
         }
         for group, counts in keyword_counts.items()
     }
 
-    # Sort groups alphabetically for consistency
-    groups = sorted(normalized_counts.keys())
-    university_values = [normalized_counts[group]["university"] for group in groups]
-    company_values = [normalized_counts[group]["company"] for group in groups]
+    # Compute dominance metric (which group has more papers)
+    dominance_ratios = {
+        group: normalized_paper_counts[group]["company"] - normalized_paper_counts[group]["university"]
+        for group in keyword_counts.keys()
+    }
 
-    # Ensure the plot is circular by closing the loop
+    # Separate categories into two groups while preserving order
+    company_dominated = sorted([g for g in keyword_counts.keys() if dominance_ratios[g] > 0])
+    university_dominated = sorted([g for g in keyword_counts.keys() if dominance_ratios[g] <= 0])
+
+    # Concatenate the groups (company first, then university)
+    sorted_categories = company_dominated + university_dominated
+
+    # Compute angles for the sorted order
+    angles = np.linspace(0, 2 * np.pi, len(sorted_categories), endpoint=False).tolist()
+    angles += angles[:1]  # Close the loop
+
+    # Find max mean citation for normalization
+    max_mean_citation = max(
+        max(mean_university_citations.values(), default=1), 
+        max(mean_company_citations.values(), default=1)
+    )
+
+    # Normalize mean citations between [0,1] based on the new order
+    university_values = [mean_university_citations[g] / max_mean_citation for g in sorted_categories]
+    company_values = [mean_company_citations[g] / max_mean_citation for g in sorted_categories]
+
+    # Ensure circular plot by repeating the first value at the end
     university_values.append(university_values[0])
     company_values.append(company_values[0])
-    angles = np.linspace(0, 2 * np.pi, len(groups), endpoint=False).tolist()
-    angles += angles[:1]
 
-    GREY12 = "#1f1f1f"
+    # Define colors
     company_color = "#4c78a8"
     university_color = "#e57f4e"
+    company_shade = "#4c78a840"  # Light blue
+    university_shade = "#e57f4e40"  # Light orange
 
-    # Initialize layout in polar coordinates
+    # Create polar plot
     fig, ax = plt.subplots(figsize=(9, 9), subplot_kw={"projection": "polar"})
-
-    # Set background color to white, both axis and figure.
     fig.patch.set_facecolor("white")
     ax.set_facecolor("white")
-
     ax.set_theta_offset(1.2 * np.pi / 2)
 
-    # Plot line for company papers
-    ax.plot(angles, company_values, color=company_color, linewidth=2, linestyle='solid', label='Corporate Papers')
+    # Plot lines for corporate and academia citations
+    ax.plot(angles, company_values, color=company_color, linewidth=2, marker='o', label='Corporate Mean Citations')
+    ax.plot(angles, university_values, color=university_color, linewidth=2, marker='o', label='Academia Mean Citations')
 
-    # Plot line for university papers
-    ax.plot(angles, university_values, color=university_color, linewidth=1, linestyle='solid', label='Academia Papers')
+    # Fill grouped shaded areas but only leave a gap at color changes
+    prev_index = 0
+    current_dominance = dominance_ratios[sorted_categories[0]]
+    gap_size = 0.4  # Small angle gap to leave empty space ONLY where color changes
 
-    # Wrap categories for better visualization
-    wrapped_categories = ["\n".join(wrap(r, 7, break_long_words=False)) for r in groups]
+    for i in range(1, len(sorted_categories)):
+        if (dominance_ratios[sorted_categories[i]]>0) != (current_dominance>0):
+            # Leave a gap before the color change)
+            
+            prev_index = i  # Update starting index for next grouped section
+            current_dominance = dominance_ratios[sorted_categories[i]]  # Update dominance type
+        else:
+            ax.fill_between(
+                [angles[prev_index], angles[i]],  # No gap within same color
+                1.0, 1.1,  
+                color=company_shade if current_dominance > 0 else university_shade, 
+                alpha=0.25
+            )
+            prev_index = i  # Update starting index for next grouped section
+            current_dominance = dominance_ratios[sorted_categories[i]]  # Update dominance type
+            
 
-    # Add a label for the first category to close the loop
-    wrapped_categories += [wrapped_categories[0]]
+    # Wrap labels for readability
+    wrapped_categories = ["\n".join(textwrap.wrap(r, 8, break_long_words=False)) for r in sorted_categories]
+    wrapped_categories.append(wrapped_categories[0])  # Close the loop
 
-    # Set the labels with reduced size
+    # Set labels
     ax.set_xticks(angles)
-    ax.set_xticklabels(wrapped_categories, size=8)  # Reduce size of labels to 8
+    ax.set_xticklabels(wrapped_categories, size=8)
 
-    # Add a legend with reduced font size
-    ax.legend(loc='upper right', bbox_to_anchor=(1.1, 1), fontsize=8)  # Reduce font size of the legend
+    # Add grid and legend
+    ax.grid(True, linestyle='--', alpha=0.5)
+     # Add custom legend with shaded areas
+   
+    legend_patches = [
+        mpatches.Patch(facecolor=company_shade, label="Corporate Dominated Research"),
+        mpatches.Patch(facecolor=university_shade, label="Academia Dominated Research"),
+        plt.Line2D([0], [0], color=company_color, lw=2, marker='o', label="Corporate Mean Citations"),
+        plt.Line2D([0], [0], color=university_color, lw=2, marker='o', label="Academia Mean Citations")
+    ]
 
-    # Set the title of the chart
-    ax.set_title('Comparison of Corporate and Academia Papers in Keyword Categories', fontsize=12)
+    ax.legend(handles=legend_patches, loc='upper right', bbox_to_anchor=(1.1, 1.03), fontsize=8, frameon=False)
 
-    # Show the plot
+    # Add title with context for the max mean citation count
+    ax.set_title(f'Normalized mean citations & dominance in number of papers by research area \n(1.0 corresponds to {max_mean_citation:.2f} citations)', fontsize=12)
+
+    # Display plot
     plt.tight_layout()
     plt.show()
-    
-def plot_radar_chart_by_conference(conference_counts):
-    for conference, keyword_counts in conference_counts.items():
-        # Normalize university and company counts within each group
-        normalized_counts = {
-            group: {
-                "university": counts["university"] / counts["total"] if counts["total"] > 0 else 0,
-                "company": counts["company"] / counts["total"] if counts["total"] > 0 else 0,
-            }
-            for group, counts in keyword_counts.items()
-        }
-
-        # Sort groups alphabetically for consistency
-        groups = sorted(normalized_counts.keys())
-        university_values = [normalized_counts[group]["university"] for group in groups]
-        company_values = [normalized_counts[group]["company"] for group in groups]
-
-        # Create angles for the radar plot
-        angles = np.linspace(0, 2 * np.pi, len(groups), endpoint=False).tolist()
- 
-        # Initialize the plot
-        fig, ax = plt.subplots(figsize=(10, 10), subplot_kw=dict(polar=True))
-
-        # Plot for universities
-        ax.fill(angles, university_values, color='skyblue', alpha=0.4, label='University')
-        ax.plot(angles, university_values, color='blue', linewidth=2)
-
-        # Plot for companies
-        ax.fill(angles, company_values, color='lightgreen', alpha=0.4, label='Company')
-        ax.plot(angles, company_values, color='green', linewidth=2)
-
-        # Add labels and legend
-        ax.set_yticks([])
-        ax.set_xticks(angles)
-        ax.set_xticklabels(groups, fontsize=10, ha='center')
-
-        plt.title(f"Relative Contributions (University vs. Company) in {conference}", size=16, weight='bold', pad=20)
-        plt.legend(loc='upper right', bbox_to_anchor=(1.2, 1.1))
-        plt.tight_layout()
-
-        # Show the plot
-        plt.show()
-
-def write_keyword_dictionaries_by_keywords(keyword_counts, keyword_groups, company_file, university_file):
-    """
-    Writes two text files: one with the keyword dictionary for company papers 
-    and the other for university papers, based on individual keywords.
-
-    :param keyword_counts: Dictionary containing counts for groups of keywords.
-    :param keyword_groups: Dictionary mapping groups to individual keywords.
-    :param company_file: Path to the output text file for company-related keywords.
-    :param university_file: Path to the output text file for university-related keywords.
-    """
-    # Flatten keyword_groups into a keyword-to-group mapping
-    keyword_to_group = {keyword: group for group, keywords in keyword_groups.items() for keyword in keywords}
-
-    # Initialize dictionaries for individual keyword counts
-    company_keywords = defaultdict(int)
-    university_keywords = defaultdict(int)
-
-    # Iterate over the grouped counts and distribute to individual keywords
-    for group, counts in keyword_counts.items():
-        if group in keyword_groups:
-            for keyword in keyword_groups[group]:
-                company_keywords[keyword] += counts["company"]
-                university_keywords[keyword] += counts["university"]
-          
-    # Write company keyword dictionary
-    with open(company_file, 'w', encoding="utf-8") as company_out:
-        company_out.write(f"{'Keyword':<50} {'Company Papers':<15}\n")
-        company_out.write("-" * 65 + "\n")
-        for keyword, count in sorted(company_keywords.items(), key=lambda x: x[0]):
-            company_out.write(f"{keyword:<50} {count:<15}\n")
-
-    # Write university keyword dictionary
-    with open(university_file, 'w', encoding="utf-8") as university_out:
-        university_out.write(f"{'Keyword':<50} {'University Papers':<15}\n")
-        university_out.write("-" * 65 + "\n")
-        for keyword, count in sorted(university_keywords.items(), key=lambda x: x[0]):
-            university_out.write(f"{keyword:<50} {count:<15}\n")
-
+         
 # Replace 'your_file.csv' with the path to your CSV file
-file_path = 'C:\\Users\\JAI GURU JI\\Desktop\\Data Lit\\Project\\Data_Literacy\\data\\wacv_preprocessed\\wacv2024.csv'
-output_file = 'C:\\Users\\JAI GURU JI\\Desktop\\Data Lit\\Project\\Data_Literacy\\data\\wacv_preprocessed\\results_24.csv'
-keyword_file = 'C:\\Users\\JAI GURU JI\\Desktop\\Data Lit\\Project\\Data_Literacy\\data\\wacv_preprocessed\\keywords_24.txt'
+file_path = '/Users/merve/Data_Literacy/data/merged_dataset.csv'
+output_file = '/Users/merve/Data_Literacy/data/results.csv'
+keyword_file = '/Users/merve/Data_Literacy/data/keywords.txt'
 extract_unique_keywords(file_path, keyword_file)
 keyword_counts = process_csv(file_path)
 write_results_to_csv(keyword_counts, output_file)
 
-plot_radarline_chart(keyword_counts)
-plot_radar_chart(keyword_counts)
-
-# Merge two keyword_groups
-# for group, keywords in ieee_categories.items():
-#     if group in keyword_groups:
-#         keyword_groups[group].extend(keywords)
-#     else:
-#         keyword_groups[group] = keywords
-
-# print(keyword_groups)
+plot_radar_citations(keyword_counts)
