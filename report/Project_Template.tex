@@ -92,16 +92,13 @@ We construct our dataset by extracting paper titles, authors, and affiliations u
 \centering
 \vspace{-10pt}
 \includegraphics[width=.95\linewidth]{report/images/affiliation-combination.png}
-\caption{Exemplary paper-author-\\
-affiliation combinations [1]}
+\caption{Illustration of different paper-author-affiliation relationships.[1] Authors with both corporate and academic affiliations have their contributions split proportionally. Papers with any corporate-affiliated authors are classified as corporate-affiliated, while those with $\geq$ 50\% corporate contributions are considered corporate-led.}
 \label{fig:affiliation-combination}
 \vspace{-20pt}
 \end{wrapfigure}
 2019–2024, encompassing 18,925 papers. This period allows us to analyze citation trends, acknowledging that older papers (e.g., from 2019) tend to have higher citation counts due to accumulation over time.
 
-Each paper is categorized based on author affiliations, as shown in Figure \ref{fig:affiliation-combination}. Authors with both corporate and academic affiliations have their contributions split proportionally. Papers with any corporate-affiliated authors are classified as corporate-affiliated, while those with $\geq$ 50\% corporate contributions are considered corporate-led.
-
-Companies are categorized as big, mid-size, scaleup, or startup based on turnover, employee count, and growth rates, using Dun \& Bradstreet Business Directory [5]. Papers are further classified into 15 research categories using arXiv taxonomy [6] and ChatGPT. The dataset and additional resources are available at: \url{https://github.com/mervekocabas/Data_Literacy}.
+Each paper is categorized based on author affiliations, as shown in Figure \ref{fig:affiliation-combination}. Companies are categorized as big, mid-size, scaleup, or startup based on turnover, employee count, and growth rates, using Dun \& Bradstreet Business Directory [5]. Papers are further classified into 15 research categories using arXiv taxonomy [6] and ChatGPT. The dataset and additional resources are available at: \url{https://github.com/mervekocabas/Data_Literacy}.
 
 
 
@@ -197,7 +194,7 @@ To investigate whether corporate-affiliated research has gained influence at top
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.9\linewidth]{report/images/corporate_ratio_table.png}
-    \caption{...}
+    \caption{Corporate-affiliated paper ratio across CVPR, ICCV, and WACV from 2019 to 2024. The plot on right shows an increasing trend in corporate contributions, with CVPR and ICCV maintaining higher ratios compared to WACV. The accompanying table on left presents Spearman’s rank correlation coefficients, all of which indicate strong positive correlations. Statistically significant values (p < 0.05) are marked with an asterisk (*).}
     \label{fig:corporate_ratio_graph}
     % \vspace{-5pt}
 \end{figure}
