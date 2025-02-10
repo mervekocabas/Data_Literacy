@@ -20,7 +20,7 @@ def convert_to_list(entry):
 
 
 # Load your data
-data = pd.read_csv('../data/updated_dataset.csv')
+data = pd.read_csv('Data_Literacy/data/updated_dataset.csv')
 
 data['company_country_list'] = data['company_country'].apply(convert_to_list)
 data['company_deduplicated_countries'] = data['company_country_list'].apply(lambda countries: list(dict.fromkeys(countries)))
@@ -53,7 +53,7 @@ fig_university = px.choropleth(
     projection="natural earth",
 )
 
-fig_university.write_image('../graphs/university_affiliations.png', width=1920, height=1080, scale=3)
+fig_university.write_image('Data_Literacy/graphs/university_affiliations.png', width=1920, height=1080, scale=3)
 
 # Plot choropleth map for company affiliations
 fig_company = px.choropleth(
@@ -67,5 +67,5 @@ fig_company = px.choropleth(
     projection="natural earth",
 )
 
-fig_company.write_image('../graphs/company_affiliations.png', width=1920, height=1080, scale=3)
+fig_company.write_image('Data_Literacy/graphs/company_affiliations.png', width=1920, height=1080, scale=3)
 
