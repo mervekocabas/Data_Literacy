@@ -5,6 +5,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches 
 import textwrap 
+import matplotlib.font_manager as fm
+
+prop = fm.FontProperties(fname='C:/Windows/Fonts/times.ttf') 
+plt.rcParams['font.family'] = prop.get_name()
+# plt.rcParams['text.usetex'] = True
 
 keyword_groups={
 'Natural Language Processing': ['Machine translation', 'Question answering (information retrieval)', 'Speech processing', 'Fake news','Grammar', 'Text detection', 'Thesauri', 'Tokenization', 'Teleconferencing', 'US Department of Homeland SecurityVocabulary', 'Dictionaries', 'Decision making', 'Decoding', 'Error analysis', 'Encoding', 'Knowledge based systems', 'Knowledge discovery', 'Knowledge engineering', 'Knowledge transfer', 'Labeling', 'Learning (artificial intelligence)', 'Learning systems', 'Text-to-image synthesis', 'Natural language processing', 'Natural languages', 'Linguistics', 'Message passing', 'Inference algorithms', 'Markov processes', 'Markov random fields', 'Mixture models', 'Pragmatics', 'Prediction algorithms', 'Predictive models', 'Probabilistic logic', 'Semantics', 'Search problems', 'Sequential analysis', 'Supervised learning', 'Vocabulary', 'Text recognition', 'Syntactics', 'Taxonomy', 'Character recognition', 'Context-aware services', 'Handwriting recognition', 'Optical character recognition software', 'Phonetics', 'Speech enhancement', 'Speech recognition', 'Twitter', 'Voice activity detection', 'Annotations', 'Semantic search', 'Sentiment analysis', 'Text analysis', 'Text categorization', 'Writing', 'Information filters', 'Prediction methods', 'Electronic mail', 'Web and internet services', 'Web and internet services', 'Web conferencing', 'Webcams', 'Hypertext systems', 'Unified modeling language', 'User-generated content', 'Webcams', 'Browsers', 'Open Access', 'Resource description framework', 'QR codes', 'Query processing', 'Virtual assistants', 'Speech coding', 'Vocoders', 'Large language models', 'Text summarization', 'Text to image', 'Text to speech', 'Text to video', 'Recommender systems', 'Formal languages'], 
@@ -27,7 +32,7 @@ keyword_groups={
 'Natural Scenes and Environmental Analysis': [ 'Stars','Dark matter', 'Ash', 'Moisture', 'Streams', 'Environmental factors', 'Grasslands', 'Icebergs', 'Lakes', 'Natural Scenes and Environmental Analysis', 
         'Weather forecasting', 'Weather modification','Fluids', 'Water', 'Climate change', 'Flora', 'Flowering plants', 'Geospatial analysis', 'Land surface', 'Phenology', 'Plant diseases', 'Plantations', 'Agriculture', 'Atmospheric measurements', 'Atmospheric modeling', 'Clouds', 'Remote sensing', 'Ocean monitoring', 'Aerial imagery', 'Satellite images', 'Climate analysis', 'Floods', 'Sea surface', 'Agriculture', 'Atmospheric measurements', 'Clouds', 'Ocean monitoring', 'Climate analysis', 'Geophysical measurement techniques', 'Ground penetrating radar', 'Extraterrestrial measurements', 'Meteorology', 'Rain', 'Rivers', 'Snow', 'Roads', 'Public transportation', 'Geophysical measurement techniques', 'Acoustics', 'Animals', 'Birds', 'Clutter', 'Liquids', 'Monitoring', 'Pipelines', 'Powders', 'Photonics', 'Satellites', 'Sensors', 'Sensor arrays', 'Spatial resolution', 'Spatial coherence', 'Vegetation', 'Urban areas', 'Water resources', 'Biodiversity', 'Earth', 'Environmental analysis', 'Geology', 'Natural scenes', 'Sea measurements', 'Vegetation mapping', 'Wildlife', 'Forestry', 'Fungi', 'Methane', 'Rocks', 'Whales', 'Lightning', 'Ecosystems', 'Horses', 'Hurricanes', 'Oceans', 'Plants (biology)', 'Reservoirs', 'Spaceborne radar', 'Irrigation', 'Systematics', 'Earthquakes', 'Oils', 'Density measurement', 'Pollution measurement', 'Rough surfaces', 'Surface roughness', 'Moon', 'Rough surfaces', 'Surface roughness', 'Light scattering', 'Nonhomogeneous media', 'Spectroscopy', 'Spatial diversity', 'Nonhomogeneous media', 'Spectroscopy', 'Spatial diversity', 'Soil', 'Scattering parameters', 'Vibrations', 'Hazards', 'Orbits', 'Impurities', 'Current distribution', 'Arctic', 'Biomes', 'Fish', 'Greenhouse effect', 'Storms', 'Seals', 'Structural engineering', 'Antarctica', 'Rainforests', 'Marine vegetation', 'Habitats', 'Green buildings', 'Precipitation', 'Planets', 'Acoustic field', 'Acoustic noise', 'Lava', 'Area measurement', 'Contamination'], 
 
-'Augmented Reality (AR) and Virtual Reality (VR)': ['Digital humans', 'Augmented Reality (AR) and Virtual Reality (VR)', 'Isosurfaces','Blogs', 'Headphones', 'Keyboards', 'Wheels', 'Augmented reality', 'Virtual reality', '3D reconstruction', 'Avatars', 'Holography', 'Immersive environments', '3D reconstruction', 'Immersive environments', 'Graphics', 'Graphics processing units', 'Telepresence', 'Rendering (computer graphics)', 'Virtual reality', '3D reconstruction', 'Immersive environments', 'Three-dimensional displays', 'Two dimensional displays', 'Augmented reality', 'Extended reality', 'Immersive experience', 'Mixed reality', 'Virtual environments', 'Virtual private networks', 'X reality', 'Animation', 'Image motion analysis', 'Optical flow', 'Radar imaging', 'Visual effects', 'Surfaces', 'Liquid crystal displays', 'Image texture', 'Liquid crystal displays', 'Optical microscopy', 'Optical saturation', 'Optical feedback', 'Image texture', 'Image storage', 'Ray tracing', 'Optical reflection', 'Optical feedback', 'Optical design', 'Smart cameras', 'Computer graphics', 'Computer graphics', 'Metaverse', 'Geometric modeling', 'Video codecs', 'Digital cameras', 'Image augmentation', 'Image transformation', 'Artificial light', 'Image morphing', 'Neural radiance field', 'Virtual machine monitors', 'Wrapping', 'Digital twins', 'Portable media players'], 
+'Augmented Reality and Virtual Reality ': ['Digital humans', 'Augmented Reality (AR) and Virtual Reality (VR)', 'Isosurfaces','Blogs', 'Headphones', 'Keyboards', 'Wheels', 'Augmented reality', 'Virtual reality', '3D reconstruction', 'Avatars', 'Holography', 'Immersive environments', '3D reconstruction', 'Immersive environments', 'Graphics', 'Graphics processing units', 'Telepresence', 'Rendering (computer graphics)', 'Virtual reality', '3D reconstruction', 'Immersive environments', 'Three-dimensional displays', 'Two dimensional displays', 'Augmented reality', 'Extended reality', 'Immersive experience', 'Mixed reality', 'Virtual environments', 'Virtual private networks', 'X reality', 'Animation', 'Image motion analysis', 'Optical flow', 'Radar imaging', 'Visual effects', 'Surfaces', 'Liquid crystal displays', 'Image texture', 'Liquid crystal displays', 'Optical microscopy', 'Optical saturation', 'Optical feedback', 'Image texture', 'Image storage', 'Ray tracing', 'Optical reflection', 'Optical feedback', 'Optical design', 'Smart cameras', 'Computer graphics', 'Computer graphics', 'Metaverse', 'Geometric modeling', 'Video codecs', 'Digital cameras', 'Image augmentation', 'Image transformation', 'Artificial light', 'Image morphing', 'Neural radiance field', 'Virtual machine monitors', 'Wrapping', 'Digital twins', 'Portable media players'], 
 
 'Video Analysis and Action Recognition': ['High dynamic range', 'Gray-scale', 'Metasearch', 'Multispectral imaging',  'Hyperspectral imaging', 'UHDTV', 'TV', 'Detection algorithms', 'Detectors', 'Dynamic range', 'Video Analysis and Action Recognition', 'Transhuman', 'Digital images', 'Image forensics', 'Sensor systems and applications', 'Vision sensors', 'Entertainment industry',  'Video processing', 'Motion segmentation', 'Event detection', 'Temporal analysis', 'Video summarization', 'Action recognition', 'Motion segmentation', 'Event detection', 'Video summarization', 'Action recognition', 'Image recognition', 'Image segmentation', 'Image matching', 'Image resolution', 'Image retrieval', 'Image restoration', 'Motion pictures', 'Pattern recognition', 'Pose estimation', 'Saliency detection', 'Motion compensation', 'Motion estimation', 'Joints', 'Junctions', 'Kinematics', 'Kinetic theory', 'Message passing', 'Monitoring', 'Structure from motion', 'Streaming media', 'Target recognition', 'Target tracking', 'Tracking', 'Video surveillance', 'Video sequences', 'Videos', 'Video compression', 'Action recognition', 'Motion capture', 'Video coding', 'Instance segmentation', 'Video description', 'Video games', 'Image sequences', 'Stereo image processing', 'Video on demand', 'Video recording', 'Video tracking', 'Synthetic aperture radar', 'Radar tracking', 'Sonar detection', 'Character generation', 'Human image synthesis', 'Radar', 'Firing', 'Explosions', 'Audio recording', 'Speech', 'Timbre', 'Speech synthesis', 'Audio recording', 'Sparse representation', 'Shape control', 'Sprites (computer)', 'Motion analysis', 'Pattern classification', 'Scene classification', 'Background noise', 'Fine-grained image recognition', 'Video reviews'], 
 
@@ -259,7 +264,7 @@ def plot_radar_chart(keyword_counts):
     ax.set_xticklabels(wrapped_categories, size=8)  # Reduce size of labels to 8
 
     # Add a legend with reduced font size
-    ax.legend(loc='upper right', bbox_to_anchor=(1.1, 1), fontsize=8)  # Reduce font size of the legend
+    ax.legend(loc='upper right', bbox_to_anchor=(1.1, 1.2), fontsize=16)  # Reduce font size of the legend
 
     # Set the title of the chart
     ax.set_title('Comparison of Corporate and Academia Papers in Keyword Categories', fontsize=12)
@@ -324,10 +329,10 @@ def plot_radar_citations(keyword_counts):
     company_values.append(company_values[0])
 
     # Define colors
-    company_color = "#4c78a8"
-    university_color = "#e57f4e"
-    company_shade = "#4c78a840"  # Light blue
-    university_shade = "#e57f4e40"  # Light orange
+    company_color = "#6a0dad"
+    university_color = "#279962"
+    company_shade = "#6a0dad"  
+    university_shade = "#279962"  
 
     # Create polar plot
     fig, ax = plt.subplots(figsize=(9, 9), subplot_kw={"projection": "polar"})
@@ -355,7 +360,7 @@ def plot_radar_citations(keyword_counts):
                 [angles[prev_index], angles[i]],  # No gap within same color
                 1.0, 1.1,  
                 color=company_shade if current_dominance > 0 else university_shade, 
-                alpha=0.25
+                alpha=0.5
             )
             prev_index = i  # Update starting index for next grouped section
             current_dominance = dominance_ratios[sorted_categories[i]]  # Update dominance type
@@ -367,33 +372,58 @@ def plot_radar_citations(keyword_counts):
 
     # Set labels
     ax.set_xticks(angles)
-    ax.set_xticklabels(wrapped_categories, size=8)
-
-    # Add grid and legend
-    ax.grid(True, linestyle='--', alpha=0.5)
-     # Add custom legend with shaded areas
-   
+    ax.set_xticklabels(wrapped_categories, fontsize=16, fontweight='medium', color='none')
+    ax.get_xticklabels()[0].set_color(company_color)
+    ax.get_xticklabels()[0].set_fontweight('bold')
+    ax.get_xticklabels()[1].set_color(company_color)
+    ax.get_xticklabels()[1].set_fontweight('bold')
+    ax.get_xticklabels()[2].set_color(company_color)
+    ax.get_xticklabels()[2].set_fontweight('bold')
+    ax.get_xticklabels()[3].set_color(company_color)
+    ax.get_xticklabels()[3].set_fontweight('bold')
+    ax.get_xticklabels()[4].set_color(company_color)
+    ax.get_xticklabels()[4].set_fontweight('bold')
+    ax.get_xticklabels()[5].set_color('red')
+    ax.get_xticklabels()[5].set_fontweight('bold')
+    ax.get_xticklabels()[6].set_color('black')
+    ax.get_xticklabels()[7].set_color(company_color)
+    ax.get_xticklabels()[7].set_fontweight('bold')
+    ax.get_xticklabels()[8].set_color('black')
+    ax.get_xticklabels()[9].set_color('black')
+    ax.get_xticklabels()[10].set_color(university_color)
+    ax.get_xticklabels()[10].set_fontweight('bold')
+    ax.get_xticklabels()[11].set_color(university_color)
+    ax.get_xticklabels()[11].set_fontweight('bold')
+    ax.get_xticklabels()[12].set_color('black')
+    ax.get_xticklabels()[13].set_color('black')
+    ax.get_xticklabels()[14].set_color('red')
+    ax.get_xticklabels()[14].set_fontweight('bold')
+    ax.get_xticklabels()[15].set_color('black')
+    ax.get_xticklabels()[16].set_color('black')
+    # ax.get_xticklabels()[17].set_color('black')
+    ax.set_yticklabels([0.2, 0.4, 0.6, 0.8, 1.0], fontsize=14, fontweight='medium')
     legend_patches = [
-        mpatches.Patch(facecolor=company_shade, label="Corporate Dominated Research"),
-        mpatches.Patch(facecolor=university_shade, label="Academia Dominated Research"),
-        plt.Line2D([0], [0], color=company_color, lw=2, marker='o', label="Corporate Mean Citations"),
-        plt.Line2D([0], [0], color=university_color, lw=2, marker='o', label="Academia Mean Citations")
-    ]
-
-    ax.legend(handles=legend_patches, loc='upper right', bbox_to_anchor=(1.1, 1.03), fontsize=8, frameon=False)
-
+        # mpatches.Patch(label="Dominated Research"),
+        mpatches.Patch(facecolor=company_shade, alpha=0.5, label="Corporate"),
+        mpatches.Patch(facecolor=university_shade, alpha=0.5,label="Academia"),
+        plt.Line2D([0], [0], color=company_color,  lw=2, marker='o', label="Corporate"),
+        plt.Line2D([0], [0], color=university_color,  lw=2, marker='o', label="Academia")]
+       
+    ax.legend(handles=legend_patches, loc='upper center', bbox_to_anchor=(0.5, -0.13), fontsize=20, frameon=False, ncol=2, columnspacing=5.5)
+    plt.text(0.22, -0.16, 'Dominated Research', ha='center', va='bottom', transform=ax.transAxes, fontsize=20)
+    plt.text(0.78, -0.16, 'Mean Citations', ha='center', va='bottom', transform=ax.transAxes, fontsize=20)
     # Add title with context for the max mean citation count
-    ax.set_title(f'Normalized mean citations & dominance in number of papers by research area \n(1.0 corresponds to {max_mean_citation:.2f} citations)', fontsize=12)
-
+    # ax.set_title(f'Normalized mean citations & dominance in number of papers by research area \n(1.0 corresponds to {max_mean_citation:.2f} citations)', fontsize=12)
+    print(max_mean_citation)
     # Save plot
     plt.tight_layout()
-    output_file_path = "../graphs/citation_radar_plot.png"
+    output_file_path = "C:\\Users\\JAI GURU JI\\Desktop\\Data Lit\\Project\\Data_Literacy\\graphs\\citation_radar_plot.png"
     plt.savefig(output_file_path)
          
 # Replace 'your_file.csv' with the path to your CSV file
-file_path = '/Users/merve/Data_Literacy/data/merged_dataset.csv'
-output_file = '/Users/merve/Data_Literacy/data/results.csv'
-keyword_file = '/Users/merve/Data_Literacy/data/keywords.txt'
+file_path = 'C:\\Users\\JAI GURU JI\\Desktop\\Data Lit\\Project\\Data_Literacy\\data\\merged_dataset.csv'
+output_file = 'C:\\Users\\JAI GURU JI\\Desktop\\Data Lit\\Project\\Data_Literacy\\data\\results.csv'
+keyword_file = 'C:\\Users\\JAI GURU JI\\Desktop\\Data Lit\\Project\\Data_Literacy\\data\\keywords.txt'
 extract_unique_keywords(file_path, keyword_file)
 keyword_counts = process_csv(file_path)
 write_results_to_csv(keyword_counts, output_file)
