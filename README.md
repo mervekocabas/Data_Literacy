@@ -7,8 +7,8 @@ Corporate involvement in computer vision research has grown significantly, raisi
 ## Results
 
 ### Growth of Corporate-Affiliated Research
-![Corporate Growth Ratio](graphs/corporate_ratio_graph.png)
-Corporate affiliated paper ratio shows an increasing trend (from 2019 to 2024) with CVPR and ICCV maintaining higher ratios compared to WACV and reaching record levels in corporate affiliation. 
+![Corporate Growth Ratio](graphs/corporate_ratio_table.png)
+(A) Corporate affiliated paper ratio shows an increasing trend (from 2019 to 2024) with CVPR and ICCV maintaining higher ratios compared to WACV and reaching record levels in corporate affiliation. The accompanying table (B) presents Spearman’s rank correlation coefficients, all of which indicate strong positive correlations (coefficients exceeding 0.88). Statistically significant values (p < 0.05) are marked with an asterisk (*).
 
 ### Citation Impact of Corporate-Affiliated Research
 ![Citation Impact](graphs/ieee_citations.png)
