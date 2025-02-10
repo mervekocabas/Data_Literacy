@@ -1,4 +1,29 @@
-# Data_Literacy
-University of Tuebingen Data Literacy WiSe 24 Project
+# University of Tuebingen Data Literacy WiSe 24 Project
 
-Corporate involvement in computer vision research has grown significantly in recent years, raising questions about its influence on the field. This study analyzes corporate-affiliated papers in top-tier computer vision conferences, including CVPR, ICCV, and WACV, to assess trends in publication volume,  impact and research focus. While academia still dominates in terms of total publications, our findings reveal a consistent increase in corporate-affiliated papers, with industry participation reaching its highest levels to date. Citation analysis using the Mann–Whitney U test indicates that corporate-affiliated papers receive significantly higher citation counts on average. Corporate research is highly concentrated among a small number of large technology firms, this imbalance raises concerns about the long-term trajectory of computer vision research and the extent to which corporate priorities shape the field. A breakdown of research areas shows that while both academia and industry prioritize Core Vision Algorithms, corporate research is more prevalent in applied domains such as Autonomous Vehicles, AR/VR, Video Analysis, and Natural Language Processing, whereas academia focuses more on Mathematical Foundations and Tools and Frameworks. Our study underscores the need for stronger academic-industry collaborations, open-access initiatives, and shared research resources to ensure a balanced and diverse research landscape.
+# Corporate vs. Academia: Who Dominates Computer Vision Conferences?
+
+Corporate involvement in computer vision research has grown significantly, raising questions about its influence on the field. This study analyzes corporate-affiliated papers in top-tier conferences (CVPR, ICCV, WACV) to assess publication trends, impact, and research focus. While academia still dominates in volume, corporate contributions have steadily increased, reaching record levels. Industry papers receive higher citations on average and are concentrated among a few large tech firms. Corporate research leans toward high-impact and applied areas while academia emphasizes theoretical foundations. These trends highlight the need for stronger academic-industry collaboration and open research initiatives to maintain a balanced research landscape.
+
+## Results
+
+### Growth of Corporate-Affiliated Research
+![Corporate Growth Ratio](graphs/corporate_ratio_graph.png)
+Corporate affiliated paper ratio shows an increasing trend (from 2019 to 2024) with CVPR and ICCV maintaining higher ratios compared to WACV and reaching record levels in corporate affiliation. 
+
+### Citation Impact of Corporate-Affiliated Research
+![Citation Impact](graphs/ieee_citations.png)
+Absolute (A) and kernel density estimate (B) citation distributions of academic and
+corporate papers show that corporate papers tend to have higher mean citations and a wider spread in
+their citation counts. In contrast, academic papers are more numerous but are generally concentrated
+in lower citation ranges.
+
+### Influence of Large Corporations
+![Influence of Large Corporations](graphs/pie_charts.png)
+Corporate size distribution (A) and paper contributions by corporate size (B) are based
+on corporate institutions that participated in CVPR, ICCV, and WACV from 2019 to 2024. Large
+institutions dominate both participation and research output, representing 58.6% of participating
+institutions while contributing 80.5% of the total papers.
+
+### Research Focus
+![Research Focus](graphs/citation_radar_plot.png)
+Comparing the research focus of corporate and academic institutions. The shaded areas represent the number of paper contributions (corporate in purple, academia in green), while the lines indicate mean citation counts (corporate in purple, academia in green), normalized such that 1.0 corresponds to 70 citations. Corporate research dominates high-impact applied fields highlighted in purple in paper number. Academia leads in foundational fields highlighted in green in paper number. Notably, while corporate research generally receives more citations, academia remains influential in the fields highlighted in red.
