@@ -88,31 +88,52 @@ We first analyze trends in corporate-affiliated publications to assess industry 
 This study focuses on the most influential computer vision conferences that attract high-quality submissions from academia and industry. CVPR (held annually) and ICCV (biennial), ranked \#1 and \#2 on Google Scholar Best Computer Science Conferences in Computer Vision list [3], are ideal venues for analyzing corporate and academic contributions. WACV (\#9) is included for its emphasis on applied research, contrasting with the more theoretical nature of CVPR and ICCV.
 
 We construct our dataset by extracting paper titles, authors, and affiliations using Paper Copilot GitHub [4]. Since CVPR, ICCV, and WACV proceedings are published on IEEE Xplore, we use paper titles to scrape their respective IEEE Xplore pages, collecting 
-\begin{figure}
-    \noindent
-    \hspace{-2mm}
-    \begin{minipage}{0.5\textwidth} 
-        \centering
-        \vspace{-30pt}
-        \setlength{\tabcolsep}{3pt} % Reduce column spacing
-        \begin{tabular}{|c|c|c|c|}
+% \begin{figure}
+%     \noindent
+%     \hspace{-2mm}
+%     \begin{minipage}{0.5\textwidth} 
+%         \centering
+%         \vspace{-30pt}
+%         \setlength{\tabcolsep}{3pt} % Reduce column spacing
+%         \begin{tabular}{|c|c|c|c|}
+%         \hline
+%         \textbf{Category} & \textbf{Turnover}  & \textbf{Employee count} & \textbf{Growth rate} \\ \hline
+%         \textbf{Big}      & \textgreater{}\$1B & \textgreater{}5,000     & \textless{}10\%      \\ \hline
+%         \textbf{Mid-size} & \$100M–\$1B          & 500–5,000               & 10–20\%              \\ \hline
+%         \textbf{Scaleup}  & \$10M–\$100M         & 50–500                  & \textgreater{}20\%   \\ \hline
+%         \textbf{Startup}  & \textless{}\$10M   & \textless{}50           & \textgreater{}50\%   \\ \hline
+%         \end{tabular}
+%         \begin{minipage}{1.2\textwidth}
+%             \centering
+%         \caption{\hspace{1mm}Corporate size categorization cutoff values for}
+%             \vspace{-7pt}
+%             \caption*{turnover, employee count, and growth rate.}
+%             \label{fig:corporate_size}
+%         \end{minipage}
+%     \end{minipage}
+%     \vspace{-24pt}
+% \end{figure}
+
+\begin{wraptable}{r}{0.5\textwidth} % Right-aligned, 50% text width
+    \vspace{-20pt} % Adjust vertical spacing to fit well
+    \setlength{\tabcolsep}{3pt} % Reduce column spacing
+    \centering
+    \begin{tabular}{|c|c|c|c|}
         \hline
         \textbf{Category} & \textbf{Turnover}  & \textbf{Employee count} & \textbf{Growth rate} \\ \hline
         \textbf{Big}      & \textgreater{}\$1B & \textgreater{}5,000     & \textless{}10\%      \\ \hline
-        \textbf{Mid-size} & \$100M–\$1B          & 500–5,000               & 10–20\%              \\ \hline
-        \textbf{Scaleup}  & \$10M–\$100M         & 50–500                  & \textgreater{}20\%   \\ \hline
+        \textbf{Mid-size} & \$100M–\$1B        & 500–5,000               & 10–20\%              \\ \hline
+        \textbf{Scaleup}  & \$10M–\$100M       & 50–500                  & \textgreater{}20\%   \\ \hline
         \textbf{Startup}  & \textless{}\$10M   & \textless{}50           & \textgreater{}50\%   \\ \hline
-        \end{tabular}
-        \begin{minipage}{1.2\textwidth}
-            \centering
-        \caption{\hspace{1mm}Corporate size categorization cutoff values for}
-            \vspace{-7pt}
-            \caption*{turnover, employee count, and growth rate.}
-            \label{fig:corporate_size}
-        \end{minipage}
-    \end{minipage}
-    \vspace{-24pt}
-\end{figure}
+    \end{tabular}
+    
+    \captionsetup{skip=2pt} % Reduce vertical space between caption lines
+    \caption{\hspace{1mm}Corporate size categorization cutoff values for turnover, employee count, and growth rate.}
+    \vspace{-7pt} % Reduce space before next caption line
+    \caption*{} % Non-numbered caption
+    \label{tab:corporate_size}
+    \vspace{-10pt} % Adjust space below the table
+\end{wraptable}
 
 
 \begin{wrapfigure}{r}{0.38\textwidth}
@@ -127,7 +148,7 @@ We construct our dataset by extracting paper titles, authors, and affiliations u
 \end{wrapfigure}
 citation counts (IEEE  and other publishers) and IEEE keywords. Our dataset, spanning 2019 to 2024, includes 18,925 papers, with 45\% from CVPR, 35\% from ICCV, and 20\% from WACV. This period allows us to analyze citation trends, acknowledging that older papers (e.g., from 2019) tend to have higher citation counts due to accumulation over time.
 
-Each paper is categorized based on author affiliations, as shown in Figure \ref{fig:affiliation-combination}. Corporates are categorized utilizing Figure \ref{fig:corporate_size} and Dun \& Bradstreet Business Directory [5]. Papers are further classified into 17 research categories using arXiv taxonomy [6] and ChatGPT. The dataset and additional resources are available at: \url{https://github.com/mervekocabas/Data_Literacy}.
+Each paper is categorized based on author affiliations, as shown in Figure \ref{fig:affiliation-combination}. Corporates are categorized utilizing Table \ref{tab:corporate_size} and Dun \& Bradstreet Business Directory [5]. Papers are further classified into 17 research categories using arXiv taxonomy [6] and ChatGPT. The dataset and additional resources are available at: \url{https://github.com/mervekocabas/Data_Literacy}.
 
 
 % \subsection{Spearman's Rank Correlation Coefficient}
