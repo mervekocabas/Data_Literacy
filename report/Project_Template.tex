@@ -87,7 +87,7 @@ We first analyze trends in corporate-affiliated publications to assess industry 
 \vspace{-7pt}
 This study focuses on the most influential computer vision conferences that attract high-quality submissions from academia and industry. CVPR (held annually) and ICCV (biennial), ranked \#1 and \#2 on Google Scholar Best Computer Science Conferences in Computer Vision list [3], are ideal venues for analyzing corporate and academic contributions. WACV (\#9) is included for its emphasis on applied research, contrasting with the more theoretical nature of CVPR and ICCV.
 
-We construct our dataset by extracting paper titles, authors, and affiliations using Paper Copilot GitHub [4]. Since CVPR, ICCV, and WACV proceedings are published on IEEE Xplore, we use paper titles to scrape their respective IEEE Xplore pages, collecting 
+We construct our dataset by extracting paper titles, authors, and affiliations using Paper Copilot GitHub [4]. Since CVPR, ICCV, and WACV proceedings are published on IEEE Xplore, we use paper titles to scrape their respective IEEE Xplore pages, collecting citation counts
 % \begin{figure}
 %     \noindent
 %     \hspace{-2mm}
@@ -132,7 +132,7 @@ We construct our dataset by extracting paper titles, authors, and affiliations u
     \vspace{-7pt} % Reduce space before next caption line
     \caption*{} % Non-numbered caption
     \label{tab:corporate_size}
-    \vspace{-10pt} % Adjust space below the table
+    \vspace{-5pt} % Adjust space below the table
 \end{wraptable}
 
 
@@ -141,7 +141,7 @@ We construct our dataset by extracting paper titles, authors, and affiliations u
 \centering
 \includegraphics[width=.95\linewidth]{report/images/affiliation-combination.png}
 \caption{Illustration of different paper-author-affiliation relationships[1]. Authors with both corporate and academic affiliations have their contributions split proportionally. Papers with any corporate-affiliated authors are classified as corporate-affiliated, while those with $\geq$ 50\% corporate contributions are considered corporate-led.}
-\vspace{-10pt}
+\vspace{-15pt}
 % Authors with both corporate and academic affiliations have their contributions split proportionally. Papers with any corporate-affiliated authors are classified as corporate-affiliated, while those with $\geq$ 50\% corporate contributions are considered corporate-led.
 \label{fig:affiliation-combination}
 \vspace{-20pt}
@@ -243,11 +243,12 @@ To investigate whether corporate-affiliated research has gained influence at top
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.9\linewidth]{report/images/corporate_ratio_table.png}
-    \caption{The plot on the left shows an increasing trend (from 2019 to 2024) in corporate contributions, with CVPR and ICCV maintaining higher ratios compared to WACV and reaching record levels in corporate affiliation. The accompanying table on right presents Spearman’s rank correlation coefficients, all of which indicate strong positive correlations (coefficients exceeding 0.88) . Statistically significant values (p < 0.05) are marked with an asterisk (*).}
+    \vspace{-5pt}
+    \caption{(A) shows an increasing trend (from 2019 to 2024) in corporate contributions, with CVPR and ICCV maintaining higher ratios compared to WACV and reaching record levels in corporate affiliation. The accompanying table (B) presents Spearman’s rank correlation coefficients, all of which indicate strong positive correlations (coefficients exceeding 0.88) . Statistically significant values (p < 0.05) are marked with an asterisk (*).}
     \label{fig:corporate_ratio_graph}
     % \vspace{-5pt}
 \end{figure}
-\vspace{-18pt}
+\vspace{-17pt}
 \subsection{Citation Impact of Corporate-Affiliated Research}
 \vspace{-7pt}
 Beyond their increasing presence, corporate-affiliated papers must also be evaluated in terms of their impact. One widely accepted measure of research influence is citation count, which reflects the extent to which a paper shapes subsequent research. As illustrated in Figure \ref{fig:ieee_citations}, corporate-affiliated papers 
@@ -255,11 +256,11 @@ Beyond their increasing presence, corporate-affiliated papers must also be evalu
     \centering
     % \vspace{-10pt}
     \includegraphics[width=0.9\linewidth]{report/images/ieee_citations.png}
-    \caption{Absolute (A) and Kernel Density Estimate (B) Citation distributions of academic and corporate papers show that corporate papers tend to have a higher average number of citations and a wider spread in their citation counts. In contrast, academic papers are more numerous but are generally concentrated in lower citation ranges.}
+    \caption{Absolute (A) and Kernel Density Estimate (B) Citation distributions of academic and corporate papers show that corporate papers tend to have higher mean citations and a wider spread in their citation counts. In contrast, academic papers are more numerous but are generally concentrated in lower citation ranges.}
     \label{fig:ieee_citations}
     \vspace{-10pt}
 \end{figure}
-
+% \vspace{-5pt}
 exhibit higher average citation counts than academic papers, despite constituting a smaller proportion of total publications. While academic papers are more numerous, their citation distribution is concentrated in the lower ranges, indicating that many receive moderate attention. In contrast, corporate-affiliated papers have a broader citation distribution, suggesting that they are more likely to receive high citation counts. To formally test whether corporate papers have a significantly higher mean citation count ($\mu_2$) than academic papers ($\mu_1$), since the data is not normally distributed we conduct a Mann–Whitney U test[9] with a significance threshold of $\alpha = 0.05$. The null ($H_0$) and alternative ($H_\alpha$) hypotheses are as follows:
 \[
 H_0 = \mu_2 \leq \mu_1 (\mathrm{Corporate \ papers\ have \ a \ smaller \ or \ equal \ mean \ than \ academia \ papers})
