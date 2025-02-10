@@ -1,3 +1,0 @@
-Global Table Extractor (GTE): A Framework for Joint Table Identification and Cell Structure Recognition Using Visual Context
-SuPEr-SAM: Using the Supervision Signal From a Pose Estimator to Train a Spatial Attention Module for Personal Protective Equipment Recognition
-Temporally Consistent 3D Human Pose Estimation Using Dual 360deg Cameras

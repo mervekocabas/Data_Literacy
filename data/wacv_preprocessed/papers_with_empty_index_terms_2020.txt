@@ -1,6 +1,0 @@
-End-To-End Trainable Video Super-Resolution Based on a New Mechanism for Implicit Motion Estimation and Compensation
-SINet: Extreme Lightweight Portrait Segmentation Networks with Spatial Squeeze Module and Information Blocking Decoder
-SketchTransfer: A New Dataset for Exploring Detail-Invariance and the Abstractions Learned by Deep Networks
-Towards Preserving the Ephemeral: Texture-Based Background Modelling for Capturing Back-of-the-Napkin Notes
-Visual Question Answering on 360deg Images
-Weakly-Supervised Multi-Person Action Recognition in 360$^{\circ}$ Videos
