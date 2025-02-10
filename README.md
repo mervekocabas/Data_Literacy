@@ -17,6 +17,14 @@ corporate papers show that corporate papers tend to have higher mean citations a
 their citation counts. In contrast, academic papers are more numerous but are generally concentrated
 in lower citation ranges.
 
+To formally test whether corporate papers have a significantly higher mean citation count (μ₂) than academic papers (μ₁), since the data is not normally distributed, we conduct a Mann–Whitney U test [9] with a significance threshold of α = 0.05. The null (H₀) and alternative (Hₐ) hypotheses are as follows:
+
+- **H₀**: μ₂ ≤ μ₁ (Corporate papers have a smaller or equal mean than academic papers)
+- **Hₐ**: μ₂ > μ₁ (Corporate papers have a larger mean than academic papers)
+
+The test results indicate that p-value ≪ 0.05, allowing us to reject H₀. This confirms a statistically significant difference, supporting the conclusion that corporate-affiliated papers tend to achieve higher citation impact compared to their academic counterparts.
+
+
 ### Influence of Large Corporations
 ![Influence of Large Corporations](graphs/pie_charts.png)
 Corporate size distribution (A) and paper contributions by corporate size (B) are based
